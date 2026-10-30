@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>海峽與鳥居 旅誌</title>
+<meta name="description" content="2/12–2/18 廣島、門司港、下關、福岡、宮島 7 天行程手冊">
+<meta name="theme-color" content="#13283d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316203a'/%3E%3Cpath d='M32 12v40M14.7 22l34.6 20M14.7 42l34.6-20' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F6F4;
+  --paper-2:#E8ECEE;
+  --ink:#16293C;
+  --ink-2:#556574;
+  --line:#CAD3DA;
+  --ticket:#DDEAF3;
+  --ticket-hatch:#C5D9E8;
+  --ticket-edge:#8EAFC6;
+  --seal:#BF3D2A;
+  --seal-soft:#F7E2DD;
+  --tip:#1F5A7A;
+  --tip-soft:#DDEBF2;
+  --night:#13283D;
+  --kai:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","KaiTi",serif;
+  --dot:"DotGothic16","Hiragino Kaku Gothic ProN","Noto Sans JP",monospace;
+  --sans:system-ui,-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1A24; --paper-2:#15242F; --ink:#E2E9EE; --ink-2:#97A7B3; --line:#263845;
+    --ticket:#16293A; --ticket-hatch:#1C3346; --ticket-edge:#3B6584;
+    --seal:#E66A55; --seal-soft:#3A201C; --tip:#86BFDB; --tip-soft:#163041; --night:#0A1520;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1A24; --paper-2:#15242F; --ink:#E2E9EE; --ink-2:#97A7B3; --line:#263845;
+  --ticket:#16293A; --ticket-hatch:#1C3346; --ticket-edge:#3B6584;
+  --seal:#E66A55; --seal-soft:#3A201C; --tip:#86BFDB; --tip-soft:#163041; --night:#0A1520;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans);font-feature-settings:"tnum"}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--tip);outline-offset:2px;border-radius:4px}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--night);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hero-top{position:relative;z-index:3;max-width:680px;margin:0 auto;padding:28px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;min-height:330px}
+.hero-meta{padding-top:6px;max-width:16em}
+.hero-meta .en{font-family:var(--kai);font-size:15px;letter-spacing:.04em;opacity:.75;margin:0 0 18px}
+.hero-meta .dates{font-family:var(--dot);font-size:30px;line-height:1.1;margin:0}
+.hero-meta .len{font-size:14px;opacity:.75;margin:6px 0 18px}
+.hero-meta .cities{font-family:var(--kai);font-size:17px;line-height:1.9;margin:0}
+.hero h1{writing-mode:vertical-rl;font-family:var(--kai);font-weight:700;font-size:clamp(40px,11.5vw,68px);line-height:1.25;letter-spacing:.12em;margin:0;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.hero-photo{position:relative;z-index:1;margin-top:-90px;min-height:120px;background:linear-gradient(#13283D,#2C5A78 60%,#C98A63)}
+.hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 55%}
+@media (min-width:700px){.hero-photo img{aspect-ratio:21/9}}
+.hero-photo::before{content:"";position:absolute;inset:0 0 auto 0;height:55%;background:linear-gradient(var(--night),transparent);z-index:1}
+.status{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:0 16px 14px}
+.status-inner{max-width:648px;margin:0 auto;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.status b{font-family:var(--dot);font-weight:400;font-size:34px;line-height:1}
+.status span{font-size:14px}
+
+/* ---------- sticky nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:680px;margin:0 auto;display:flex;gap:6px;overflow-x:auto;padding:8px 16px;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.chip{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:48px;height:44px;padding:0 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:12px;line-height:1.2}
+.chip b{font-family:var(--dot);font-weight:400;font-size:15px;color:var(--ink)}
+.chip.go{font-size:14px;font-weight:600;color:var(--ink);line-height:1}
+.chip.is-on{background:var(--ink);color:var(--paper)}
+.chip.is-on b{color:var(--paper)}
+.chip.is-today{box-shadow:inset 0 0 0 2px var(--seal)}
+.nav-sep{flex:none;width:1px;background:var(--line);margin:8px 4px}
+
+/* ---------- route line ---------- */
+.route{padding-top:28px;padding-bottom:8px}
+.route h2,.sec-head h2{font-family:var(--kai);font-weight:700;font-size:24px;margin:0 0 4px}
+.route p.sub,.sec-head p{margin:0;color:var(--ink-2);font-size:14px}
+.line-scroll{overflow-x:auto;margin:18px -16px 0;padding:0 16px 10px;scrollbar-width:thin}
+.line{position:relative;display:flex;min-width:max-content;padding-top:4px}
+.line::before{content:"";position:absolute;left:28px;right:28px;top:15px;height:4px;background:var(--ink);border-radius:2px}
+.stn{position:relative;flex:none;width:72px;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink)}
+.stn i{display:block;width:26px;height:26px;border-radius:50%;background:var(--paper);border:4px solid var(--ink);position:relative;z-index:1}
+.stn.side i{border-style:dashed;border-width:3px;width:22px;height:22px;margin:2px 0}
+.stn .nm{font-family:var(--kai);font-size:15px;margin-top:6px;white-space:nowrap}
+.stn .d{font-family:var(--dot);font-size:12px;color:var(--ink-2)}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--ink-2);margin-top:4px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;border:3px solid var(--ink);margin-right:6px;vertical-align:-2px}
+.legend span.s::before{border-style:dashed;border-width:2px}
+
+/* ---------- act banner ---------- */
+.act{position:relative;margin:44px 0 0;color:#fff;background:linear-gradient(135deg,#13283D,#2C5A78);min-height:240px}
+.act img{width:100%;height:clamp(240px,62vw,360px);object-fit:cover}
+.act::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(10,16,32,.82))}
+.act-text{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:0 16px 18px}
+.act-text>div{max-width:648px;margin:0 auto}
+.act-no{font-family:var(--kai);font-size:16px;opacity:.85}
+.act h2{font-family:var(--kai);font-weight:700;font-size:clamp(28px,7.5vw,38px);line-height:1.25;margin:2px 0 8px}
+.act p{margin:0;font-size:14px;line-height:1.7;opacity:.92;max-width:34em}
+
+/* ---------- day ---------- */
+.day{padding-top:30px;padding-bottom:6px;scroll-margin-top:62px}
+.ticket{position:relative;display:grid;grid-template-columns:1fr 84px;border-radius:6px;color:var(--ink);
+  background-color:var(--ticket);
+  background-image:repeating-linear-gradient(-45deg,transparent 0 5px,var(--ticket-hatch) 5px 6px),repeating-linear-gradient(45deg,transparent 0 5px,var(--ticket-hatch) 5px 6px);
+  box-shadow:inset 0 0 0 1px var(--ticket-edge)}
+.ticket .main{padding:12px 14px 12px 16px;min-width:0}
+.ticket .kind{font-family:var(--dot);font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ticket .kind em{font-style:normal;border:1px solid currentColor;padding:0 6px;border-radius:2px}
+.ticket .trip{font-family:var(--dot);font-size:clamp(20px,6vw,27px);line-height:1.3;margin:8px 0 6px;display:flex;flex-wrap:wrap;column-gap:.35em;align-items:baseline}
+.ticket .trip .ar{font-size:.8em;color:var(--ink-2)}
+.ticket .foot{font-family:var(--dot);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--ink-2)}
+.ticket .foot .fare{color:var(--ink);font-size:15px}
+.ticket .stub{position:relative;border-left:2px dashed var(--ticket-edge);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--dot);padding:8px 4px;text-align:center}
+.ticket .stub small{font-size:12px;color:var(--ink-2)}
+.ticket .stub b{font-weight:400;font-size:40px;line-height:1}
+.ticket .stub::before,.ticket .stub::after{content:"";position:absolute;left:-9px;width:16px;height:16px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1px var(--ticket-edge)}
+.ticket .stub::before{top:-8px}.ticket .stub::after{bottom:-8px}
+.day.is-today .ticket{box-shadow:inset 0 0 0 2px var(--seal)}
+.today-tag{display:none;position:absolute;right:96px;top:-11px;background:var(--seal);color:#fff;font-size:12px;padding:1px 8px;border-radius:3px}
+.day.is-today .today-tag{display:block}
+.day h3{font-family:var(--kai);font-weight:700;font-size:22px;line-height:1.4;margin:18px 0 4px}
+.day .daynote{margin:6px 0 0;font-size:14px;color:var(--seal)}
+.photos{display:flex;gap:8px;overflow-x:auto;margin:14px -16px 4px;padding:0 16px 6px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.photos::-webkit-scrollbar{display:none}
+.credits{margin-top:20px;font-size:12px;line-height:1.7;opacity:.75}
+.credits summary{cursor:pointer;font-size:13px}
+.credits ul{margin:6px 0 0;padding-left:1.1em}
+.credits a{color:inherit}
+.photos figure{position:relative;flex:none;margin:0;height:170px;scroll-snap-align:start}
+.photos img{height:100%;width:auto;max-width:300px;object-fit:cover;border-radius:6px;background:var(--paper-2)}
+.photos figure.r img{width:255px}
+.photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 8px 6px;border-radius:0 0 6px 6px;background:linear-gradient(transparent,rgba(8,12,24,.72));color:#fff;font-size:12px;line-height:1.3}
+.photos figcaption .k{display:inline-block;margin-right:4px;padding:0 5px;border-radius:3px;background:rgba(255,255,255,.22);font-size:11px}
+
+/* timeline */
+.tl{list-style:none;margin:16px 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:69px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.stop{position:relative;display:grid;grid-template-columns:56px 28px 1fr;column-gap:12px;padding:8px 0}
+.stop .t{font-size:15px;font-weight:600;text-align:right;padding-top:3px;line-height:1.3;word-break:keep-all}
+.stop .t small{display:block;font-weight:400;font-size:12px;color:var(--ink-2)}
+.stop .ic{width:28px;height:28px;border-radius:50%;background:var(--paper);border:2px solid var(--line);display:grid;place-items:center;position:relative;z-index:1;color:var(--ink)}
+.stop .ic svg{width:15px;height:15px}
+.stop.k-move .ic{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.stop .nm{font-size:16px;font-weight:600;line-height:1.45;padding-top:2px}
+.stop.is-tbd .ic{border-style:dashed;color:var(--ink-2)}
+.tbd{margin-left:8px;font-size:12px;font-weight:600;color:var(--ink-2);border:1px dashed var(--ink-2);padding:0 6px;border-radius:3px;vertical-align:2px}
+.stop .meta{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:4px;align-items:center}
+.cost{font-size:14px;color:var(--ink-2)}
+.cost b{font-weight:600;color:var(--ink)}
+.map{display:inline-flex;align-items:center;gap:3px;font-size:14px;color:var(--tip);text-decoration:none;min-height:28px;padding:0 2px}
+.map svg{width:14px;height:14px}
+.map:hover{text-decoration:underline}
+.note{margin:6px 0 0;font-size:14px;line-height:1.6;padding:6px 10px;border-radius:4px;background:var(--tip-soft);color:var(--ink)}
+.note.warn{background:var(--seal-soft)}
+.note.warn::before{content:"注意　";color:var(--seal);font-weight:600}
+.note.tip::before{content:"小提醒　";color:var(--tip);font-weight:600}
+.stop.is-next .ic{border-color:var(--seal);box-shadow:0 0 0 4px color-mix(in srgb,var(--seal) 25%,transparent)}
+.stop.is-next .nm::after{content:"下一站";margin-left:8px;font-size:12px;font-weight:600;color:#fff;background:var(--seal);padding:1px 6px;border-radius:3px;vertical-align:2px}
+.stay{display:flex;align-items:center;gap:10px;margin:14px 0 0;padding:12px 0 0;border-top:1px dashed var(--line);font-size:15px}
+.stay svg{width:18px;height:18px;flex:none;color:var(--ink-2)}
+.stay span{color:var(--ink-2)}
+
+/* ---------- sections ---------- */
+.sec{padding-top:48px;padding-bottom:8px;scroll-margin-top:62px}
+.sec-head{margin-bottom:18px}
+.hotel{padding:22px 0 18px;border-top:1px solid var(--line);scroll-margin-top:62px}
+.hotel:last-child{border-bottom:1px solid var(--line)}
+.hotel>img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.hotel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:12px}
+.hotel h3{margin:0;font-size:19px;line-height:1.35}
+.hotel-head .map{flex:none;white-space:nowrap}
+.hotel .jp{display:block;font-size:13px;font-weight:400;color:var(--ink-2);margin-top:2px}
+.hotel .when{font-family:var(--dot);font-size:14px;color:var(--ink);margin:6px 0 0}
+.hotel .lead{margin:8px 0 0;font-size:15px;line-height:1.65}
+.facts{display:grid;grid-template-columns:4.2em 1fr;gap:8px 12px;margin:14px 0 0;font-size:14px;line-height:1.6}
+.facts dt{color:var(--ink-2);font-weight:600}
+.facts dd{margin:0}
+.facts dd small{display:block;color:var(--ink-2);font-size:13px}
+.htips{list-style:none;margin:14px 0 0;padding:10px 12px;background:var(--tip-soft);border-radius:6px;font-size:14px;line-height:1.65}
+.htips li{padding-left:1.1em;text-indent:-1.1em}
+.htips li::before{content:"・";color:var(--tip)}
+.htips li+li{margin-top:4px}
+.stay a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+
+.receipt{background:var(--paper-2);border-radius:6px;padding:18px 16px 16px;font-family:var(--dot)}
+.receipt h3{font-family:var(--kai);font-weight:700;font-size:18px;margin:0 0 12px;text-align:center}
+.row{display:flex;align-items:baseline;gap:8px;font-size:15px;padding:3px 0}
+.row .lb{flex:none}
+.row .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.row .v{flex:none}
+.row.sub{font-size:13px;color:var(--ink-2);padding-left:12px}
+.row.total{font-size:18px;border-top:1px solid var(--ink);margin-top:8px;padding-top:10px}
+.rate{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+.rate input,.conv input{font:inherit;font-family:var(--dot);font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:6px 8px;width:96px}
+.fine{font-family:var(--sans);font-size:13px;color:var(--ink-2);margin:12px 0 0;line-height:1.6}
+.conv{margin-top:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}
+.conv input{width:130px}
+.conv output{font-family:var(--dot);font-size:20px}
+
+.checks h3{font-family:var(--kai);font-weight:700;font-size:18px;margin:22px 0 6px}
+.checks h3:first-child{margin-top:0}
+.ck{display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px;line-height:1.5}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:0;border:2px solid var(--ink-2);border-radius:4px;display:grid;place-items:center;cursor:pointer;background:var(--paper)}
+.ck input:checked{background:var(--ink);border-color:var(--ink)}
+.ck input:checked::after{content:"";width:6px;height:11px;border:solid var(--paper);border-width:0 2.5px 2.5px 0;transform:translateY(-1px) rotate(45deg)}
+.ck input:checked+span{color:var(--ink-2);text-decoration:line-through}
+.ck small{display:block;color:var(--ink-2);font-size:13px}
+
+footer{margin-top:56px;padding:28px 16px 40px;background:var(--night);color:#d8deea;font-size:14px}
+footer .wrap{padding:0}
+footer b{font-family:var(--dot);font-weight:400;font-size:22px;color:#fff;margin-right:6px}
+footer p{margin:6px 0}
+footer .sig{margin-top:18px;font-family:var(--kai);opacity:.7}
+
+
+/* ---------- flexible options ---------- */
+.flex{margin-top:18px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.flex>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;min-height:48px}
+.flex>summary::-webkit-details-marker{display:none}
+.flex>summary b{font-family:var(--kai);font-size:17px}
+.flex>summary .cnt{color:var(--ink-2);font-size:14px}
+.flex>summary::after{content:"";margin-left:auto;flex:none;width:8px;height:8px;border:solid var(--ink-2);border-width:0 2px 2px 0;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.flex[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
+@media (prefers-reduced-motion: reduce){.flex>summary::after{transition:none}}
+.flex-body{padding:0 14px 6px}
+.flex h4{font-size:14px;color:var(--ink-2);font-weight:600;margin:6px 0 2px}
+.alt{padding:10px 0;border-top:1px dashed var(--line)}
+.flex h4+.alt{border-top:0}
+.alt-top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.alt .nm{font-weight:600;line-height:1.45}
+.alt p{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font-size:12px;line-height:1.5;padding:1px 8px;border-radius:10px;background:var(--paper-2);color:var(--ink-2)}
+.tag.rsv{background:var(--seal-soft);color:var(--seal)}
+.tag.in{background:var(--tip-soft);color:var(--tip)}
+.evt{margin:8px 0 10px;padding:10px 12px;border-left:3px solid var(--seal);background:var(--seal-soft);border-radius:0 6px 6px 0}
+.evt .nm{font-weight:600}
+.evt p{margin:2px 0 0;font-size:14px;line-height:1.6}
+.map.sm{font-size:13px;flex:none}
+
+/* ---------- eat & buy ---------- */
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:0 -16px 6px;padding:0 16px 6px;scrollbar-width:none}
+.tabs.in{margin:2px -14px 4px;padding:0 14px 6px}
+.tab.sm{padding:6px 12px;min-height:36px;font-size:14px}
+.tab span{margin-left:5px;font-weight:400;opacity:.65}
+.tp h4:first-child{margin-top:10px}
+.tp>.food:last-child,.tp>.alt:last-child{border-bottom:0}
+.tp .seasonal{margin:8px 0 4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:8px 14px;font:600 14px var(--sans);color:var(--ink);cursor:pointer;min-height:40px}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.panel h3{font-family:var(--kai);font-weight:700;font-size:19px;margin:22px 0 2px}
+.panel .when2{font-size:13px;color:var(--ink-2);margin:0}
+.food{padding:12px 0;border-bottom:1px solid var(--line)}
+.food .nm{font-weight:600;font-size:16px}
+.food p{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.shops{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:4px}
+.seasonal{margin:14px 0 0;padding:10px 12px;background:var(--tip-soft);border-radius:6px;font-size:14px;line-height:1.65}
+.seasonal b{color:var(--tip)}
+
+/* ---------- events ---------- */
+.ev{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.ev:last-child{border-bottom:1px solid var(--line)}
+.ev .dt{font-family:var(--dot);font-size:14px;line-height:1.35;color:var(--ink)}
+.ev .dt small{display:block;color:var(--ink-2);font-size:12px}
+.ev .nm{font-weight:600;font-size:16px;line-height:1.45}
+.ev p{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.ev .meta{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:4px;align-items:center}
+.ev .meta a.d{font-size:14px;color:var(--tip);text-decoration:none}
+
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:none;background:var(--seal);color:#fff;border:0;border-radius:24px;padding:12px 18px;font:600 15px var(--sans);box-shadow:0 6px 18px rgba(0,0,0,.25);cursor:pointer}
+.fab.show{display:block}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero-top">
+    <div class="hero-meta">
+      <p class="en">7 Days in Kanmon &amp; Setouchi</p>
+      <p class="dates">2/12–2/18</p>
+      <p class="len">七天六夜，兩道海峽和一座神的島</p>
+      <p class="cities">廣島<br>門司港<br>下關<br>福岡<br>宮島</p>
+    </div>
+    <h1>海峽<br>與鳥居</h1>
+  </div>
+  <div class="hero-photo"><img id="heroImg" alt="宮島嚴島神社的海上大鳥居" referrerpolicy="no-referrer"></div>
+  <div class="status"><div class="status-inner" id="status"></div></div>
+</header>
+
+<nav class="nav" aria-label="章節"><div class="nav-inner" id="nav"></div></nav>
+
+<main>
+  <section class="wrap route" aria-labelledby="route-h">
+    <h2 id="route-h">路線</h2>
+    <p class="sub">點站名跳到那一天</p>
+    <div class="line-scroll"><div class="line" id="line"></div></div>
+    <div class="legend"><span>住宿與主要停靠</span><span class="s">當日來回</span></div>
+  </section>
+
+  <div id="days"></div>
+
+
+  <section class="wrap sec" id="events" aria-labelledby="events-h">
+    <div class="sec-head"><h2 id="events-h">這幾天的活動</h2><p>2/12–2/18 有機會碰到的祭典、點燈與季節限定</p></div>
+    <div id="evList"></div>
+  </section>
+
+  <section class="wrap sec" id="hotels" aria-labelledby="hotels-h">
+    <div class="sec-head"><h2 id="hotels-h">住宿</h2><p>三間飯店，六個晚上</p></div>
+    <div id="hotelList"></div>
+  </section>
+
+  <section class="wrap sec" id="budget" aria-labelledby="budget-h">
+    <div class="sec-head"><h2 id="budget-h">預算</h2><p>行程表上每一筆標價自動加總</p></div>
+    <div class="receipt" id="receipt"></div>
+    <div class="conv">
+      <label for="yen">日幣換算</label>
+      <input id="yen" inputmode="numeric" placeholder="¥ 金額" autocomplete="off">
+      <output id="yenOut" for="yen">NT$ 0</output>
+    </div>
+  </section>
+
+  <section class="wrap sec checks" id="checks" aria-labelledby="checks-h">
+    <div class="sec-head"><h2 id="checks-h">出發前清單</h2><p>勾選只會存在你自己這支手機</p></div>
+    <div id="checkList"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <details class="credits"><summary>照片來源</summary><p>照片來自 Wikimedia Commons，依各自授權使用：</p><ul id="creditList"></ul></details>
+    <p class="sig">寫給一起過海峽的我們</p>
+  </div>
+</footer>
+
+<button class="fab" id="fab" type="button">回到今天</button>
+
+<script>
+const IMG = {};
+
+const ICON = {
+  plane:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>',
+  train:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h2.23l2-2H14l2 2h2v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm3.5-7H6V6h5v4zm2 0V6h5v4h-5zm3.5 7c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>',
+  bus:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>',
+  ropeway:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3l20 5M12 5.5V10"/><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M6 14h12"/></svg>',
+  food:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>',
+  hotel:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>',
+  walk:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>',
+  sight:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2.5 5.5c4 1.2 15 1.2 19 0M5 10h14M7 6.5V21M17 6.5V21"/></svg>',
+  ferry:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>',
+  move:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>'
+};
+
+const ACTS = {
+  1:{no:'第一幕',title:'關門海峽的兩岸',where:'小倉、門司港、下關、福岡　Day 1–3',img:'@act1',alt:'關門海峽',
+     text:'九州和本州隔著不到一公里的海峽相望。白天坐船到下關吃市場壽司，再從海底隧道走回九州；晚上回門司港，看懷舊港町點燈。'},
+  2:{no:'第二幕',title:'海上的大鳥居',where:'宮島　Day 4–5',img:'@act2',alt:'嚴島神社大鳥居',
+     text:'住在島上，才看得到遊客散去後的嚴島神社。隔天一早搭纜車上彌山，把瀨戶內海的島一次看完。'},
+  3:{no:'第三幕',title:'河與城的廣島',where:'廣島　Day 5–7',img:'@act3',alt:'廣島原爆圓頂',
+     text:'六條河穿過市區。縮景園、和平公園、紙鶴塔一天就走得完，晚上用一盤廣島燒收尾。'}
+};
+
+// cost: [yen, category, label]   category: move | ticket | food
+const DAYS = [
+ {n:1,date:'2027-02-12',md:'2/12',wd:'五',jd:'2月12日（金）',act:1,kind:'搭乗券',trip:['台北','広島空港','小倉','門司港'],via:'山陽新幹線',fare:null,
+  title:'飛廣島，一路坐到門司港',stay:'門司港普樂美雅飯店',
+  photos:[['@hirosta','廣島站','交通'],['@kokura','小倉城','景點'],['@mojikosta','門司港站','景點'],['@sukesan','資さんうどん','美食']],
+  stops:[
+   {t:'07:10',t2:'10:25',k:'plane',nm:'桃園 → 廣島機場'},
+   {t:'11:30',t2:'12:25',k:'move',ic:'bus',nm:'利木津巴士，廣島機場 → 廣島站',q:'広島駅',cost:[[1500,'move','巴士']],note:['tip','終點在新幹線口（北口），車程約 50 分。']},
+   {t:'抵達後',k:'move',ic:'train',nm:'取票：廣島山口地區周遊券（5 日）',q:'広島駅 みどりの窓口',cost:[[15000,'move','周遊券']],
+    note:[['tip','連續 5 天，2/12–2/16 剛好用完：Day 1 新幹線、Day 3 福岡、Day 4 到宮島、Day 5 渡輪回廣島都靠它。'],['tip','只限外國護照、短期滯在入境的人買。出發前一個月 10:00 起可以在 JR 西日本官網預約，取票要帶護照和付款那張卡。']]},
+   {t:'12:30',sub:'約',k:'food',nm:'午餐',tbd:1,note:['tip','在廣島站附近吃，13:52 的新幹線前留點時間。選項在下面「彈性選項 → 美食」。']},
+   {t:'13:52',t2:'14:42',k:'move',ic:'train',nm:'山陽新幹線，廣島 → 小倉',q:'小倉駅',note:['tip','周遊券涵蓋，指定席、自由席都可以坐；單買約 ¥7,670。']},
+   {t:'14:45',sub:'約',k:'move',nm:'寄送行李到飯店',cost:[[800,'move','行李']]},
+   {t:'15:00',t2:'17:30',k:'sight',nm:'小倉城',q:'小倉城',cost:[[500,'ticket','門票']],note:['tip','冬天開到 19:00。加買共通券可以連隔壁的小倉城庭園一起看。']},
+   {t:'17:30',sub:'約',k:'food',nm:'晚餐：資さんうどん 魚町店',q:'資さんうどん 魚町店',cost:[[1500,'food','晚餐']],note:['tip','24 小時、無休。招牌是牛蒡天婦羅加牛肉的「肉ごぼ天うどん」，飯後點一個牡丹餅（ぼた餅）。']},
+   {t:'18:42',t2:'18:55',k:'move',ic:'train',nm:'JR 鹿兒島本線，小倉 → 門司港',q:'門司港駅',cost:[[340,'move','JR']],note:['tip','這段是 JR 九州，周遊券不包，刷 IC 卡或另外買票。']},
+   {t:'19:30',k:'hotel',nm:'Check-in 門司港普樂美雅飯店',q:'プレミアホテル門司港',note:['tip','放下行李就出門：懷舊區冬季點燈 18:00 開始，就在飯店門口。']}
+  ]},
+ {n:2,date:'2027-02-13',md:'2/13',wd:'六',jd:'2月13日（土）',act:1,kind:'乗船券',trip:['門司港','唐戸','門司港'],via:'関門汽船と海底トンネル',fare:400,
+  title:'一天跨兩次海峽',stay:'門司港普樂美雅飯店',
+  photos:[['@karato','唐戶市場','景點'],['@akama','赤間神宮','景點'],['@kanmonbridge','關門橋','景點'],['@mojikoretro','門司港懷舊區','景點'],['@yakicurry','燒咖哩','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐'},
+   {t:'09:00',t2:'11:00',k:'sight',nm:'九州鐵道紀念館',q:'九州鉄道記念館',cost:[[500,'ticket','門票']],note:['tip','9:00–17:00。每年有十天左右不定期休館，出發前看一下官網。']},
+   {t:'11:10',t2:'11:20',k:'move',ic:'ferry',nm:'關門汽船，門司港 → 下關唐戶',q:'関門汽船 門司港',cost:[[400,'move','渡輪']],
+    note:['tip','可以考慮「關門海峽クローバーきっぷ」¥1,000：關門汽船、三電巴士、潮風號小火車各坐一次，剛好是今天這一圈。販售點出發前再確認。']},
+   {t:'11:30',t2:'13:00',k:'food',nm:'午餐：唐戶市場',q:'唐戸市場',cost:[[3000,'food','午餐']],note:['tip','週六有「活きいき馬関街」，約 20 攤壽司、海鮮丼，10:00 開，熱門的中午前就可能賣完。想吃好一點的，紀念館早點離開。']},
+   {t:'13:00',t2:'14:00',k:'sight',nm:'春帆樓',q:'春帆楼 下関',
+    note:[['tip','春帆樓是河豚料亭，午餐 11:00–14:00（13:00 最後點餐），要吃得先訂位。'],['tip','隔壁的日清講和記念館免費，保存簽《馬關條約》時的桌椅；旁邊的赤間神宮也順路。']]},
+   {t:'14:00',t2:'14:20',k:'walk',nm:'回門司港：步行關門海底隧道',q:'関門トンネル人道 下関側',cost:[[400,'move','交通']],
+    note:['tip','行人免費，6:00–22:00，約 780 公尺、15 分鐘，走到一半有縣界線可以拍照。出口在門司側的和布刈，可以接潮風號回懷舊區。']},
+   {t:'下午',k:'walk',nm:'門司港懷舊 海峽廣場',q:'門司港レトロ 海峡プラザ'},
+   {t:'16:30',t2:'18:00',k:'walk',nm:'散步：遊覽船、香蕉、紀念館、觀光火車',cost:[[1200,'ticket','體驗']],
+    note:['warn','觀光小火車「潮風號」2 月週末有開，大約 10:00–16:40，16:30 才去可能趕不上末班。從隧道出來直接搭它回懷舊區最順。']},
+   {t:'傍晚',k:'sight',nm:'門司港懷舊展望室',q:'門司港レトロ展望室',cost:[[600,'ticket','門票']],note:['tip','開到 22:00。晚餐後再上去，可以同時看海峽夜景和懷舊區點燈。']},
+   {t:'18:00',t2:'19:00',k:'food',nm:'晚餐：燒咖哩 伽哩本舗',q:'伽哩本舗 門司港',cost:[[2000,'food','晚餐']],note:['tip','11:00–19:30，最後點餐時間沒查到，18:00 到應該沒問題。']}
+  ]},
+ {n:3,date:'2027-02-14',md:'2/14',wd:'日',jd:'2月14日（日）',act:1,kind:'乗車券',trip:['門司港','博多','門司港'],via:'山陽新幹線',fare:null,
+  title:'福岡一日來回',stay:'門司港普樂美雅飯店',
+  photos:[['@ohori','大濠公園','景點'],['@fam','福岡市美術館','景點'],['@canal','博多運河城','景點'],['@ramen','博多豚骨拉麵','美食'],['@mentaiko','明太子','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐'},
+   {t:'09:14',t2:'09:51',k:'move',ic:'train',nm:'JR＋新幹線，門司港 → 博多',q:'博多駅',cost:[[340,'move','JR']],note:['tip','門司港到小倉是 JR 九州，要另外付 ¥340；小倉到博多的新幹線用周遊券。']},
+   {t:'10:30',t2:'10:40',k:'move',ic:'train',nm:'地鐵，博多 → 大濠公園',q:'大濠公園駅',cost:[[260,'move','地鐵']]},
+   {t:'10:40',t2:'13:10',k:'sight',nm:'大濠公園、福岡市美術館',q:'福岡市美術館',cost:[[1200,'ticket','門票']],
+    note:[['tip','美術館 9:30–17:30，週一休，週日有開。館藏展只要 ¥200，特別展另外算，2027 年 2 月的展覽還沒公布。'],['tip','東邊的舞鶴公園梅園就在旁邊，2 月中旬正值花期，順路走過去。']]},
+   {t:'13:20',t2:'13:30',k:'move',ic:'train',nm:'地鐵，大濠公園 → 中洲川端',q:'中洲川端駅',cost:[[210,'move','地鐵']]},
+   {t:'14:00',t2:'14:30',k:'food',nm:'午餐：博多シーフード うお田',q:'博多シーフード うお田 西中洲',cost:[[3000,'food','午餐']],
+    note:['warn','已經搬到西中洲，中洲川端站走約 5 分。午餐 15:00 最後點餐，假日要取號等 1–2 小時，14:00 才到很可能排不到。建議 13:30 前先去拿號；不想排的話，附近的元祖博多めんたい重是好備案。']},
+   {t:'14:30',t2:'17:00',k:'walk',nm:'逛街：博多運河城、天神商圈',q:'キャナルシティ博多',note:['tip','運河城商店 10:00–21:00。旁邊步行 5 分就是櫛田神社。']},
+   {t:'17:00',t2:'18:00',k:'food',nm:'晚餐：一蘭 本社總本店',q:'一蘭 本社総本店',cost:[[2000,'food','晚餐']],note:['tip','24 小時營業，全部是個人隔間座位，中洲川端站走 1 分。']},
+   {t:'18:00',t2:'19:00',k:'walk',nm:'博多車站',q:'博多駅',note:['tip','伴手禮集中在 1 樓デイトス（到 21:00）和マイング（到 21:00）；博多阪急到 20:00。明太子要冷藏，回飯店放冰箱。']},
+   {t:'19:30',t2:'20:10',k:'move',ic:'train',nm:'JR＋新幹線，博多 → 門司港',q:'門司港駅',cost:[[340,'move','JR']]}
+  ]},
+ {n:4,date:'2027-02-15',md:'2/15',wd:'一',jd:'2月15日（月）',act:2,kind:'乗車券',trip:['門司港','広島','宮島'],via:'新幹線とJR連絡船',fare:null,
+  title:'渡海到神的島',stay:'櫻谷酒店',
+  photos:[['@shrinecorr','嚴島神社迴廊','景點'],['@daishoin','大聖院','景點'],['@shrinenight','夜間點燈的嚴島神社','景點'],['@anago','星鰻飯','美食'],['@momiji','紅葉饅頭','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐'},
+   {t:'出發前',k:'move',nm:'寄送行李',cost:[[3000,'move','行李']],note:['tip','如果寄到廣島的飯店（Day 5 入住），宮島只帶一晚的小包，上下渡輪、爬坡都輕鬆。']},
+   {t:'10:00',t2:'10:13',k:'move',ic:'train',nm:'JR，門司港 → 小倉',q:'小倉駅',cost:[[340,'move','JR']]},
+   {t:'10:31',t2:'11:17',k:'move',ic:'train',nm:'山陽新幹線，小倉 → 廣島',q:'広島駅',note:['tip','小倉轉車有 18 分鐘，最後的九州伴手禮可以在站內買。']},
+   {t:'11:30',t2:'11:57',k:'move',ic:'train',nm:'JR 山陽本線，廣島 → 宮島口',q:'宮島口駅'},
+   {t:'12:00',sub:'約',k:'move',ic:'ferry',nm:'JR 渡輪，宮島口 → 宮島',q:'JR西日本宮島フェリー 宮島口',
+    note:['tip','周遊券涵蓋渡輪。上島要付宮島訪問稅每人 ¥100，拿周遊券的人在宮島口的售票機另外買。']},
+   {t:'12:30',t2:'13:30',k:'food',nm:'午餐：宮島いちや，星鰻飯、牡蠣',q:'宮島 あなごめし',cost:[[3000,'food','午餐']],
+    note:['warn','查不到「宮島いちや」這家店。名字最像的「宮島いちわ」週一公休。建議跟 Day 5 對調：今天吃焼がきのはやし（週一有開），明天再吃いちわ；或在宮島口上船前先吃うえの的星鰻飯。']},
+   {t:'13:30',t2:'16:00',k:'sight',nm:'嚴島神社、大聖院',q:'厳島神社',cost:[[1500,'ticket','門票']],
+    note:[['tip','嚴島神社 2 月開到 17:30，昇殿 ¥300，加寶物館 ¥500，只收現金。大聖院免費參拜，8:00–17:00。'],['tip','潮位低於 100 公分可以走到大鳥居下；250 公分以上神社像浮在海上。出發前查「宮島 潮見表」。']]},
+   {t:'下午',k:'food',nm:'點心：嚴島表參道商店街',q:'宮島表参道商店街',cost:[[1000,'food','點心']],note:['tip','炸紅葉饅頭、生もみじ、烤牡蠣，店家大多 17:00 前收。']},
+   {t:'傍晚',k:'hotel',nm:'Check-in 櫻谷酒店',q:'Miyajima no Yado Sakuraya',note:['tip','15:00–22:00 入住。有大浴場，晚上散步回來可以泡。']},
+   {t:'18:00',t2:'19:00',k:'food',nm:'晚餐：LAWSON 宮島店',q:'ローソン 宮島店',cost:[[1500,'food','晚餐']],note:['tip','島上餐廳多半傍晚就收，7:30–21:30 的 LAWSON 很實用。想吃熱的，彈性選項有週一晚上有開的店。']},
+   {t:'19:00',sub:'後',k:'walk',nm:'散步：嚴島神社夜間點燈',q:'厳島神社',note:['tip','日落後點燈到 23:00 左右，遊客散了以後最安靜。這是住在島上才有的時間。']}
+  ]},
+ {n:5,date:'2027-02-16',md:'2/16',wd:'二',jd:'2月16日（火）',act:2,kind:'乗車券',trip:['宮島','弥山','広島'],via:'宮島ロープウエー',fare:2000,
+  title:'登彌山，回廣島',stay:'廣島河畔皇家花園酒店',
+  photos:[['@ropeway','宮島纜車','景點'],['@misen','從彌山看瀨戶內海','景點'],['@oysters','烤牡蠣','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'早餐：LAWSON 宮島店',q:'ローソン 宮島店',cost:[[1000,'food','早餐']]},
+   {t:'09:00',t2:'09:30',k:'ropeway',nm:'宮島纜車，紅葉谷 → 獅子岩',q:'宮島ロープウエー 紅葉谷駅',cost:[[2000,'ticket','纜車']],
+    note:[['warn','纜車每年約 2 月會停駛整備，有一年停了 1/16–3/6。2027 年的日期大約 1 月公布，記得查。停駛的話只能走登山道，單程 1.5–2 小時，午餐要往後延。'],['tip','冬天 9:00 開始上山，最後一班下山 16:30。免費接駁車停駛中，從表參道走到紅葉谷站約 15 分。']]},
+   {t:'09:30',t2:'11:30',k:'walk',nm:'彌山山頂',q:'弥山 宮島',note:['tip','獅子岩站走到山頂約 30 分，一路是石階。2026 年 5 月靈火堂發生火災，2027 年開放狀況出發前再確認。']},
+   {t:'11:30',t2:'12:00',k:'ropeway',nm:'纜車下山，獅子岩 → 紅葉谷'},
+   {t:'12:00',t2:'14:00',k:'food',nm:'午餐：焼がきのはやし',q:'焼がきのはやし',cost:[[3500,'food','午餐']],note:['tip','10:30–16:30，週三休，今天有開。牡蠣今年可能偏少，見彈性選項的季節提醒。']},
+   {t:'14:30',sub:'約',k:'move',ic:'ferry',nm:'JR 渡輪，宮島 → 宮島口'},
+   {t:'15:03',t2:'15:30',k:'move',ic:'train',nm:'JR，宮島口 → 廣島',q:'広島駅',note:['tip','今天是周遊券最後一天。']},
+   {t:'15:45',sub:'約',k:'hotel',nm:'Check-in 廣島河畔皇家花園酒店',q:'ザ ロイヤルパークホテル 広島リバーサイド',note:['tip','廣島站南口走約 8 分，縮景園就在旁邊。']},
+   {t:'17:00',t2:'18:30',k:'food',nm:'晚餐：ますひろ 上八丁堀店',q:'ますひろ 上八丁堀',cost:[[2500,'food','晚餐']],
+    note:['warn','有資料寫週二公休，2/16 剛好是週二。出發前打電話或看 Google 地圖確認；休息的話改去電光石火或お好み村，選項在彈性選項。']},
+   {t:'18:30',t2:'20:00',k:'walk',nm:'廣島站 ekie 商圈',q:'ekie 広島駅',note:['tip','ekie おみやげ館 8:00–21:00。伴手禮今晚就買，最後一天早上來不及。']}
+  ]},
+ {n:6,date:'2027-02-17',md:'2/17',wd:'三',jd:'2月17日（水）',act:3,kind:'散策券',trip:['広島','市内'],via:'縮景園と平和公園',fare:null,
+  title:'庭園、和平公園、紙鶴塔',stay:'廣島河畔皇家花園酒店',
+  photos:[['@shukkeien','縮景園','景點'],['@abomb','原爆圓頂館','景點'],['@hcastle','廣島城（天守閉館中）','景點'],['@orizuru','紙鶴塔','景點'],['@okonomiyaki','廣島燒','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐'},
+   {t:'09:00',t2:'10:30',k:'sight',nm:'縮景園、縣立美術館',q:'縮景園',cost:[[660,'ticket','門票']],
+    note:['tip','縮景園 9:00–17:00，單買 ¥350；¥660 是跟廣島縣立美術館館藏展的共通券。美術館週一休，週三有開。2 月中梅花正要開。']},
+   {t:'10:30',t2:'13:00',k:'sight',nm:'廣島城、和平紀念公園、美術館',q:'広島平和記念公園',
+    note:[['warn','廣島城天守 2026/3/22 起關閉，2027 年不會重開。二之丸免費開放，外觀照樣能拍。'],['warn','和平紀念資料館每年 2 月中會換展休館約 3 天，2026 年是 2/16–2/21。2027 年的日期公布後記得查，可能撞到今天。']]},
+   {t:'13:00',sub:'約',k:'food',nm:'午餐：松屋 廣島紙屋町店',q:'松屋 広島紙屋町店',cost:[[1000,'food','午餐']],note:['tip','24 小時。想吃在地的，附近的みっちゃん廣島燒、くにまつ汁なし担担麺今天都有開。']},
+   {t:'14:00',t2:'15:30',k:'sight',nm:'紙鶴塔、紙屋町',q:'おりづるタワー',cost:[[2200,'ticket','門票']],note:['tip','10:00–18:00。屋頂展望台正對原爆圓頂。']},
+   {t:'15:30',t2:'17:00',k:'walk',nm:'自由活動',cost:[[1000,'food','零用']]},
+   {t:'18:00',sub:'約',k:'food',nm:'晚餐：Shake Shack minamoa 廣島',q:'Shake Shack ミナモア広島',cost:[[3000,'food','晚餐']],
+    note:['tip','在廣島站 minamoa 2 樓，不在紙屋町。10:00–21:30。吃完可以上頂樓的ソラモア廣場。']}
+  ]},
+ {n:7,date:'2027-02-18',md:'2/18',wd:'四',jd:'2月18日（木）',act:3,kind:'搭乗券',trip:['広島','広島空港','台北'],via:'リムジンバス',fare:1500,
+  title:'帶著牡蠣和紅葉饅頭回家',stay:null,
+  photos:[['@hirosta','廣島站','交通'],['@hiroair','廣島機場','交通'],['@momiji','紅葉饅頭','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐'},
+   {t:'08:13',t2:'09:05',k:'move',ic:'bus',nm:'利木津巴士，廣島站 → 廣島機場',q:'広島駅 新幹線口 リムジンバス',cost:[[1500,'move','巴士']],
+    note:[['tip','站牌在新幹線口（北口），飯店在南邊，要穿過車站，多留 15 分鐘。'],['warn','8:13 這班的時刻沒查到，出發前看廣島交通官網。']]},
+   {t:'09:15',k:'plane',nm:'廣島機場，報到、最後採買',q:'広島空港',cost:[[1000,'food','機場']]},
+   {t:'登機前',k:'food',nm:'午餐',tbd:1,note:['tip','機場或機上吃。']},
+   {t:'11:25',t2:'13:25',k:'plane',nm:'廣島 → 桃園'},
+   {t:'回台後',k:'food',nm:'晚餐',tbd:1}
+  ]}
+];
+
+const HOTELS = [
+ {id:'h1', stayKey:'門司港普樂美雅飯店', nm:'門司港普樂美雅飯店', jp:'プレミアホテル門司港', img:'@h1',
+  when:'Day 1–3　2/12 入住，3 晚', price:'約 NT$2,000／晚', q:'プレミアホテル門司港',
+  lead:'義大利建築師 Aldo Rossi 設計的海邊飯店，就在門司港懷舊區裡，三晚的據點。',
+  facts:[
+   ['位置','北九州市門司區港町 9-11，JR 門司港站走 2–3 分；面對關門海峽'],
+   ['入住','15:00–24:00，退房 11:00'],
+   ['雙床房','標準雙床 21.2㎡；海峽豪華雙床 34–37.5㎡，兩張 120cm 床','標準雙床的床寬沒查到。'],
+   ['浴室','有浴缸，沒有大浴場'],
+   ['早餐','2 樓自助餐 Buffet farmers，¥2,800，7:00–10:00','如果房價沒含早餐，懷舊區附近也有便利商店。'],
+   ['特色','1998 年開幕（前身是門司港ホテル），客房以豪華郵輪為主題']
+  ],
+  tips:[
+   'Day 1 晚上 19:30 才入住，點燈就在門口，放下行李直接出去散步。',
+   '三晚都住這裡，Day 3 去福岡不用帶行李；Day 4 早上把行李寄出再出門。',
+   '海峽側的房間看得到關門橋，訂房時可以備註想要海景。'
+  ]},
+ {id:'h2', stayKey:'櫻谷酒店', nm:'櫻谷酒店', jp:'Miyajima no Yado Sakuraya', img:'',
+  when:'Day 4　2/15 入住，1 晚', price:'約 NT$2,200／晚', q:'Miyajima no Yado Sakuraya',
+  lead:'住在宮島上的小旅館，晚上和清晨的嚴島神社都看得到。',
+  facts:[
+   ['位置','廿日市市宮島町 853-1，走到嚴島神社約 7 分'],
+   ['入住','15:00–22:00，退房 10:00'],
+   ['房型','和室（榻榻米、鋪被褥），分山側和海側','雙床房的配置沒查到，和室通常是兩組被褥並排。'],
+   ['浴室','部分房型共用衛浴；大浴場 15:00–23:00','有刺青可能會被拒絕使用大浴場。'],
+   ['餐食','不附餐，早晚餐自理，LAWSON 走路可到'],
+   ['稅金','上島要付宮島訪問稅 ¥100；2026/4/1 起，每人每晚房價 ¥6,000 以上另收住宿稅 ¥200'],
+   ['其他','2013 年整修']
+  ],
+  tips:[
+   '退房 10:00，Day 5 要上彌山，入住時先問能不能把行李寄放在櫃台。',
+   '晚餐後去看嚴島神社點燈，亮到 23:00 左右。'
+  ]},
+ {id:'h3', stayKey:'廣島河畔皇家花園酒店', nm:'廣島河畔皇家花園酒店', jp:'ザ ロイヤルパークホテル 広島リバーサイド', img:'',
+  when:'Day 5–6　2/16 入住，2 晚', price:'約 NT$1,350／晚', q:'ザ ロイヤルパークホテル 広島リバーサイド',
+  lead:'在京橋川邊、縮景園旁邊，走到廣島站約 8 分，最後兩晚的據點。',
+  facts:[
+   ['位置','廣島市中區上幟町 7-14，廣島站南口走約 8 分'],
+   ['入住','15:00 起，退房 11:00'],
+   ['雙床房','經濟雙床 17.6㎡（90cm 床×2）、標準 21.4㎡、高級 23.7㎡、豪華 36.7㎡（120cm 床×2）','90cm 比台灣的單人床稍窄，看訂的是哪一型。'],
+   ['浴室','有浴缸，沒有大浴場'],
+   ['早餐','1 樓 The Riverside Cafe，7:00–10:00，約 ¥1,760–1,980']
+  ],
+  tips:[
+   'Day 6 早上 9:00 去縮景園，走路就到。',
+   'Day 7 的利木津巴士在北口（新幹線口），從飯店過去要穿過車站，多留 15 分鐘。',
+   '行李從門司港寄過來的話，入住時跟櫃台說一聲。'
+  ]}
+];
+
+const STATIONS = [
+ {nm:'広島空港',d:1},{nm:'広島',d:1},{nm:'小倉',d:1},{nm:'門司港',d:1},{nm:'下関',d:2,side:1},{nm:'博多',d:3,side:1},
+ {nm:'宮島',d:4},{nm:'弥山',d:5,side:1},{nm:'広島',d:5},{nm:'広島空港',d:7}
+];
+
+const CHECKS = [
+ {g:'要先訂的',items:[
+  ['b1','廣島山口地區周遊券','出發前一個月起可上網預約，Day 1 在廣島站取票'],
+  ['b2','新幹線指定席','用周遊券劃位，Day 1、Day 3、Day 4'],
+  ['b3','三間飯店確認信'],
+  ['b4','行李寄送','Day 1 小倉、Day 4 門司港出發'],
+  ['b5','Visit Japan Web 入境資料','填完會拿到 QR code'],
+  ['b6','日本上網：eSIM 或網卡'],
+  ['b7','換日幣','市場、嚴島神社、小店常只收現金'],
+  ['b8','春帆樓午餐訂位','想吃河豚料亭才需要']
+ ]},
+ {g:'出發前再確認',items:[
+  ['c1','宮島纜車整備停駛日','約 1 月公布，撞到 2/16 就改走登山道'],
+  ['c2','和平紀念資料館 2 月休館日','2026 年是 2/16–2/21'],
+  ['c3','ますひろ 週二有沒有開','2/16 晚餐'],
+  ['c4','宮島 潮見表','想走到大鳥居下要等低潮'],
+  ['c5','利木津巴士時刻','Day 7 的 8:13 班次']
+ ]},
+ {g:'行李',items:[
+  ['p1','好走的鞋','彌山山頂要走一段石階'],
+  ['p2','防風外套','海峽和島上風很大'],
+  ['p3','行動電源'],
+  ['p4','零錢包','宮島訪問稅、投幣置物櫃'],
+  ['p5','保冷袋','明太子、河豚要冷藏']
+ ]}
+];
+
+const ALT = {}; const EVENTS = []; const PER = {}; const PHOTOS = {};
+// ---- Kokura / Mojiko / Shimonoseki: Day 1, Day 2, Day 4 morning ----
+ALT[1] = (ALT[1]||[]).concat([
+  {g:'小倉', nm:'北九州市漫畫博物館', q:'北九州市漫画ミュージアム', what:'松本零士的故鄉，館內有幾萬本漫畫可以自由翻，下雨時的好去處。週二休，週五有開。', near:'小倉站北口 あるあるCity 5–6 樓', hrs:'11:00–19:00', fee:'¥480', io:'室內'},
+  {g:'小倉', nm:'旦過市場', q:'旦過市場', what:'「北九州的廚房」，重建工程中照常營業，可以邊走邊吃。', near:'小倉城步行約 10 分', io:'室內'},
+  {g:'小倉', nm:'小倉城庭園、松本清張記念館', q:'小倉城庭園', what:'天守加庭園共通券 ¥700，再加清張記念館三館 ¥900。', near:'小倉城旁', fee:'共通券 ¥700 起', io:'室內＋戶外'},
+  {g:'小倉', nm:'小倉八坂神社', q:'八坂神社 小倉', what:'就在小倉城裡，順路參拜。', near:'小倉城內', fee:'免費', io:'戶外'}
+]);
+ALT[2] = [
+  {g:'下關', nm:'赤間神宮', q:'赤間神宮', what:'龍宮造型的朱紅神社，祭祀壇之浦戰役沉海的安德天皇，就在春帆樓隔壁。', near:'春帆樓旁', hrs:'寶物殿 9:00–16:30', fee:'寶物殿 ¥100', io:'戶外'},
+  {g:'下關', nm:'日清講和記念館', q:'日清講和記念館', what:'1895 年簽《馬關條約》的地方，原樣保存當時的桌椅。', near:'春帆樓旁', hrs:'9:00–17:00', fee:'免費', io:'室內'},
+  {g:'下關', nm:'海響館', q:'海響館', what:'2025 年翻新，有約 100 種河豚的展區。', near:'唐戶市場旁', hrs:'9:30–17:30', fee:'¥2,500', io:'室內'},
+  {g:'門司港', nm:'舊門司稅關', q:'旧門司税関', what:'紅磚洋館，二樓可以看海峽。', near:'門司港懷舊區', hrs:'9:00–17:00', fee:'免費', io:'室內'},
+  {g:'門司港', nm:'舊門司三井俱樂部', q:'旧門司三井倶楽部', what:'愛因斯坦住過的洋館，二樓有展示，離飯店很近。', near:'門司港站旁', hrs:'9:00–17:00', fee:'2 樓約 ¥150', io:'室內'},
+  {g:'門司港', nm:'關門海峽博物館', q:'関門海峡ミュージアム', what:'講海峽歷史的博物館，風大或下雨時的備案。', near:'門司港懷舊區', hrs:'9:00–17:00', fee:'¥500', io:'室內'},
+  {g:'門司港', nm:'和布刈神社', q:'和布刈神社', what:'海峽邊的古神社，鳥居就立在急流前，在關門橋正下方。', near:'門司港搭巴士到「和布刈神社前」', fee:'免費', io:'戶外'}
+];
+
+EVENTS.push(
+  {id:'mojiillumi', nm:'門司港懷舊區冬季點燈', dt:'11/14–5/23', dt2:'2026–27', when:'18:00 點燈，原則上亮到 24:00', where:'門司港懷舊區', note:'就在飯店門口，三個晚上都看得到。', days:[1,2,3], q:'門司港レトロ'},
+  {id:'mojihina', nm:'門司港懷舊區雛祭', dt:'2月初–3月初', dt2:'往年', when:'2026 年是 2/7–3/1，懷舊區各館擺雛人形', where:'門司港懷舊區', note:'2027 年日期還沒公布，照往年會碰到。', days:[2], q:'門司港レトロ'},
+  {id:'mekari', nm:'和布刈神事（這次碰不到）', dt:'2/7', dt2:'2027', when:'每年農曆元旦凌晨舉行，2027 年是 2/7', where:'和布刈神社', note:'在你們出發前五天。', days:[], q:'和布刈神社'},
+  {id:'fukunohi', nm:'下關河豚日祭（這次碰不到）', dt:'2/11', dt2:'往年', when:'2026 年是 2/11 早上，在南風泊市場', where:'下關', note:'2027 年日期還沒公布；如果一樣是 2/11，就是你們抵達前一天。', days:[], q:'南風泊市場'}
+);
+
+const PER_K = {
+ 1: {
+  eat:[
+   {g:'廣島站午餐（13:52 新幹線前）', nm:'廣島燒', note:'電光石火 駅前ひろば店在南口步行 3 分，10:00–22:30，無休，趕新幹線前吃最順。', shops:[['電光石火 駅前ひろば店','電光石火 駅前ひろば店']]},
+   {g:'廣島站午餐（13:52 新幹線前）', nm:'minamoa 餐廳樓層', note:'跟車站直結的新大樓，6 樓整層是餐廳。', shops:[['minamoa','minamoa 広島']]},
+   {g:'小倉晚餐', nm:'資さんうどん（原行程）', note:'北九州人的國民烏龍麵，魚町店 24 小時、無休。', shops:[['資さんうどん 魚町店','資さんうどん 魚町店']]},
+   {g:'小倉晚餐', nm:'小倉燒烏龍', note:'燒烏龍的發祥店，11:30 開。', shops:[['だるま堂','だるま堂 小倉']]},
+   {g:'小倉晚餐', nm:'糠炊（ぬか炊き）', note:'用米糠醬燉青花魚、沙丁魚，小倉的家常味。週日休，週五有開。', shops:[['百年床 宇佐美商店','宇佐美商店 旦過市場']]}
+  ],
+  buy:[
+   {g:'小倉站', nm:'湖月堂 栗饅頭', note:'1895 年創業的小倉老店。', shops:[['湖月堂本店','湖月堂 本店 小倉']]},
+   {g:'小倉站', nm:'ひよ子のたまご あまおう', note:'博多站和小倉站限定。', shops:[['小倉駅','小倉駅 お土産']]},
+   {g:'小倉站', nm:'ネジチョコ、明太子脆餅', note:'螺絲造型的巧克力，北九州工業城的梗。', shops:[['小倉駅','小倉駅 お土産']]},
+   {g:'小倉站', nm:'くろがね堅パン', note:'當年給八幡製鐵所工人吃的超硬麵包，很耐放。'}
+  ]
+ },
+ 2: {
+  eat:[
+   {g:'唐戶市場午餐', nm:'市場攤位壽司', note:'週六「活きいき馬関街」約 20 攤，10:00 開、賣完就收，一貫 ¥100 起。', shops:[['唐戸市場','唐戸市場']]},
+   {g:'唐戶市場午餐', nm:'河豚定食', note:'市場 2 樓，週六開到 14:30，週三休。河豚刺身定食 ¥1,200。', shops:[['市場食堂よし','市場食堂よし 唐戸市場']]},
+   {g:'唐戶市場午餐', nm:'鮪魚丼', note:'6:00–13:30，週三休。', shops:[['まぐろとかめ','まぐろとかめ 唐戸']]},
+   {g:'門司港晚餐', nm:'燒咖哩（原行程）', note:'伽哩本舗 11:00–19:30，最後點餐時間沒查到，18:00 前到比較穩。', shops:[['伽哩本舗 門司港レトロ店','伽哩本舗 門司港']]},
+   {g:'門司港晚餐', nm:'燒咖哩（備案）', note:'週五、週六開到 22:00，無休。', shops:[['BEAR FRUITS','BEAR FRUITS 門司港']]},
+   {g:'門司港晚餐', nm:'河豚料理', note:'2 月是河豚最肥的季節。套餐 ¥7,700 起，17:00–21:00。', shops:[['ふく料理 志げる','志げる 門司港']]}
+  ],
+  snack:[
+   {nm:'河豚味噌湯', note:'馬関街攤位就有，冬天喝很暖。', shops:[['唐戸市場','唐戸市場']]},
+   {nm:'紅豆湯', note:'門司港的老甜品店，¥550。', shops:[['梅月','梅月 門司港']]},
+   {nm:'燒咖哩烏龍', note:'午餐限定，11:00–15:30，週四休。', shops:[['港屋千兵衛','港屋千兵衛 門司港']]}
+  ],
+  buy:[
+   {nm:'河豚刺身、河豚火鍋組', note:'唐戶市場買得到，要冷藏，當天吃或請店家包保冷。', shops:[['唐戸市場','唐戸市場']]}
+  ]
+ },
+ 4: {
+  buy:[
+   {g:'小倉站轉車（18 分鐘）', nm:'最後的九州伴手禮', note:'之後就離開九州了。湖月堂栗饅頭、ひよ子のたまご あまおう、ネジチョコ都在站內。', shops:[['小倉駅','小倉駅 お土産']]}
+  ]
+ }
+};
+for (const k in PER_K){ PER[k] = PER[k] || {}; for (const f of ['eat','snack','buy']) if (PER_K[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_K[k][f]); }
+
+Object.assign(PHOTOS, {
+  hero:'Itsukushima-jinja_torii_at_sunset.jpg',
+  act1:'Kanmon_Straits_and_Kanmonkyo_Bridge_33021765_org.v1367901695.jpg',
+  kokura:'Kokura_castle_from_the_Japanese_garden.jpg',
+  mojikosta:'Mojiko_Station_02.JPG',
+  mojikoretro:'140721_Mojiko_Retro_Kitakyushu_Japan01s3.jpg',
+  kanmonbridge:'KANMONKYO_Bridge.jpg',
+  karato:'141122_Karato_Fish_Market_Shimonoseki_Yamaguchi_pref_Japan01s3.jpg',
+  akama:'Akama_jingu.JPG',
+  yakicurry:'Yaki_curry.jpg',
+  sukesan:'Sukesan_Udon_Ryogoku.jpg',
+  h1:'Mojiko_Hotel.jpg'
+});
+
+// ---- Miyajima: Day 4, Day 5 morning ----
+ALT[4] = [
+  {nm:'千疊閣（豐國神社）', q:'千畳閣 宮島', what:'豐臣秀吉下令蓋的大經堂，鋪了 857 張榻榻米，就在神社後方的小丘上。', near:'嚴島神社步行約 3 分', hrs:'8:30–16:30', fee:'¥100', io:'有屋頂'},
+  {nm:'嚴島神社寶物館', q:'厳島神社宝物館', what:'平家奉納的經卷與寶物，跟昇殿共通券 ¥500。', near:'嚴島神社旁', hrs:'8:00–17:00', fee:'¥300', io:'室內'},
+  {nm:'五重塔', q:'五重塔 宮島', what:'千疊閣旁的朱紅塔，只能看外觀，可能在搭鷹架整修。', near:'千疊閣旁', fee:'免費', io:'戶外'},
+  {nm:'宮島水族館', q:'宮島水族館 みやじマリン', what:'下雨時的備案，瀨戶內海的魚和牡蠣養殖展示。', near:'嚴島神社步行約 10 分', hrs:'9:00–17:00', fee:'¥1,420', io:'室內'}
+];
+ALT[5] = (ALT[5]||[]).concat([
+  {g:'宮島早上', nm:'紅葉谷公園', q:'紅葉谷公園', what:'往纜車站必經的溪谷公園，冬天清晨很安靜。', near:'纜車站下方', fee:'免費', io:'戶外'},
+  {g:'宮島早上', nm:'宮島歷史民俗資料館', q:'宮島歴史民俗資料館', what:'老商家改建的資料館，週一休，週二有開。', near:'嚴島神社步行約 5 分', io:'室內'}
+]);
+
+EVENTS.push(
+  {id:'miyalight', nm:'嚴島神社夜間點燈', dt:'每晚', dt2:'全年', when:'社殿、五重塔、多寶塔、大鳥居從日落亮到約 23:00', where:'嚴島神社', note:'住在島上才看得到，遊客散了以後最安靜。', days:[4], q:'厳島神社'},
+  {id:'kakimatsuri', nm:'宮島牡蠣祭（這次碰不到）', dt:'2月第二個週末', dt2:'往年', when:'照慣例 2027 年會是 2/13–2/14，10:00–15:00，宮島棧橋前', where:'宮島', note:'2026 年因為牡蠣大量死亡停辦，2027 年還沒公布。就算照辦，也比你們早兩天。', days:[], q:'宮島桟橋'}
+);
+
+const PER_M = {
+ 4: {
+  season:'牡蠣 10 月到 3 月最好吃。不過宮島漁協 2025 年約六成牡蠣死亡，2026 年的牡蠣祭還因此停辦，2027 年供應量可能偏少，想吃的店先問有沒有。',
+  eat:[
+   {g:'午餐（週一）', nm:'烤牡蠣', note:'原本排在 Day 5 的焼がきのはやし週三休、週一有開，可以跟 Day 5 的午餐對調。10:30–16:30。', shops:[['焼がきのはやし','焼がきのはやし']]},
+   {g:'午餐（週一）', nm:'星鰻飯（あなごめし）', note:'うえの在宮島口，搭船前吃。10:00–19:00，無休，不收訂位，排隊在隔壁的上野商店。ふじたや在島上，不定休。', shops:[['あなごめし うえの 宮島口本店','あなごめし うえの'],['あなごめし ふじたや','ふじたや 宮島']]},
+   {g:'午餐（週一）', nm:'牡蠣專門店', note:'牡蠣屋 10:00–18:00、賣完就收；かきふくまる週四休。', shops:[['牡蠣屋','牡蠣屋 宮島'],['かきふくまる','かきふくまる 宮島']]},
+   {g:'晚餐（週一）', nm:'超商（原行程）', note:'島上餐廳多半 17:00 前收，所以吃超商很合理。LAWSON 7:30–21:30。', shops:[['ローソン 宮島店','ローソン 宮島店']]},
+   {g:'晚餐（週一）', nm:'有開的餐廳', note:'KIMURA 18:00–22:00、週四休；宮島キュイエール 18:00–21:00；レ・クロ 17:00–20:00，晚餐約 ¥5,000。', shops:[['KIMURA','KIMURA 宮島'],['宮島キュイエール','宮島キュイエール'],['宮島レ・クロ','宮島 レクロ']]}
+  ],
+  snack:[
+   {nm:'炸紅葉饅頭（揚げもみじ）', note:'外酥內軟，有豆沙、奶油、起司口味，一個約 ¥200–300。', shops:[['紅葉堂本店','紅葉堂 本店 宮島'],['紅葉堂 弐番屋','紅葉堂 弐番屋']]},
+   {nm:'生もみじ', note:'Q 彈的米粉版紅葉饅頭。', shops:[['にしき堂 宮島店','にしき堂 宮島店']]},
+   {nm:'特殊口味紅葉饅頭', note:'南瓜、蘭姆葡萄等口味。', shops:[['木村家本店','木村家本店 宮島']]},
+   {nm:'咖啡、霜淇淋', note:'自家烘焙，9:00–18:00。', shops:[['伊都岐珈琲','伊都岐珈琲']]}
+  ],
+  buy:[
+   {nm:'紅葉饅頭', note:'やまだ屋有超過 13 種口味，還能體驗手烤。', shops:[['やまだ屋 宮島本店','やまだ屋 宮島本店']]},
+   {nm:'杓子煎餅、柿羊羹', shops:[['藤い屋 宮島本店','藤い屋 宮島本店']]},
+   {nm:'宮島飯杓', note:'宮島是飯杓的發源地，「召取る」諧音，考生和業務員最愛。', shops:[['博多屋','博多屋 宮島']]},
+   {nm:'廣島清酒、七味', shops:[['宮島鉄鍋火屋本店','宮島鉄鍋火屋本店']]},
+   {nm:'油漬牡蠣', shops:[['牡蠣屋','牡蠣屋 宮島']]}
+  ]
+ },
+ 5: {
+  eat:[
+   {g:'午餐（週二）', nm:'烤牡蠣（原行程）', note:'焼がきのはやし 10:30–16:30，週三休，今天有開。', shops:[['焼がきのはやし','焼がきのはやし']]},
+   {g:'午餐（週二）', nm:'星鰻飯、牡蠣定食', note:'宮島いちわ午餐 11:30–15:00，週二到週日開。如果 Day 4 改吃はやし，今天就吃這家。', shops:[['宮島いちわ','宮島いちわ']]},
+   {g:'午餐（週二）', nm:'星鰻飯便當', note:'回程經過宮島口時外帶，便當可一個月前預約。', shops:[['あなごめし うえの 宮島口本店','あなごめし うえの']]}
+  ]
+ }
+};
+for (const k in PER_M){ PER[k] = PER[k] || {}; if (PER_M[k].season) PER[k].season = PER_M[k].season; for (const f of ['eat','snack','buy']) if (PER_M[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_M[k][f]); }
+
+Object.assign(PHOTOS, {
+  act2:'Torii_and_Itsukushima_Shrine.jpg',
+  shrinecorr:'Corridors,_Itsukushima_Shinto_Shrine_-_DSC01945.JPG',
+  shrinenight:'Itsukushima-Shrine_Night.jpg',
+  daishoin:'Daisho-in_(Miyajima)_-_DSC02130.JPG',
+  ropeway:'Miyajima_Ropeway.jpg',
+  misen:'Miyajima-from-misen-san.jpg',
+  anago:'Japanese_anagomeshi.jpg',
+  oysters:'Grilled_oysters_Food_in_Miyajima_-_DSC02189.JPG',
+  hiroair:'Hiroshima-airport001.JPG',
+  hirosta:'広島駅駅舎.jpg'
+});
+
+// ---- Hiroshima city: Day 1 lunch, Day 5 evening, Day 6, Day 7 ----
+ALT[5] = (ALT[5]||[]).concat([
+  {g:'廣島晚上', nm:'minamoa 廣島站大樓', q:'minamoa 広島', what:'2025 年開的新車站大樓，B1 到 9 樓約 220 家店，6 樓整層是餐廳，屋頂有ソラモア廣場。', near:'廣島站直結', io:'室內'},
+  {g:'廣島晚上', nm:'お好み村', q:'お好み村 広島', what:'一整棟都是廣島燒攤位，坐在鐵板前看師傅做，晚餐的熱門備案。', near:'八丁堀電車站步行 3 分', io:'室內'}
+]);
+ALT[6] = [
+  {nm:'原爆圓頂館', q:'原爆ドーム', what:'世界遺產，只能在外面看，不能進去。從和平公園過橋就到。', near:'和平紀念公園旁', fee:'免費', io:'戶外'},
+  {nm:'廣島和平紀念資料館', q:'広島平和記念資料館', what:'原行程的「和平之森」順路就能進。每年 2 月中會換展休館約 3 天，2026 年是 2/16–2/21，2027 年的日期公布前先查。', near:'和平紀念公園內', hrs:'7:30–18:00', fee:'¥200', io:'室內'},
+  {nm:'廣島城二之丸', q:'広島城 二の丸', what:'天守關了，但二之丸的表御門和櫓免費開放，城的氣氛還在。', near:'廣島城內', hrs:'9:00–16:30', fee:'免費', io:'室內＋戶外'},
+  {nm:'ひろしま美術館', q:'ひろしま美術館', what:'中央公園裡的私人美術館，以法國印象派收藏出名。週一休，週三有開。', near:'廣島城旁', hrs:'9:00–17:00', fee:'依展覽', io:'室內'},
+  {nm:'世界和平紀念聖堂', q:'世界平和記念聖堂', what:'村野藤吾設計的戰後教堂，免費參觀，教會活動時不開放。', near:'八丁堀', hrs:'9:00–17:00', fee:'免費', io:'室內'},
+  {nm:'minamoa 屋頂 ソラモア廣場', q:'minamoa 広島 ソラモア広場', what:'車站大樓頂樓，路面電車就從大樓裡開進來，晚上吃完 Shake Shack 順便上去。', near:'廣島站', io:'戶外'}
+];
+
+EVENTS.push(
+  {id:'shukkeiume', nm:'縮景園賞梅', dt:'2月中–3月初', dt2:'季節', when:'園內約 140 棵梅樹，最佳觀賞期 2 月中旬到 3 月上旬；往年有梅見茶會', where:'縮景園', note:'2/17 剛好進入花期。茶會的 2027 年日期還沒公布。', days:[6], q:'縮景園'}
+);
+
+const PER_H = {
+ 5: {
+  eat:[
+   {g:'廣島晚餐（週二）', nm:'府中燒、鐵板燒（原行程）', note:'ますひろ 17:00–22:00。有資料寫週二公休，2/16 剛好週二，先打電話確認。', shops:[['ますひろ 上八丁堀店','ますひろ 上八丁堀']]},
+   {g:'廣島晚餐（週二）', nm:'廣島燒', note:'電光石火在車站南口，無休；お好み村 たけのこ週四休，今天有開。みっちゃん週二休，不要排今天。', shops:[['電光石火 駅前ひろば店','電光石火 駅前ひろば店'],['お好み村 たけのこ','お好み村 たけのこ']]},
+   {g:'廣島晚餐（週二）', nm:'汁なし担担麺', note:'無湯的擔擔麵，花椒很麻，廣島近年最紅的在地麵。11:00–22:00，無休。', shops:[['キング軒 本通り店','キング軒 本通り店']]},
+   {g:'廣島晚餐（週二）', nm:'牡蠣配檸檬', note:'廣島兩大名產一起吃。晚上 17:00–22:00，公休日沒查到。', shops:[['SANGO','レモン&オイスターガーデン SANGO']]}
+  ],
+  buy:[
+   {g:'廣島站 ekie おみやげ館（8:00–21:00）', nm:'紅葉饅頭', note:'にしき堂一個 ¥140；藤い屋有五種口味綜合盒。', shops:[['にしき堂','にしき堂 広島駅'],['藤い屋','藤い屋 広島駅']]},
+   {g:'廣島站 ekie おみやげ館（8:00–21:00）', nm:'生もみじ', note:'米粉做的 Q 彈版紅葉饅頭。', shops:[['にしき堂','にしき堂 広島駅']]},
+   {g:'廣島站 ekie おみやげ館（8:00–21:00）', nm:'瀨戶田檸檬蛋糕', shops:[['アンデルセン','ekie おみやげ館']]},
+   {g:'廣島站 ekie おみやげ館（8:00–21:00）', nm:'川通り餅、桐葉菓', note:'在地老牌和菓子，便宜好分。', shops:[['ekie おみやげ館','ekie おみやげ館']]},
+   {g:'廣島站 ekie おみやげ館（8:00–21:00）', nm:'烤牡蠣仙貝', shops:[['ekie おみやげ館','ekie おみやげ館']]}
+  ]
+ },
+ 6: {
+  eat:[
+   {g:'午餐（紙屋町、八丁堀一帶）', nm:'牛丼（原行程）', note:'松屋 24 小時、全年無休，紙屋町西電車站步行 2 分。', shops:[['松屋 広島紙屋町店','松屋 広島紙屋町店']]},
+   {g:'午餐（紙屋町、八丁堀一帶）', nm:'廣島燒', note:'みっちゃん 八丁堀本店平日 11:30–14:30，週三有開。', shops:[['みっちゃん総本店 八丁堀本店','みっちゃん総本店 八丁堀本店']]},
+   {g:'午餐（紙屋町、八丁堀一帶）', nm:'汁なし担担麺', note:'くにまつ 11:00–15:00，週末休，週三剛好有開。', shops:[['中華そば くにまつ','中華そば くにまつ'],['キング軒 本通り店','キング軒 本通り店']]},
+   {g:'午餐（紙屋町、八丁堀一帶）', nm:'廣島沾麵', note:'冷麵配超辣沾醬。ばくだん屋總本店週三休，今天改去辛部。', shops:[['辛部 十日市店','辛部 十日市店']]},
+   {g:'晚餐', nm:'Shake Shack（原行程）', note:'在廣島站 minamoa 2 樓，不在紙屋町。10:00–21:30。', shops:[['Shake Shack ミナモア広島','Shake Shack ミナモア広島']]}
+  ],
+  snack:[
+   {nm:'八朔大福', note:'整瓣八朔柑橘包在麻糬裡，要冷藏，三天內吃完。ekie 單顆 ¥210，有沒有貨每天不同。', shops:[['ekie おみやげ館','ekie おみやげ館']]},
+   {nm:'紅葉饅頭', note:'現在烤的最好吃，車站買得到。', shops:[['にしき堂','にしき堂 広島駅']]}
+  ]
+ },
+ 7: {
+  buy:[
+   {nm:'最後補貨', note:'ekie おみやげ館 8:00 才開，8:13 的巴士來不及，伴手禮前一天先買好，剩下的到機場補。', shops:[['広島空港','広島空港']]}
+  ]
+ }
+};
+for (const k in PER_H){ PER[k] = PER[k] || {}; for (const f of ['eat','snack','buy']) if (PER_H[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_H[k][f]); }
+
+Object.assign(PHOTOS, {
+  act3:'Atomic_Bomb_Dome_and_Motoyaso_River,_Hiroshima,_Northwest_view_20190417_1.jpg',
+  abomb:'Atomic_Bomb_Dome,_Hiroshima,_South_view_20190417_1.jpg',
+  shukkeien:'Hiroshima_Shukkei-en_Pond.jpg',
+  orizuru:'HIROSHIMA_ORIZURU_TOWER_2016-1006-1.jpg',
+  hcastle:'Keep_tower,_Hiroshima_Castle,_Southwest_remote_view_20190417_1.jpg',
+  okonomiyaki:'Hiroshimayaki.jpg',
+  momiji:'Momiji_Manju_-Nishikido.jpg'
+});
+
+// ---- Fukuoka day trip: Day 3 (Sun 2/14) ----
+ALT[3] = [
+  {g:'大濠公園一帶', nm:'舞鶴公園、福岡城跡梅園', q:'舞鶴公園 梅園', what:'就在大濠公園東邊，約 250 棵梅樹，往年 1 月下旬到 3 月上旬開花，可以直接併進上午。多聞櫓 9:00–17:00 開放。', near:'大濠公園東側，步行可到', fee:'免費', io:'戶外'},
+  {g:'大濠公園一帶', nm:'大濠公園日本庭園', q:'大濠公園日本庭園', what:'池泉回遊式庭園。因為新縣立美術館施工，預定 2027/3/31 起暫時休園，2 月是關閉前最後一季。只收現金。', near:'大濠公園南側，美術館旁', hrs:'9:00–17:00（最後入園 16:45）', fee:'¥250', io:'戶外'},
+  {g:'博多一帶', nm:'櫛田神社', q:'櫛田神社', what:'博多的總鎮守，境內常設一座約 13 公尺高的祇園山笠「飾り山」。', near:'運河城步行約 5 分', hrs:'4:00–22:00', fee:'免費', io:'戶外'},
+  {g:'博多一帶', nm:'博多町家ふるさと館', q:'博多町家ふるさと館', what:'明治時代的博多町家，看博多織、山笠的老街生活。', near:'櫛田神社大鳥居前', hrs:'10:00–18:00', fee:'展示棟 ¥200', io:'室內'},
+  {g:'博多一帶', nm:'東長寺 福岡大佛', q:'東長寺 福岡', what:'日本最大的木造坐佛，佛像底下可以走「地獄極樂巡」。', near:'祇園站旁', hrs:'9:00–16:45', fee:'¥50', io:'室內＋戶外'},
+  {g:'博多一帶', nm:'KITTE 博多、博多阪急 B1', q:'KITTE博多', what:'跟博多站直結，最後一小時補貨、買便當最方便。', near:'博多站', hrs:'博多阪急 10:00–20:00', io:'室內'},
+  {g:'換掉下午也可以', nm:'太宰府天滿宮', q:'太宰府天満宮', what:'約 6,000 棵梅樹，往年 2 月中旬到 3 月上旬開花。想去的話，建議拿運河城、天神這段來換。本殿在整修中，2027 年狀況未確認。', near:'天神搭西鐵約 30 分（¥420）／博多巴士總站直達約 40 分（¥800）', hrs:'6:30 開門', fee:'免費', io:'戶外'},
+  {g:'換掉下午也可以', nm:'福岡塔', q:'福岡タワー', what:'234 公尺的海濱塔，看博多灣夕陽。離今天的路線比較遠，要搭西鐵巴士。', near:'百道濱', hrs:'9:30–22:00', fee:'¥1,000', io:'室內'}
+];
+
+EVENTS.push(
+  {id:'maizuruume', nm:'舞鶴公園梅花祭', dt:'2月中旬', dt2:'往年', when:'2026 年是 2/14–2/15，10:00–16:00，下雨取消', where:'舞鶴公園 福岡城跡梅園', note:'2027 年日期還沒公布；如果一樣辦在 2 月第二個週末，就剛好是你們去福岡那天。', days:[3], q:'舞鶴公園 梅園'},
+  {id:'dazaifu', nm:'太宰府天滿宮 門前祭、賞梅', dt:'2月–3月', dt2:'2026', when:'2026 年門前祭 2/7–3/20，池坊花道展 2/13–2/16', where:'太宰府天滿宮', note:'2027 年還沒公布。梅花 2/14 大概開幾成也還不知道，2026 年是 2/25 滿開。', days:[3], q:'太宰府天満宮'}
+);
+
+const PER_F = {
+ 3: {
+  eat:[
+   {g:'午餐（週日）', nm:'海鮮丼（原行程）', note:'うお田已經搬到西中洲。午餐 11:00–15:00 最後點餐，人多時要先取號、等 1–2 小時，發號機約 15:00 收。14:00 才到很可能吃不到，建議 13:30 前先去拿號。', shops:[['博多シーフード うお田','博多シーフード うお田 西中洲']]},
+   {g:'午餐（週日）', nm:'明太子重', note:'うお田的備案，同在西中洲，7:00–22:30，有繁中菜單。', shops:[['元祖博多めんたい重','元祖博多めんたい重']]},
+   {g:'午餐（週日）', nm:'牛腸鍋', note:'楽天地在天神 ACROS 福岡 B2，11:00 開，順著下午逛天神。', shops:[['元祖もつ鍋 楽天地 天神本店','元祖もつ鍋 楽天地 天神本店']]},
+   {g:'晚餐（週日）', nm:'一蘭（原行程）', note:'本社總本店 24 小時，全部是個人隔間座位。', shops:[['一蘭 本社総本店','一蘭 本社総本店']]},
+   {g:'晚餐（週日）', nm:'豚骨拉麵', note:'在博多站東邊，吃完直接搭車。11:00–24:00。', shops:[['博多一双 博多駅東本店','博多一双 博多駅東本店']]},
+   {g:'晚餐（週日）', nm:'牛腸鍋', note:'前田屋在博多站附近，17:00 開。', shops:[['博多もつ鍋 前田屋 総本店','博多もつ鍋 前田屋 総本店']]},
+   {g:'晚餐（週日）', nm:'雞肉水炊', note:'華味鳥 17:00 開，在中洲，離一蘭很近。', shops:[['博多華味鳥 中洲本店','博多華味鳥 中洲本店']]},
+   {g:'晚餐（週日）', nm:'牧のうどん', note:'福岡人的軟烏龍麵，麵會一直吸湯。在博多巴士總站 B1，10:00–23:00。', shops:[['牧のうどん 博多バスターミナル店','牧のうどん 博多バスターミナル']]},
+   {g:'週日公休，別排', nm:'博多祇園鉄なべ、もつ幸', note:'兩家都是週日休。'},
+   {g:'週日公休，別排', nm:'中洲屋台', note:'屋台多半 18:00 後才開，有些攤週日或 2 月第二個週日休，19:30 前要回博多站，時間很趕。'}
+  ],
+  snack:[
+   {nm:'博多通りもん', note:'牛奶餡西式饅頭，福岡伴手禮第一名。', shops:[['博多駅 マイング','博多駅 マイング']]},
+   {nm:'プレスバターサンド あまおう苺', note:'博多限定的草莓口味，5 個 ¥1,431。', shops:[['BAKE 博多駅','プレスバターサンド 博多駅']]},
+   {nm:'鈴乃◯餅', note:'鈴懸的小圓餅，一個 ¥128，現買現吃最好。', shops:[['鈴懸 博多デイトス','鈴懸 デイトス']]},
+   {nm:'むっちゃん万十', note:'鯛魚燒造型，火腿蛋口味最有名，¥260。', shops:[['博多バスターミナル','むっちゃん万十 博多バスターミナル']]}
+  ],
+  buy:[
+   {g:'博多站（デイトス 8:00–21:00、マイング 9:00–21:00）', nm:'明太子', note:'マイング有九州最大的明太子專區。要冷藏，回門司港放飯店冰箱。', shops:[['博多駅 マイング','博多駅 マイング']]},
+   {g:'博多站（デイトス 8:00–21:00、マイング 9:00–21:00）', nm:'めんべい', note:'明太子仙貝，好帶又便宜，2 袋 ¥260。', shops:[['博多駅 デイトス','博多デイトス みやげもん市場']]},
+   {g:'博多站（デイトス 8:00–21:00、マイング 9:00–21:00）', nm:'名菓ひよ子、チロリアン', note:'老牌福岡點心。', shops:[['博多駅 デイトス','博多デイトス みやげもん市場']]},
+   {g:'博多站（デイトス 8:00–21:00、マイング 9:00–21:00）', nm:'めんツナかんかん', note:'ふくや的明太子鮪魚罐頭，常溫可帶上飛機。', shops:[['博多駅 マイング','博多駅 マイング']]},
+   {g:'博多站（デイトス 8:00–21:00、マイング 9:00–21:00）', nm:'辛子高菜', note:'配白飯、拉麵都好。', shops:[['博多駅 デイトス','博多デイトス みやげもん市場']]},
+   {g:'博多阪急（10:00–20:00）', nm:'AMANBERRY', note:'あまおう草莓巧克力，只有博多阪急有。', shops:[['博多阪急','博多阪急']]}
+  ]
+ }
+};
+for (const k in PER_F){ PER[k] = PER[k] || {}; for (const f of ['eat','snack','buy']) if (PER_F[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_F[k][f]); }
+
+Object.assign(PHOTOS, {
+  ohori:'Ohori_Park,_Fukuoka.JPG',
+  fam:'Fukuoka_art_museum.JPG',
+  canal:'Canal_city_hakata_fukuoka.jpg',
+  ramen:'Yaruki-ramen_of_hakata-sanki.JPG',
+  ramen2:'Tonkotsu_ramen.JPG',
+  mentaiko:'Mentaiko_from_a_Fish_Market_in_Fukuoka.jpg'
+});
+
+
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const yen = n => '¥' + n.toLocaleString('en-US');
+const ntd = n => 'NT$' + Math.round(n).toLocaleString('en-US');
+const commons = f => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(f) + '?width=640';
+const mapUrl = q => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+const store = {
+  get(k, d){ try { const v = localStorage.getItem('setotrip:' + k); return v === null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem('setotrip:' + k, JSON.stringify(v)); } catch(e){} }
+};
+const ymd = tz => new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const nowMin = tz => { const p = new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date()).split(':'); return (+p[0]%24)*60 + +p[1]; };
+
+/* ---------- hero ---------- */
+{ const h = $('#heroImg'); h.onerror = () => h.remove(); if (PHOTOS.hero) { h.dataset.cf = PHOTOS.hero; h.dataset.keep = 1; h.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(PHOTOS.hero) + '?width=1400'; } else h.remove(); }
+
+/* ---------- nav + route ---------- */
+$('#nav').innerHTML =
+  DAYS.map(d => `<a class="chip" href="#d${d.n}" data-day="${d.n}"><b>D${d.n}</b>${d.md}</a>`).join('') +
+  '<span class="nav-sep" aria-hidden="true"></span>' +
+  [['events','活動'],['hotels','住宿'],['budget','預算'],['checks','清單']].map(([id,l]) => `<a class="chip go" href="#${id}" data-sec="${id}">${l}</a>`).join('');
+
+$('#line').innerHTML = STATIONS.map(s =>
+  `<a class="stn${s.side?' side':''}" href="#d${s.d}"><i></i><span class="nm">${s.nm}</span><span class="d">D${s.d}</span></a>`).join('');
+
+/* ---------- days ---------- */
+function stopHTML(s){
+  const icon = ICON[s.ic || s.k] || ICON.move;
+  const time = s.t2 ? `${s.t}<small>– ${s.t2}</small>` : s.sub ? `${s.t}<small>${s.sub}</small>` : s.t;
+  const costs = (s.cost||[]).map(([y,,l]) => `<span class="cost">${esc(l)} <b>${yen(y)}</b></span>`).join('');
+  const map = s.q ? `<a class="map" href="${mapUrl(s.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(s.q)}">${ICON.pin}地圖</a>` : '';
+  const note = (s.note ? (Array.isArray(s.note[0]) ? s.note : [s.note]) : []).map(n => `<p class="note ${n[0]}">${esc(n[1])}</p>`).join('');
+  return `<li class="stop k-${s.k}${s.tbd ? ' is-tbd' : ''}" data-t="${esc(s.t)}">
+    <div class="t">${time}</div>
+    <div class="ic" aria-hidden="true">${icon}</div>
+    <div><div class="nm">${esc(s.nm)}${s.tbd ? '<span class="tbd">待定</span>' : ''}</div>${(costs||map)?`<div class="meta">${costs}${map}</div>`:''}${note}</div>
+  </li>`;
+}
+const EVMAP = Object.fromEntries(EVENTS.map(e => [e.id, e]));
+function tagsHTML(a){
+  const t = [];
+  if (a.hrs) t.push(`<span class="tag">${esc(a.hrs)}</span>`);
+  if (a.fee) t.push(`<span class="tag">${esc(a.fee)}</span>`);
+  if (a.io) t.push(`<span class="tag${a.io==='室內'?' in':''}">${esc(a.io)}</span>`);
+  if (a.rsv) t.push(`<span class="tag rsv">${esc(a.rsv)}</span>`);
+  return t.length ? `<div class="tags">${t.join('')}</div>` : '';
+}
+function altHTML(a){
+  const map = a.q ? `<a class="map sm" href="${mapUrl(a.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(a.nm)}">${ICON.pin}地圖</a>` : '';
+  return `<div class="alt"><div class="alt-top"><div class="nm">${esc(a.nm)}</div>${map}</div>
+    ${a.what ? `<p>${esc(a.what)}</p>` : ''}${a.near ? `<p>${esc(a.near)}</p>` : ''}${tagsHTML(a)}</div>`;
+}
+function foodHTML(f){
+  const shops = (f.shops||[]).map(([n,q]) => `<a class="map" href="${mapUrl(q||n)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(n)}">${ICON.pin}${esc(n)}</a>`).join('');
+  return `<div class="food"><div class="nm">${esc(f.nm)}</div>${f.note ? `<p>${esc(f.note)}</p>` : ''}${shops ? `<div class="shops">${shops}</div>` : ''}</div>`;
+}
+function evtHTML(e){
+  return `<div class="evt"><div class="nm">${esc(e.nm)}</div><p>${esc(e.when)}${e.where ? '，' + esc(e.where) : ''}</p>${e.note ? `<p>${esc(e.note)}</p>` : ''}</div>`;
+}
+function grouped(items, fn){
+  let prev = null;
+  return items.map(a => { const h = a.g && a.g !== prev ? `<h4>${esc(a.g)}</h4>` : ''; prev = a.g; return h + fn(a); }).join('');
+}
+const TABS = [['ev','活動'],['alt','景點'],['eat','美食'],['snack','點心'],['buy','伴手禮']];
+function flexHTML(d){
+  const P = PER[d.n] || {};
+  const data = {ev: EVENTS.filter(e => e.days.includes(d.n)), alt: ALT[d.n] || [], eat: P.eat || [], snack: P.snack || [], buy: P.buy || []};
+  const tabs = TABS.filter(([k]) => data[k].length);
+  if (!tabs.length) return '';
+  const cnt = tabs.map(([k,l]) => `${l} ${data[k].length}`).join('，');
+  const bar = tabs.map(([k,l],i) => `<button class="tab sm" type="button" role="tab" id="t${d.n}-${k}" aria-controls="p${d.n}-${k}" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${l}<span>${data[k].length}</span></button>`).join('');
+  const panels = tabs.map(([k],i) => {
+    let body;
+    if (k === 'ev') body = data.ev.map(evtHTML).join('');
+    else if (k === 'alt') body = grouped(data.alt, altHTML);
+    else body = (k === 'eat' && P.season ? `<div class="seasonal"><b>季節提醒　</b>${esc(P.season)}</div>` : '') + grouped(data[k], foodHTML);
+    return `<div class="tp" role="tabpanel" id="p${d.n}-${k}" aria-labelledby="t${d.n}-${k}" ${i ? 'hidden' : ''}>${body}</div>`;
+  }).join('');
+  return `<details class="flex"><summary><b>彈性選項</b><span class="cnt">${cnt}</span></summary><div class="flex-body"><div class="tabs in" role="tablist" aria-label="Day ${d.n} 彈性選項">${bar}</div>${panels}</div></details>`;
+}
+let html = '', lastAct = 0;
+for (const d of DAYS){
+  if (d.act !== lastAct){
+    const a = ACTS[d.act]; lastAct = d.act;
+    const aimg = a.img[0] === '@' ? (PHOTOS[a.img.slice(1)] ? `<img data-cf="${esc(PHOTOS[a.img.slice(1)])}" data-keep="1" src="${commons(PHOTOS[a.img.slice(1)]).replace('width=640','width=1200')}" alt="${a.alt}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : '') : `<img src="${IMG[a.img]}" alt="${a.alt}" loading="lazy">`;
+    html += `<section class="act" aria-label="${a.no} ${a.title}">${aimg}
+      <div class="act-text"><div><div class="act-no">${a.no}　${a.where}</div><h2>${a.title}</h2><p>${a.text}</p></div></div></section>`;
+  }
+  const trip = d.trip.map(x => x === '⇄' ? '<span class="ar">⇄</span>' : esc(x))
+                     .join('<span class="ar">→</span>').replace(/<span class="ar">→<\/span><span class="ar">⇄<\/span><span class="ar">→<\/span>/,'<span class="ar">⇄</span>');
+  const pics = d.photos.map(([k,alt,kind]) => {
+    const tag = kind ? `<span class="k">${kind}</span>` : '';
+    if (k[0] !== '@') return `<figure><img src="${IMG[k]}" alt="${esc(alt)}" loading="lazy"><figcaption>${tag}${esc(alt)}</figcaption></figure>`;
+    const f = PHOTOS[k.slice(1)]; if (!f) return '';
+    return `<figure class="r"><img data-cf="${esc(f)}" src="${commons(f)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"><figcaption>${tag}${esc(alt)}</figcaption></figure>`;
+  }).join('');
+  const photos = pics ? `<div class="photos">${pics}</div>` : '';
+  html += `<article class="wrap day" id="d${d.n}" data-date="${d.date}">
+    <div class="ticket" role="img" aria-label="Day ${d.n}，${d.md} 星期${d.wd}，${d.trip.filter(x=>x!=='⇄').join(' 到 ')}">
+      <span class="today-tag">今天</span>
+      <div class="main">
+        <div class="kind"><em>${d.kind}</em><span>${d.jd}</span></div>
+        <div class="trip">${trip}</div>
+        <div class="foot"><span>経由　${esc(d.via)}</span><span class="fare">${d.fare ? yen(d.fare) : '當日有效'}</span></div>
+      </div>
+      <div class="stub"><small>Day</small><b>${d.n}</b><small>${ACTS[d.act].no}</small></div>
+    </div>
+    <h3>${esc(d.title)}</h3>
+    ${d.daynote ? `<p class="daynote">${esc(d.daynote)}</p>` : ''}
+    ${photos}
+    <ol class="tl">${d.stops.map(stopHTML).join('')}</ol>
+    ${flexHTML(d)}
+    ${d.stay ? `<div class="stay">${ICON.hotel}<div><span>今晚住　</span>${(H => `<a href="#${H ? H.id : 'hotels'}">${esc(H ? H.nm : d.stay)}</a>`)(HOTELS.find(h => h.stayKey === d.stay))}</div></div>` : ''}
+  </article>`;
+}
+$('#days').innerHTML = html;
+/* Commons photos: author and license are read live from Commons and listed in the footer */
+(async function(){
+  const imgs = [...document.querySelectorAll('img[data-cf]')];
+  if (!imgs.length) return;
+  const files = [...new Set(imgs.map(i => i.dataset.cf))];
+  const page = f => 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(f);
+  const meta = {};
+  for (let i = 0; i < files.length; i += 40){
+    const titles = files.slice(i, i + 40).map(f => 'File:' + f).join('|');
+    const url = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=640&iiextmetadatafilter=Artist|LicenseShortName&titles=' + encodeURIComponent(titles);
+    try {
+      const j = await (await fetch(url)).json();
+      for (const p of Object.values((j.query && j.query.pages) || {})){
+        if (!p.imageinfo) continue;
+        const ii = p.imageinfo[0], em = ii.extmetadata || {};
+        const tmp = document.createElement('div'); tmp.innerHTML = (em.Artist && em.Artist.value) || '';
+        meta[p.title.replace(/^File:/, '').replace(/ /g, '_')] = {thumb: ii.thumburl || ii.url, page: ii.descriptionurl, author: tmp.textContent.trim(), lic: (em.LicenseShortName && em.LicenseShortName.value) || ''};
+      }
+    } catch(e) {}
+  }
+  const seen = new Set(), items = [];
+  for (const img of imgs){
+    const f = img.dataset.cf, m = meta[f];
+    if (m && /\b(NC|ND)\b|non-?commercial|no ?deriv/i.test(m.lic)){ (img.closest('figure') || img).remove(); continue; }
+    if (m && m.thumb && img.isConnected && !img.dataset.keep) img.src = m.thumb;
+    if (seen.has(f) || !img.isConnected) continue;
+    seen.add(f);
+    const who = m && m.author ? esc(m.author) : '作者見原頁';
+    const lic = m && m.lic ? '，' + esc(m.lic) : '';
+    items.push(`<li>${esc(img.alt)}：<a href="${esc((m && m.page) || page(f))}" target="_blank" rel="noopener">${who}</a>${lic}</li>`);
+  }
+  $('#creditList').innerHTML = items.join('');
+})();
+function selectTab(btn){
+  const list = btn.parentElement;
+  list.querySelectorAll('.tab').forEach(t => { const on = t === btn; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; });
+  list.parentElement.querySelectorAll('.tp').forEach(p => p.hidden = p.id !== btn.getAttribute('aria-controls'));
+  list.scrollTo({left: btn.offsetLeft - list.clientWidth/2 + btn.offsetWidth/2, behavior: 'auto'});
+}
+$('#days').addEventListener('click', e => { const b = e.target.closest('.tabs.in .tab'); if (b) selectTab(b); });
+$('#days').addEventListener('keydown', e => {
+  const b = e.target.closest('.tabs.in .tab'); if (!b || !['ArrowRight','ArrowLeft'].includes(e.key)) return;
+  const tabs = [...b.parentElement.querySelectorAll('.tab')], i = tabs.indexOf(b);
+  const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+  n.focus(); selectTab(n); e.preventDefault();
+});
+
+/* ---------- events ---------- */
+$('#evList').innerHTML = [...EVENTS].sort((x,y) => (x.days.length ? Math.min(...x.days) : 99) - (y.days.length ? Math.min(...y.days) : 99)).map(e => `<div class="ev">
+  <div class="dt">${esc(e.dt)}${e.dt2 ? `<small>${esc(e.dt2)}</small>` : ''}</div>
+  <div><div class="nm">${esc(e.nm)}</div><p>${esc(e.when)}${e.where ? '，' + esc(e.where) : ''}</p>${e.note ? `<p>${esc(e.note)}</p>` : ''}
+  <div class="meta">${e.days.map(n => `<a class="d" href="#d${n}">Day ${n}</a>`).join('')}${e.q ? `<a class="map" href="${mapUrl(e.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(e.nm)}">${ICON.pin}地圖</a>` : ''}</div></div>
+</div>`).join('');
+
+/* ---------- hotels ---------- */
+$('#hotelList').innerHTML = HOTELS.map(h => `<article class="hotel" id="${h.id}">
+  ${h.img && h.img[0] === '@' ? (PHOTOS[h.img.slice(1)] ? `<img data-cf="${esc(PHOTOS[h.img.slice(1)])}" src="${commons(PHOTOS[h.img.slice(1)])}" alt="${esc(h.nm)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : '') : (h.img ? `<img src="${IMG[h.img]}" alt="${esc(h.nm)}" loading="lazy">` : '')}
+  <div class="hotel-head"><div><h3>${esc(h.nm)}<span class="jp">${esc(h.jp)}</span></h3><div class="when">${esc(h.when)}　${esc(h.price)}</div></div>
+    <a class="map" href="${mapUrl(h.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(h.nm)}">${ICON.pin}地圖</a></div>
+  <p class="lead">${esc(h.lead)}</p>
+  ${h.facts.length ? `<dl class="facts">${h.facts.map(([k,v,n]) => `<dt>${esc(k)}</dt><dd>${esc(v)}${n ? `<small>${esc(n)}</small>` : ''}</dd>`).join('')}</dl>` : ''}
+  ${h.tips.length ? `<ul class="htips">${h.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+</article>`).join('');
+
+/* ---------- budget ---------- */
+const cats = {move:{l:'交通',items:[]}, ticket:{l:'門票、體驗',items:[]}, food:{l:'餐飲',items:[]}};
+for (const d of DAYS) for (const s of d.stops) for (const [y,c,l] of (s.cost||[])) cats[c].items.push(y);
+const sum = a => a.reduce((x,y) => x+y, 0);
+const jpyTotal = sum(Object.values(cats).map(c => sum(c.items)));
+const FLIGHT = 15000;
+const LODGE = 2000*3 + 2200 + 1350*2;
+const range = (a,b) => `${ntd(a)}–${ntd(b).replace('NT$','')}`;
+const row = (l,v,cls='') => `<div class="row ${cls}"><span class="lb">${l}</span><span class="dots"></span><span class="v">${v}</span></div>`;
+$('#receipt').innerHTML = `<h3>旅費精算</h3>
+  ${Object.values(cats).map(c => row(c.l, yen(sum(c.items))) ).join('')}
+  ${row('日幣小計', yen(jpyTotal))}
+  ${row('機票（桃園－廣島來回）', ntd(FLIGHT))}
+  ${row('住宿（六晚）', ntd(LODGE))}
+  ${row('合計約', '<span id="grand"></span>', 'total')}
+  <div class="rate"><label for="rate">匯率 1 日圓 =</label><input id="rate" inputmode="decimal" value="${store.get('rate', 0.20)}"> 台幣</div>
+  <p class="fine">照原規劃表的金額加總，不含購物和伴手禮。匯率可以自己改，換算會跟著更新。</p>`;
+function calc(){
+  const r = parseFloat($('#rate').value) || 0;
+  store.set('rate', r);
+  $('#grand').textContent = ntd(jpyTotal * r + FLIGHT + LODGE);
+  const y = parseFloat(String($('#yen').value).replace(/[^\d.]/g,'')) || 0;
+  $('#yenOut').textContent = ntd(y * r);
+}
+$('#rate').addEventListener('input', calc);
+$('#yen').addEventListener('input', calc);
+calc();
+
+/* ---------- checklist ---------- */
+const done = store.get('checks', {});
+$('#checkList').innerHTML = CHECKS.map(g => `<h3>${g.g}</h3>` + g.items.map(([id,l,s]) =>
+  `<label class="ck"><input type="checkbox" data-id="${id}" ${done[id]?'checked':''}><span>${l}${s?`<small>${s}</small>`:''}</span></label>`).join('')).join('');
+$('#checkList').addEventListener('change', e => {
+  const id = e.target.dataset.id; if (!id) return;
+  done[id] = e.target.checked; store.set('checks', done);
+});
+
+/* ---------- today / countdown ---------- */
+(function(){
+  const st = $('#status'), fab = $('#fab');
+  const tokyo = ymd('Asia/Tokyo'), taipei = ymd('Asia/Taipei');
+  const start = DAYS[0].date, end = DAYS[DAYS.length-1].date;
+  const today = DAYS.find(d => d.date === tokyo);
+  if (today){
+    st.innerHTML = `<b>Day ${today.n}</b><span>${today.md}（${today.wd}）${esc(today.title)}</span>`;
+    const el = document.getElementById('d' + today.n);
+    el.classList.add('is-today');
+    document.querySelector(`.chip[data-day="${today.n}"]`).classList.add('is-today');
+    const now = nowMin('Asia/Tokyo');
+    for (const li of el.querySelectorAll('.stop')){
+      const m = li.dataset.t.match(/(\d{1,2}):(\d{2})/);
+      if (m && (+m[1]*60 + +m[2]) >= now){ li.classList.add('is-next'); break; }
+    }
+    fab.classList.add('show');
+    fab.addEventListener('click', () => el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}));
+  } else if (taipei < start){
+    const days = Math.round((Date.parse(start) - Date.parse(taipei)) / 864e5);
+    st.innerHTML = `<b>${days}</b><span>天後出發</span>`;
+  } else if (tokyo > end){
+    st.innerHTML = `<span>旅程結束，下一趟見。</span>`;
+  }
+})();
+
+/* ---------- nav highlight ---------- */
+(function(){
+  const chips = {};
+  document.querySelectorAll('.chip').forEach(c => chips[c.dataset.day ? 'd'+c.dataset.day : c.dataset.sec] = c);
+  const targets = [...document.querySelectorAll('article.day, section.sec')];
+  let cur = null;
+  const io = new IntersectionObserver(es => {
+    for (const e of es) if (e.isIntersecting){
+      const c = chips[e.target.id]; if (!c || c === cur) continue;
+      cur && cur.classList.remove('is-on'); c.classList.add('is-on'); cur = c;
+      c.scrollIntoView({block:'nearest', inline:'center', behavior:'auto'});
+    }
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  targets.forEach(t => io.observe(t));
+})();
+
+</script>
+</body>
+</html>
