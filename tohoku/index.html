@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>北國雪解 旅誌</title>
+<meta name="description" content="3/15–3/22 青森、弘前、奧入瀨、八戶、平泉、松島、仙台 8 天行程手冊">
+<meta name="theme-color" content="#13283d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316203a'/%3E%3Cpath d='M32 12v40M14.7 22l34.6 20M14.7 42l34.6-20' stroke='%23fff' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4EF;
+  --paper-2:#ECE7DE;
+  --ink:#23262E;
+  --ink-2:#5E6470;
+  --line:#D6D0C4;
+  --ticket:#E4EDDC;
+  --ticket-hatch:#CFDEC2;
+  --ticket-edge:#93AD80;
+  --seal:#B8323A;
+  --seal-soft:#F6E0E0;
+  --tip:#2E5E4E;
+  --tip-soft:#E1ECE6;
+  --night:#1E2A2A;
+  --kai:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","KaiTi",serif;
+  --dot:"DotGothic16","Hiragino Kaku Gothic ProN","Noto Sans JP",monospace;
+  --sans:system-ui,-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#12171A; --paper-2:#1A2125; --ink:#E6E8E3; --ink-2:#9DA5A0; --line:#2B3437;
+    --ticket:#1B2A22; --ticket-hatch:#213429; --ticket-edge:#4A6B55;
+    --seal:#E46A6E; --seal-soft:#3A1E21; --tip:#8CC5AE; --tip-soft:#183028; --night:#0C1214;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12171A; --paper-2:#1A2125; --ink:#E6E8E3; --ink-2:#9DA5A0; --line:#2B3437;
+  --ticket:#1B2A22; --ticket-hatch:#213429; --ticket-edge:#4A6B55;
+  --seal:#E46A6E; --seal-soft:#3A1E21; --tip:#8CC5AE; --tip-soft:#183028; --night:#0C1214;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans);font-feature-settings:"tnum"}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--tip);outline-offset:2px;border-radius:4px}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--night);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hero-top{position:relative;z-index:3;max-width:680px;margin:0 auto;padding:28px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;min-height:330px}
+.hero-meta{padding-top:6px;max-width:16em}
+.hero-meta .en{font-family:var(--kai);font-size:15px;letter-spacing:.04em;opacity:.75;margin:0 0 18px}
+.hero-meta .dates{font-family:var(--dot);font-size:30px;line-height:1.1;margin:0}
+.hero-meta .len{font-size:14px;opacity:.75;margin:6px 0 18px}
+.hero-meta .cities{font-family:var(--kai);font-size:17px;line-height:1.9;margin:0}
+.hero h1{writing-mode:vertical-rl;font-family:var(--kai);font-weight:700;font-size:clamp(40px,11.5vw,68px);line-height:1.25;letter-spacing:.12em;margin:0;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.hero-photo{position:relative;z-index:1;margin-top:-90px;min-height:120px;background:linear-gradient(#1E2A2A,#4E6B6B 60%,#C9B9A6)}
+.hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 55%}
+@media (min-width:700px){.hero-photo img{aspect-ratio:21/9}}
+.hero-photo::before{content:"";position:absolute;inset:0 0 auto 0;height:55%;background:linear-gradient(var(--night),transparent);z-index:1}
+.status{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:0 16px 14px}
+.status-inner{max-width:648px;margin:0 auto;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.status b{font-family:var(--dot);font-weight:400;font-size:34px;line-height:1}
+.status span{font-size:14px}
+
+/* ---------- sticky nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:680px;margin:0 auto;display:flex;gap:6px;overflow-x:auto;padding:8px 16px;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.chip{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:48px;height:44px;padding:0 10px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-size:12px;line-height:1.2}
+.chip b{font-family:var(--dot);font-weight:400;font-size:15px;color:var(--ink)}
+.chip.go{font-size:14px;font-weight:600;color:var(--ink);line-height:1}
+.chip.is-on{background:var(--ink);color:var(--paper)}
+.chip.is-on b{color:var(--paper)}
+.chip.is-today{box-shadow:inset 0 0 0 2px var(--seal)}
+.nav-sep{flex:none;width:1px;background:var(--line);margin:8px 4px}
+
+/* ---------- route line ---------- */
+.route{padding-top:28px;padding-bottom:8px}
+.route h2,.sec-head h2{font-family:var(--kai);font-weight:700;font-size:24px;margin:0 0 4px}
+.route p.sub,.sec-head p{margin:0;color:var(--ink-2);font-size:14px}
+.line-scroll{overflow-x:auto;margin:18px -16px 0;padding:0 16px 10px;scrollbar-width:thin}
+.line{position:relative;display:flex;min-width:max-content;padding-top:4px}
+.line::before{content:"";position:absolute;left:28px;right:28px;top:15px;height:4px;background:var(--ink);border-radius:2px}
+.stn{position:relative;flex:none;width:72px;display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink)}
+.stn i{display:block;width:26px;height:26px;border-radius:50%;background:var(--paper);border:4px solid var(--ink);position:relative;z-index:1}
+.stn.side i{border-style:dashed;border-width:3px;width:22px;height:22px;margin:2px 0}
+.stn .nm{font-family:var(--kai);font-size:15px;margin-top:6px;white-space:nowrap}
+.stn .d{font-family:var(--dot);font-size:12px;color:var(--ink-2)}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--ink-2);margin-top:4px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;border:3px solid var(--ink);margin-right:6px;vertical-align:-2px}
+.legend span.s::before{border-style:dashed;border-width:2px}
+
+/* ---------- act banner ---------- */
+.act{position:relative;margin:44px 0 0;color:#fff;background:linear-gradient(135deg,#1E2A2A,#3F5F55);min-height:240px}
+.act img{width:100%;height:clamp(240px,62vw,360px);object-fit:cover}
+.act::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(10,16,32,.82))}
+.act-text{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:0 16px 18px}
+.act-text>div{max-width:648px;margin:0 auto}
+.act-no{font-family:var(--kai);font-size:16px;opacity:.85}
+.act h2{font-family:var(--kai);font-weight:700;font-size:clamp(28px,7.5vw,38px);line-height:1.25;margin:2px 0 8px}
+.act p{margin:0;font-size:14px;line-height:1.7;opacity:.92;max-width:34em}
+
+/* ---------- day ---------- */
+.day{padding-top:30px;padding-bottom:6px;scroll-margin-top:62px}
+.ticket{position:relative;display:grid;grid-template-columns:1fr 84px;border-radius:6px;color:var(--ink);
+  background-color:var(--ticket);
+  background-image:repeating-linear-gradient(-45deg,transparent 0 5px,var(--ticket-hatch) 5px 6px),repeating-linear-gradient(45deg,transparent 0 5px,var(--ticket-hatch) 5px 6px);
+  box-shadow:inset 0 0 0 1px var(--ticket-edge)}
+.ticket .main{padding:12px 14px 12px 16px;min-width:0}
+.ticket .kind{font-family:var(--dot);font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ticket .kind em{font-style:normal;border:1px solid currentColor;padding:0 6px;border-radius:2px}
+.ticket .trip{font-family:var(--dot);font-size:clamp(20px,6vw,27px);line-height:1.3;margin:8px 0 6px;display:flex;flex-wrap:wrap;column-gap:.35em;align-items:baseline}
+.ticket .trip .ar{font-size:.8em;color:var(--ink-2)}
+.ticket .foot{font-family:var(--dot);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--ink-2)}
+.ticket .foot .fare{color:var(--ink);font-size:15px}
+.ticket .stub{position:relative;border-left:2px dashed var(--ticket-edge);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--dot);padding:8px 4px;text-align:center}
+.ticket .stub small{font-size:12px;color:var(--ink-2)}
+.ticket .stub b{font-weight:400;font-size:40px;line-height:1}
+.ticket .stub::before,.ticket .stub::after{content:"";position:absolute;left:-9px;width:16px;height:16px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1px var(--ticket-edge)}
+.ticket .stub::before{top:-8px}.ticket .stub::after{bottom:-8px}
+.day.is-today .ticket{box-shadow:inset 0 0 0 2px var(--seal)}
+.today-tag{display:none;position:absolute;right:96px;top:-11px;background:var(--seal);color:#fff;font-size:12px;padding:1px 8px;border-radius:3px}
+.day.is-today .today-tag{display:block}
+.day h3{font-family:var(--kai);font-weight:700;font-size:22px;line-height:1.4;margin:18px 0 4px}
+.day .daynote{margin:6px 0 0;font-size:14px;color:var(--seal)}
+.photos{display:flex;gap:8px;overflow-x:auto;margin:14px -16px 4px;padding:0 16px 6px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.photos::-webkit-scrollbar{display:none}
+.credits{margin-top:20px;font-size:12px;line-height:1.7;opacity:.75}
+.credits summary{cursor:pointer;font-size:13px}
+.credits ul{margin:6px 0 0;padding-left:1.1em}
+.credits a{color:inherit}
+.photos figure{position:relative;flex:none;margin:0;height:170px;scroll-snap-align:start}
+.photos img{height:100%;width:auto;max-width:300px;object-fit:cover;border-radius:6px;background:var(--paper-2)}
+.photos figure.r img{width:255px}
+.photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 8px 6px;border-radius:0 0 6px 6px;background:linear-gradient(transparent,rgba(8,12,24,.72));color:#fff;font-size:12px;line-height:1.3}
+.photos figcaption .k{display:inline-block;margin-right:4px;padding:0 5px;border-radius:3px;background:rgba(255,255,255,.22);font-size:11px}
+
+/* timeline */
+.tl{list-style:none;margin:16px 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:69px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.stop{position:relative;display:grid;grid-template-columns:56px 28px 1fr;column-gap:12px;padding:8px 0}
+.stop .t{font-size:15px;font-weight:600;text-align:right;padding-top:3px;line-height:1.3;word-break:keep-all}
+.stop .t small{display:block;font-weight:400;font-size:12px;color:var(--ink-2)}
+.stop .ic{width:28px;height:28px;border-radius:50%;background:var(--paper);border:2px solid var(--line);display:grid;place-items:center;position:relative;z-index:1;color:var(--ink)}
+.stop .ic svg{width:15px;height:15px}
+.stop.k-move .ic{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.stop .nm{font-size:16px;font-weight:600;line-height:1.45;padding-top:2px}
+.stop.is-tbd .ic{border-style:dashed;color:var(--ink-2)}
+.tbd{margin-left:8px;font-size:12px;font-weight:600;color:var(--ink-2);border:1px dashed var(--ink-2);padding:0 6px;border-radius:3px;vertical-align:2px}
+.stop .meta{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:4px;align-items:center}
+.cost{font-size:14px;color:var(--ink-2)}
+.cost b{font-weight:600;color:var(--ink)}
+.map{display:inline-flex;align-items:center;gap:3px;font-size:14px;color:var(--tip);text-decoration:none;min-height:28px;padding:0 2px}
+.map svg{width:14px;height:14px}
+.map:hover{text-decoration:underline}
+.note{margin:6px 0 0;font-size:14px;line-height:1.6;padding:6px 10px;border-radius:4px;background:var(--tip-soft);color:var(--ink)}
+.note.warn{background:var(--seal-soft)}
+.note.warn::before{content:"注意　";color:var(--seal);font-weight:600}
+.note.tip::before{content:"小提醒　";color:var(--tip);font-weight:600}
+.stop.is-next .ic{border-color:var(--seal);box-shadow:0 0 0 4px color-mix(in srgb,var(--seal) 25%,transparent)}
+.stop.is-next .nm::after{content:"下一站";margin-left:8px;font-size:12px;font-weight:600;color:#fff;background:var(--seal);padding:1px 6px;border-radius:3px;vertical-align:2px}
+.stay{display:flex;align-items:center;gap:10px;margin:14px 0 0;padding:12px 0 0;border-top:1px dashed var(--line);font-size:15px}
+.stay svg{width:18px;height:18px;flex:none;color:var(--ink-2)}
+.stay span{color:var(--ink-2)}
+
+/* ---------- sections ---------- */
+.sec{padding-top:48px;padding-bottom:8px;scroll-margin-top:62px}
+.sec-head{margin-bottom:18px}
+.hotel{padding:22px 0 18px;border-top:1px solid var(--line);scroll-margin-top:62px}
+.hotel:last-child{border-bottom:1px solid var(--line)}
+.hotel>img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.hotel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:12px}
+.hotel h3{margin:0;font-size:19px;line-height:1.35}
+.hotel-head .map{flex:none;white-space:nowrap}
+.hotel .jp{display:block;font-size:13px;font-weight:400;color:var(--ink-2);margin-top:2px}
+.hotel .when{font-family:var(--dot);font-size:14px;color:var(--ink);margin:6px 0 0}
+.hotel .lead{margin:8px 0 0;font-size:15px;line-height:1.65}
+.facts{display:grid;grid-template-columns:4.2em 1fr;gap:8px 12px;margin:14px 0 0;font-size:14px;line-height:1.6}
+.facts dt{color:var(--ink-2);font-weight:600}
+.facts dd{margin:0}
+.facts dd small{display:block;color:var(--ink-2);font-size:13px}
+.htips{list-style:none;margin:14px 0 0;padding:10px 12px;background:var(--tip-soft);border-radius:6px;font-size:14px;line-height:1.65}
+.htips li{padding-left:1.1em;text-indent:-1.1em}
+.htips li::before{content:"・";color:var(--tip)}
+.htips li+li{margin-top:4px}
+.stay a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+
+.receipt{background:var(--paper-2);border-radius:6px;padding:18px 16px 16px;font-family:var(--dot)}
+.receipt h3{font-family:var(--kai);font-weight:700;font-size:18px;margin:0 0 12px;text-align:center}
+.row{display:flex;align-items:baseline;gap:8px;font-size:15px;padding:3px 0}
+.row .lb{flex:none}
+.row .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.row .v{flex:none}
+.row.sub{font-size:13px;color:var(--ink-2);padding-left:12px}
+.row.total{font-size:18px;border-top:1px solid var(--ink);margin-top:8px;padding-top:10px}
+.rate{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+.rate input,.conv input{font:inherit;font-family:var(--dot);font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:6px 8px;width:96px}
+.fine{font-family:var(--sans);font-size:13px;color:var(--ink-2);margin:12px 0 0;line-height:1.6}
+.conv{margin-top:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}
+.conv input{width:130px}
+.conv output{font-family:var(--dot);font-size:20px}
+
+.checks h3{font-family:var(--kai);font-weight:700;font-size:18px;margin:22px 0 6px}
+.checks h3:first-child{margin-top:0}
+.ck{display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px;line-height:1.5}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:0;border:2px solid var(--ink-2);border-radius:4px;display:grid;place-items:center;cursor:pointer;background:var(--paper)}
+.ck input:checked{background:var(--ink);border-color:var(--ink)}
+.ck input:checked::after{content:"";width:6px;height:11px;border:solid var(--paper);border-width:0 2.5px 2.5px 0;transform:translateY(-1px) rotate(45deg)}
+.ck input:checked+span{color:var(--ink-2);text-decoration:line-through}
+.ck small{display:block;color:var(--ink-2);font-size:13px}
+
+footer{margin-top:56px;padding:28px 16px 40px;background:var(--night);color:#d8deea;font-size:14px}
+footer .wrap{padding:0}
+footer b{font-family:var(--dot);font-weight:400;font-size:22px;color:#fff;margin-right:6px}
+footer p{margin:6px 0}
+footer .sig{margin-top:18px;font-family:var(--kai);opacity:.7}
+
+
+/* ---------- flexible options ---------- */
+.flex{margin-top:18px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.flex>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:10px;min-height:48px}
+.flex>summary::-webkit-details-marker{display:none}
+.flex>summary b{font-family:var(--kai);font-size:17px}
+.flex>summary .cnt{color:var(--ink-2);font-size:14px}
+.flex>summary::after{content:"";margin-left:auto;flex:none;width:8px;height:8px;border:solid var(--ink-2);border-width:0 2px 2px 0;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.flex[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
+@media (prefers-reduced-motion: reduce){.flex>summary::after{transition:none}}
+.flex-body{padding:0 14px 6px}
+.flex h4{font-size:14px;color:var(--ink-2);font-weight:600;margin:6px 0 2px}
+.alt{padding:10px 0;border-top:1px dashed var(--line)}
+.flex h4+.alt{border-top:0}
+.alt-top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.alt .nm{font-weight:600;line-height:1.45}
+.alt p{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font-size:12px;line-height:1.5;padding:1px 8px;border-radius:10px;background:var(--paper-2);color:var(--ink-2)}
+.tag.rsv{background:var(--seal-soft);color:var(--seal)}
+.tag.in{background:var(--tip-soft);color:var(--tip)}
+.evt{margin:8px 0 10px;padding:10px 12px;border-left:3px solid var(--seal);background:var(--seal-soft);border-radius:0 6px 6px 0}
+.evt .nm{font-weight:600}
+.evt p{margin:2px 0 0;font-size:14px;line-height:1.6}
+.map.sm{font-size:13px;flex:none}
+
+/* ---------- eat & buy ---------- */
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:0 -16px 6px;padding:0 16px 6px;scrollbar-width:none}
+.tabs.in{margin:2px -14px 4px;padding:0 14px 6px}
+.tab.sm{padding:6px 12px;min-height:36px;font-size:14px}
+.tab span{margin-left:5px;font-weight:400;opacity:.65}
+.tp h4:first-child{margin-top:10px}
+.tp>.food:last-child,.tp>.alt:last-child{border-bottom:0}
+.tp .seasonal{margin:8px 0 4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:8px 14px;font:600 14px var(--sans);color:var(--ink);cursor:pointer;min-height:40px}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.panel h3{font-family:var(--kai);font-weight:700;font-size:19px;margin:22px 0 2px}
+.panel .when2{font-size:13px;color:var(--ink-2);margin:0}
+.food{padding:12px 0;border-bottom:1px solid var(--line)}
+.food .nm{font-weight:600;font-size:16px}
+.food p{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.shops{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:4px}
+.seasonal{margin:14px 0 0;padding:10px 12px;background:var(--tip-soft);border-radius:6px;font-size:14px;line-height:1.65}
+.seasonal b{color:var(--tip)}
+
+/* ---------- events ---------- */
+.ev{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.ev:last-child{border-bottom:1px solid var(--line)}
+.ev .dt{font-family:var(--dot);font-size:14px;line-height:1.35;color:var(--ink)}
+.ev .dt small{display:block;color:var(--ink-2);font-size:12px}
+.ev .nm{font-weight:600;font-size:16px;line-height:1.45}
+.ev p{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.ev .meta{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:4px;align-items:center}
+.ev .meta a.d{font-size:14px;color:var(--tip);text-decoration:none}
+
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:none;background:var(--seal);color:#fff;border:0;border-radius:24px;padding:12px 18px;font:600 15px var(--sans);box-shadow:0 6px 18px rgba(0,0,0,.25);cursor:pointer}
+.fab.show{display:block}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero-top">
+    <div class="hero-meta">
+      <p class="en">8 Days in Tohoku</p>
+      <p class="dates">3/15–3/22</p>
+      <p class="len">八天七夜，從津輕一路南下到松島</p>
+      <p class="cities">青森<br>弘前<br>奧入瀨<br>八戶<br>平泉<br>仙台</p>
+    </div>
+    <h1>北國<br>雪解時</h1>
+  </div>
+  <div class="hero-photo"><img id="heroImg" alt="冬天的奧入瀨溪流" referrerpolicy="no-referrer"></div>
+  <div class="status"><div class="status-inner" id="status"></div></div>
+</header>
+
+<nav class="nav" aria-label="章節"><div class="nav-inner" id="nav"></div></nav>
+
+<main>
+  <section class="wrap route" aria-labelledby="route-h">
+    <h2 id="route-h">路線</h2>
+    <p class="sub">點站名跳到那一天</p>
+    <div class="line-scroll"><div class="line" id="line"></div></div>
+    <div class="legend"><span>住宿與主要停靠</span><span class="s">當日來回</span></div>
+  </section>
+
+  <div id="days"></div>
+
+
+  <section class="wrap sec" id="events" aria-labelledby="events-h">
+    <div class="sec-head"><h2 id="events-h">這幾天的活動</h2><p>3/15–3/22 有機會碰到的祭典、點燈與季節限定</p></div>
+    <div id="evList"></div>
+  </section>
+
+  <section class="wrap sec" id="hotels" aria-labelledby="hotels-h">
+    <div class="sec-head"><h2 id="hotels-h">住宿</h2><p>四間飯店，七個晚上</p></div>
+    <div id="hotelList"></div>
+  </section>
+
+  <section class="wrap sec" id="budget" aria-labelledby="budget-h">
+    <div class="sec-head"><h2 id="budget-h">預算</h2><p>行程表上每一筆標價自動加總</p></div>
+    <div class="receipt" id="receipt"></div>
+    <div class="conv">
+      <label for="yen">日幣換算</label>
+      <input id="yen" inputmode="numeric" placeholder="¥ 金額" autocomplete="off">
+      <output id="yenOut" for="yen">NT$ 0</output>
+    </div>
+  </section>
+
+  <section class="wrap sec checks" id="checks" aria-labelledby="checks-h">
+    <div class="sec-head"><h2 id="checks-h">出發前清單</h2><p>勾選只會存在你自己這支手機</p></div>
+    <div id="checkList"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <details class="credits"><summary>照片來源</summary><p>照片來自 Wikimedia Commons，依各自授權使用：</p><ul id="creditList"></ul></details>
+    <p class="sig">寫給一起坐暖爐列車的我們</p>
+  </div>
+</footer>
+
+<button class="fab" id="fab" type="button">回到今天</button>
+
+<script>
+const IMG = {};
+
+const ICON = {
+  plane:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>',
+  train:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h2.23l2-2H14l2 2h2v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm3.5-7H6V6h5v4zm2 0V6h5v4h-5zm3.5 7c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>',
+  bus:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>',
+  ropeway:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3l20 5M12 5.5V10"/><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M6 14h12"/></svg>',
+  food:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>',
+  hotel:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>',
+  walk:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>',
+  sight:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2.5 5.5c4 1.2 15 1.2 19 0M5 10h14M7 6.5V21M17 6.5V21"/></svg>',
+  car:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>',
+  ferry:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>',
+  move:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>'
+};
+
+const ACTS = {
+  1:{no:'第一幕',title:'津輕的雪',where:'青森、弘前、金木　Day 1–3',img:'@act1',alt:'冬天的弘前城',
+     text:'三月中的津輕還是一片白。在弘前的洋館喝下午茶，坐暖爐列車去太宰治的故鄉，回青森看睡魔燈籠。'},
+  2:{no:'第二幕',title:'溪流與海岸',where:'奧入瀨、八戶　Day 4–5',img:'@act2',alt:'奧入瀨溪流',
+     text:'住進奧入瀨溪流旁的飯店，清晨跟著嚮導走一段溪谷。下午開車沿著八戶的海岸線，看斷崖和海鷗的島。'},
+  3:{no:'第三幕',title:'金色堂到松島',where:'平泉、猊鼻溪、仙台、松島　Day 6–8',img:'@act3',alt:'松島',
+     text:'從平泉的金色堂一路往南，坐船穿過猊鼻溪的峽谷，最後在松島看海上的小島，用一份牛舌收尾。'}
+};
+
+// cost: [yen, category, label]   category: move | ticket | food
+const DAYS = [
+ {n:1,date:'2027-03-15',md:'3/15',wd:'一',jd:'3月15日（月）',act:1,kind:'搭乗券',trip:['台北','青森空港','青森'],via:'長榮航空',fare:null,
+  title:'飛進雪國青森',stay:'Daiwa Roynet 青森',
+  photos:[['@aomoriair','青森機場','交通'],['@aomoribay','青森灣','景點'],['@lovebridge','青森港 Love Bridge','景點'],['@apple','青森蘋果','美食']],
+  stops:[
+   {t:'09:55',t2:'14:20',k:'plane',nm:'桃園 → 青森機場',note:['tip','長榮這條航線 2026/10/25–2027/3/27 每天飛，機型 A321。']},
+   {t:'機上',k:'food',nm:'午餐：飛機餐'},
+   {t:'16:06',t2:'16:45',k:'move',ic:'bus',nm:'機場巴士，青森機場 → 青森站',q:'青森駅',cost:[[980,'move','巴士']],
+    note:['tip','JR 巴士東北，約 35 分。乘車處在入境大廳出口外，班次會配合航班，16:06 這班沒查到，落地後可能有更早的車。']},
+   {t:'16:50',sub:'約',k:'hotel',nm:'Check-in Daiwa Roynet 青森',q:'ダイワロイネットホテル青森',note:['tip','14:00 起就能入住，青森站東口走約 5 分。']},
+   {t:'17:00',t2:'19:00',k:'sight',nm:'青森縣觀光物產館 ASPAM 夜景',q:'青森県観光物産館アスパム',cost:[[500,'ticket','展望台']],
+    note:['tip','13 樓展望台開到 19:00，門票沒查到。從車站走約 8 分，旁邊的青森灣大橋晚上會點燈。']},
+   {t:'19:00',t2:'20:00',k:'food',nm:'晚餐：大戸屋ごはん処',q:'大戸屋 青森 新町',cost:[[1500,'food','晚餐']],
+    note:['warn','只查到新町一間分店，最新評論停在 2023 年，現在還有沒有開沒查到。備案：ASPAM 10 樓的鄉土料理西むら開到 20:00，看完夜景直接下樓吃。']}
+  ]},
+ {n:2,date:'2027-03-16',md:'3/16',wd:'二',jd:'3月16日（火）',act:1,kind:'乗車券',trip:['青森','弘前','青森'],via:'奥羽本線',fare:1440,
+  title:'弘前的洋館與城',stay:'Daiwa Roynet 青森',
+  daynote:'⚠ 3/16 是週二，青森銀行紀念館和紅磚倉庫美術館都休館。建議跟 Day 3 對調：弘前改週三去，這兩館都有開；津輕那天改週二，行程一樣走得通，太宰治疎開之家也有開。',
+  photos:[['@hirosaki','冬天的弘前城','景點'],['@library','舊弘前市立圖書館','景點'],['@fujita','藤田紀念庭園洋館','景點'],['@applepie','蘋果派','美食']],
+  stops:[
+   {t:'早上',k:'sight',nm:'廣田神社',q:'廣田神社 青森',note:['tip','青森站走約 15 分，在青森地方法院對面。']},
+   {t:'早餐',k:'food',nm:'飯店早餐'},
+   {t:'09:52',t2:'10:37',k:'move',ic:'train',nm:'JR 奧羽本線，青森 → 弘前',q:'弘前駅',cost:[[720,'move','JR']],note:['tip','JR 每年 3 月中會改時刻表，2027 年的新時刻大約 12 月公布，所有 JR 班次出發前都要再查一次。']},
+   {t:'10:38',t2:'10:48',k:'move',ic:'bus',nm:'土手町循環巴士，弘前站 → 追手門一帶',cost:[[100,'move','巴士']],
+    note:['tip','查到的票價是 ¥100（原表寫 ¥150），一日券 ¥500，約 10 分一班，冬天開到 17:00。表上的「1號」和「銀行站」對不到站名，在站前問一下往市役所方向就好。']},
+   {t:'10:50',t2:'12:30',k:'sight',nm:'舊弘前市立圖書館、青森銀行紀念館、弘前紅磚倉庫美術館',q:'旧弘前市立図書館',
+    note:[['tip','舊市立圖書館 9:00–17:00，免費，週二有開。'],['warn','青森銀行紀念館（¥200）和紅磚倉庫美術館（特展 ¥1,600）週二休館。不對調的話，改看旁邊免費的外人教師館、洋館模型、山車展示館，選項在彈性選項。']]},
+   {t:'12:30',t2:'13:30',k:'food',nm:'午餐：そば処 かふく亭',q:'そば処 かふく亭 弘前',cost:[[2500,'food','午餐']],note:['tip','11:00–19:30，週一休，今天有開。']},
+   {t:'14:00',t2:'15:30',k:'sight',nm:'弘前城、藤田紀念庭園',q:'弘前城',
+    note:[['tip','11/24–3/31 弘前公園的收費區免費開放。天守內部要關到 2032 年左右，但 2026 年 11 月天守會移回原本的石垣上，3 月剛好能從外面看到它回到原位。'],['tip','藤田紀念庭園冬天只開洋館，9:00–16:30，免費（原表 ¥520 用不到）。庭園要到 4 月中才開。']]},
+   {t:'15:30',t2:'16:30',k:'food',nm:'下午茶：大正浪漫喫茶室',q:'大正浪漫喫茶室',cost:[[1000,'food','下午茶']],note:['tip','就在藤田紀念庭園洋館裡，16:00 最後點餐。蘋果派套餐約 ¥990–1,100，有好幾種蘋果派可以選。']},
+   {t:'16:31',t2:'16:55',k:'move',ic:'bus',nm:'土手町循環巴士，市役所前 → 弘前站',cost:[[100,'move','巴士']]},
+   {t:'17:41',t2:'18:23',k:'move',ic:'train',nm:'JR 奧羽本線，弘前 → 青森',q:'青森駅',cost:[[720,'move','JR']]},
+   {t:'18:30',sub:'約',k:'food',nm:'晚餐：とんかつ新宿さぼてん／薩莉亞',q:'とんかつ新宿さぼてん 青森ラビナ',cost:[[2000,'food','晚餐']],note:['tip','さぼてん在ラビナ 1 樓，サイゼリヤ在 &LOVINA 1 樓，都在青森站旁。']}
+  ]},
+ {n:3,date:'2027-03-17',md:'3/17',wd:'三',jd:'3月17日（水）',act:1,kind:'乗車券',trip:['青森','五所川原','金木','青森'],via:'津軽鉄道ストーブ列車',fare:null,
+  title:'坐暖爐列車去金木',stay:'Daiwa Roynet 青森',
+  daynote:'⚠ 白神號 3/17 沒有開（3 月只開週末前後幾天），回程改搭弘南巴士，下面已經換好。',
+  photos:[['@stove','津輕鐵道暖爐列車','交通'],['@shayokan','斜陽館','景點'],['@nebuta','睡魔之家 WA RASSE','景點'],['@kaisendon','海鮮丼','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐',note:['tip','飯店早餐 6:30 開，7:53 的巴士來得及。']},
+   {t:'07:53',t2:'09:13',k:'move',ic:'bus',nm:'弘南巴士，青森站前 → 五所川原站前',q:'青森駅前 弘南バス',cost:[[1200,'move','巴士']],
+    note:['tip','青森站前 9 號乘車處，車頭寫「エルムの街」。到站是 9:13，不是 9:06，離暖爐列車約 20 分。票價 ¥1,200 是 2026/10 漲價前的，現金和 IC 卡都帶著。']},
+   {t:'09:35',t2:'10:00',k:'move',ic:'train',nm:'津輕鐵道暖爐列車，津輕五所川原 → 金木',q:'津軽五所川原駅',cost:[[1560,'move','暖爐列車']],
+    note:['tip','車資 ¥560 加暖爐列車券 ¥1,000，只收現金、不能預約，先到先坐。津輕五所川原站就在 JR 五所川原站旁。車上可以請服務員在暖爐上烤魷魚乾。']},
+   {t:'10:00',t2:'11:00',k:'sight',nm:'太宰治紀念館「斜陽館」',q:'太宰治記念館 斜陽館',cost:[[600,'ticket','門票']],
+    note:[['tip','9:00–17:00，門票 ¥600（原表 ¥500）。特展「太宰治 旅の中で」展到 3/22。'],['warn','附近的太宰治疎開之家每月第 1、3、5 個週三休，3/17 剛好休；津輕三味線會館冬天也休館。']]},
+   {t:'11:04',t2:'11:29',k:'move',ic:'train',nm:'津輕鐵道暖爐列車，金木 → 津輕五所川原',cost:[[1560,'move','暖爐列車']]},
+   {t:'11:30',sub:'約',k:'food',nm:'點心：LAWSON',cost:[[500,'food','點心']],note:['tip','等巴士有快一個小時。也可以走 5 分鐘去立佞武多之館（¥800），看 23 公尺高的睡魔燈籠。']},
+   {t:'12:28',t2:'13:37',k:'move',ic:'bus',nm:'弘南巴士，五所川原站前 → 青森站前',q:'五所川原駅前',cost:[[1200,'move','巴士']],
+    note:['warn','原本的白神號 3/17 不開（3/19–3/22 才有）。改搭跟早上同一條弘南巴士，直達青森。']},
+   {t:'14:00',t2:'15:00',k:'food',nm:'午餐：丸青食堂',q:'丸青食堂 アウガ',cost:[[2500,'food','午餐']],
+    note:['warn','在 AUGA 地下的新鮮市場裡，市場每月休一個週三，2026 年 3 月休的是第 3 個週三。2027 年的公休表還沒出，3/17 有可能撞到。撞到就去週三有開的青森魚菜中心吃のっけ丼。']},
+   {t:'15:00',t2:'17:00',k:'sight',nm:'睡魔之家 WA RASSE',q:'ねぶたの家 ワ・ラッセ',cost:[[620,'ticket','門票']],
+    note:['tip','9:00–18:00，門票 ¥620。15:10 有現場太鼓和笛子的「祭典體驗」，20 分鐘，可以跟著跳，一進門剛好趕上。']},
+   {t:'17:00',t2:'18:30',k:'food',nm:'點心：A-FACTORY',q:'A-FACTORY 青森',cost:[[1000,'food','點心']],note:['tip','商店開到 19:00。2 樓的蘋果酒工房可以試飲。']},
+   {t:'18:30',t2:'19:30',k:'food',nm:'晚餐：吉野家／薩莉亞',q:'サイゼリヤ 青森',cost:[[1500,'food','晚餐']],note:['tip','想吃在地的：車站旁的長尾中華そば小魚乾拉麵開到 21:00。']}
+  ]},
+ {n:4,date:'2027-03-18',md:'3/18',wd:'四',jd:'3月18日（木）',act:2,kind:'乗車券',trip:['青森','美術館','奥入瀬'],via:'送迎バス',fare:null,
+  title:'從美術館到溪流旁',stay:'奧入瀨溪流飯店',
+  photos:[['@museum','青森縣立美術館','景點'],['@oirase','奧入瀨溪流','景點'],['@galette','法式蕎麥薄餅','美食']],
+  stops:[
+   {t:'早餐',k:'food',nm:'飯店早餐',note:['tip','退房後可以先把行李寄放在櫃台，下午回來拿。']},
+   {t:'09:58',t2:'10:23',k:'move',ic:'bus',nm:'巴士，青森站 → 縣立美術館',q:'青森県立美術館',cost:[[280,'move','巴士']],
+    note:['warn','表上的「51 號 9:58」查不到。查到的是觀光巴士ねぶたん号：青森站西口 9:00、10:30 發車，35 分到，每次 ¥300，一日券 ¥800。另外市營巴士「三内丸山遺跡行」約 20 分，時刻沒查到。']},
+   {t:'10:30',t2:'12:30',k:'sight',nm:'青森縣立美術館',q:'青森県立美術館',cost:[[700,'ticket','門票']],
+    note:['tip','9:30–17:00，3/18 有開，收藏展 ¥700，這期主題是十和田湖。下雪期間通往大型白狗「青森犬」的戶外通道可能會關。隔壁就是三內丸山遺跡。']},
+   {t:'12:31',t2:'12:59',k:'move',ic:'bus',nm:'巴士，縣立美術館 → 青森站',cost:[[280,'move','巴士']],note:['warn','「A1 12:31」也查不到。ねぶたん号回程是 11:11 和 13:51，13:51 會趕不上午餐，市營巴士的時刻出發前再查。']},
+   {t:'13:00',t2:'14:30',k:'food',nm:'午餐：Galetteria Da Sasino',q:'Galetteria Da Sasino 青森',cost:[[2500,'food','午餐']],note:['tip','在 A-FACTORY 2 樓，午餐 14:30 最後點餐，不定休。']},
+   {t:'14:30',sub:'約',k:'move',nm:'回飯店取行李',note:['tip','飯店在東口，接駁車在西口，留 15 分鐘走過去。']},
+   {t:'15:00',t2:'17:30',k:'move',ic:'bus',nm:'飯店接駁巴士，青森站 → 奧入瀨',q:'青森駅 西口',cost:[[4000,'move','接駁車']],
+    note:[['warn','12–3 月是冬季票價 ¥4,000（原表寫 ¥3,500）。最晚 2 天前預約，額滿就停收，也有網站寫 3 天前，早點訂比較保險。'],['tip','在青森站西口廣場上車，冬天路程約 2 個半小時。']]},
+   {t:'16:30',t2:'17:30',k:'sight',nm:'奧入瀨溪流館（改到 Day 5 早上）',q:'奥入瀬渓流館',
+    note:['warn','冬天 16:30 就關門，接駁車 17:30 才到，今天排不進去。館內免費，從飯店走約 5 分，已經挪到明天 9:00。']},
+   {t:'17:30',sub:'約',k:'hotel',nm:'Check-in 星野集團 奧入瀨溪流飯店',q:'星野リゾート 奥入瀬渓流ホテル',note:['tip','大廳那座 8.5 公尺高的暖爐是岡本太郎的作品「森の神話」。']},
+   {t:'18:30',k:'food',nm:'晚餐：飯店自助餐 青森りんごキッチン',note:['tip','17:30–21:00（20:30 最後點餐）。原表寫 ¥0，代表住宿方案含晚餐；沒含的話大人 ¥6,050。']},
+   {t:'晚餐後',k:'walk',nm:'泡湯：溪流露天風呂「氷瀑の湯」',note:['tip','冰瀑點燈 2/28 就結束了，但露天風呂裡的「氷瀑の湯」開到 3/29，房客免費。']}
+  ]},
+ {n:5,date:'2027-03-19',md:'3/19',wd:'五',jd:'3月19日（金）',act:2,kind:'散策券',trip:['奥入瀬','八戸','種差海岸','八戸'],via:'レンタカー',fare:null,
+  title:'清晨的溪流，下午的海岸',stay:'東橫INN 八戶站前',
+  photos:[['@act2','奧入瀨溪流','景點'],['@kabushima','蕪嶋神社','景點'],['@kabushima2','蕪島一帶','景點'],['@uni','海膽','美食']],
+  stops:[
+   {t:'07:00',t2:'07:50',k:'bus',ic:'bus',nm:'奧入瀨溪流巴士導覽（預約）',q:'奥入瀬渓流 石ヶ戸',
+    note:['tip','冬天沒有徒步導覽，改成飯店的「奥入瀬渓流バスツアー」：停馬門岩和石ヶ戸の瀬兩站，約 50 分鐘，日語導覽，每班 18 人。官網列為免費，前一天 18:00 前預約。']},
+   {t:'08:00',t2:'09:00',k:'food',nm:'飯店早餐',note:['tip','自助餐 7:00–10:00（9:30 最後點餐）。']},
+   {t:'09:00',t2:'10:00',k:'sight',nm:'奧入瀨溪流館（從 Day 4 挪過來）',q:'奥入瀬渓流館',note:['tip','9:00 開門，免費，從飯店走約 5 分。館裡的「あら、りんご。」有蘋果甜點。']},
+   {t:'11:00',t2:'12:10',k:'move',ic:'bus',nm:'飯店接駁巴士，奧入瀨 → 八戶站',q:'八戸駅',note:['tip','房客免費，跟去程一樣要事先預約。退房時間是 12:00，但車 11:00 就開。']},
+   {t:'12:10',sub:'約',k:'move',nm:'寄放行李',q:'東横INN 八戸駅前',note:['tip','接駁車停西口，東橫INN 和租車店都在東口，要穿過車站。飯店 15:00 才能入住，能不能先寄放行李沒查到，到了問櫃台。']},
+   {t:'12:30',t2:'13:00',k:'move',ic:'car',nm:'Times 租車，八戶站東口',q:'タイムズカー 八戸駅前店',cost:[[2500,'move','租車']],
+    note:[['warn','台灣的國際駕照在日本不能用。要帶台灣駕照正本、日文譯本（監理所臨櫃 NT$100）和護照，影本不收。'],['tip','整台車 6 小時約 ¥6,820 起，加安心補償 ¥1,100。原表 ¥2,500 應該是分攤後。預約時勾雪地胎，當天營業時間也一起確認。']]},
+   {t:'13:00',t2:'13:30',k:'move',ic:'car',nm:'開車到種差海岸',q:'種差海岸'},
+   {t:'13:30',t2:'15:00',k:'food',nm:'午餐：仕出し料理 波光食堂',q:'波光食堂 八戸',cost:[[3000,'food','午餐']],note:['tip','無休，15:15 最後點餐。3 月有沒有生海膽沒查到，想吃先打電話問：0178-38-2433。']},
+   {t:'15:00',t2:'16:30',k:'sight',nm:'種差天然芝生地 → 葦毛崎展望台 → 蕪嶋神社',q:'葦毛崎展望台',cost:[[1000,'ticket','景點']],
+    note:[['tip','由南往北走最順：芝生地就在食堂旁，開車到葦毛崎約 10 分，最後到蕪島。三個地方都免費。'],['warn','蕪嶋神社的開放時間各網站寫法不同，最早的說 16:00 關，最晚 16:00 前到。']]},
+   {t:'16:30',t2:'18:00',k:'move',ic:'car',nm:'回八戶站還車',note:['tip','八戶站ユートリー的伴手禮店 18:00 關門，還車前先去買。']},
+   {t:'18:00',sub:'約',k:'hotel',nm:'Check-in 東橫INN 八戶站前',q:'東横INN 八戸駅前'},
+   {t:'19:00',t2:'20:00',k:'food',nm:'晚餐：LAWSON',cost:[[1000,'food','晚餐']],note:['tip','想吃熱的，八戶站東口就有居酒屋，本八戶還有屋台村みろく橫丁，選項在彈性選項。']}
+  ]},
+ {n:6,date:'2027-03-20',md:'3/20',wd:'六',jd:'3月20日（土）',act:3,kind:'特急券',trip:['八戸','一ノ関','平泉','猊鼻渓','仙台'],via:'東北新幹線',fare:null,
+  title:'金色堂與峽谷的船',stay:'相鐵 FRESA INN 仙台',
+  daynote:'⚠ 這天要帶著行李從八戶一路玩到仙台。建議前一晚在東橫INN 用宅急便把大行李寄到仙台飯店，或放進平泉站、一之關站的投幣置物櫃（中尊寺裡沒有）。',
+  photos:[['@motsuji','毛越寺淨土庭園','景點'],['@konjikido','中尊寺金色堂','景點'],['@geibista','猊鼻溪站','交通'],['@wanko','碗子蕎麥','美食'],['@gyutan','仙台牛舌','美食']],
+  stops:[
+   {t:'07:17',t2:'08:29',k:'move',ic:'train',nm:'東北新幹線 はやぶさ 8 號，八戶 → 一之關',q:'一ノ関駅',cost:[[6790,'move','新幹線']],
+    note:['tip','全車指定席，要先劃位。2026 年 3 月調價後是 ¥6,790（原表 ¥6,290），旺季再多 ¥200–400。']},
+   {t:'08:55',t2:'09:03',k:'move',ic:'train',nm:'JR 東北本線，一之關 → 平泉',q:'平泉駅',cost:[[210,'move','JR']]},
+   {t:'09:00',t2:'12:00',k:'sight',nm:'毛越寺、中尊寺',q:'中尊寺',cost:[[700,'ticket','毛越寺'],[1000,'ticket','中尊寺']],
+    note:[['tip','先去毛越寺（車站走 7 分，¥700，8:30–17:00），逛完走 25 分到中尊寺（金色堂加讃衡藏 ¥1,000，2024 年起漲價）。月見坂走到金色堂要 20–30 分，冬天小心結冰。'],['tip','3/20 剛好是毛越寺每月 20 日的常行堂法會，11:00 開始。'],['warn','平泉的循環巴士「るんるん」3 月不開，兩座寺之間只能走路或搭一般公車。']]},
+   {t:'中午前',k:'food',nm:'點心',cost:[[1000,'food','點心']],note:['tip','平泉站旁吉野屋的弁慶力餅，8 個 ¥799。']},
+   {t:'12:22',t2:'13:17',k:'move',ic:'train',nm:'JR，平泉 → 一之關 → 猊鼻溪',q:'猊鼻渓駅',cost:[[740,'move','JR']],
+    note:['warn','原本的東磐交通巴士只在 4–11 月的週二、週三開，3/20 沒有車。改搭 JR：平泉 12:22 → 一之關 12:29，轉大船渡線 12:45 → 猊鼻溪 13:17（週六時刻）。']},
+   {t:'13:20',sub:'約',k:'food',nm:'午餐：たかこう',q:'たかこう 一関 東山町',cost:[[2000,'food','午餐']],note:['tip','離猊鼻溪站約 200 公尺，11:00–14:30，週六有開，只收現金。14:00 要開船，點蕎麥麵最快。']},
+   {t:'14:00',t2:'15:30',k:'sight',nm:'猊鼻溪遊船',q:'げいび観光センター',cost:[[2000,'ticket','遊船']],
+    note:[['tip','來回約 90 分，中途上岸散步約 20 分。冬季 9:30–15:00 每小時一班，被爐船 2 月底就收了，記得穿暖。'],['warn','14:00 這班的時刻和票價（¥1,800–2,000 都有人寫）出發前打電話確認：0191-47-2341。']]},
+   {t:'15:50',t2:'16:32',k:'move',ic:'bus',nm:'東磐交通巴士，げいび溪口 → 一關站前',cost:[[500,'move','巴士']],
+    note:['warn','只收現金。查到的是 2023 年的時刻，週六有沒有開沒查到。巴士站跟 JR 猊鼻溪站不在同一個地方。沒車的話，JR 猊鼻溪 16:04 有一班週末限定的觀光列車（要另外買座位），下一班普通車要等到 17:51。']},
+   {t:'16:51',t2:'17:23',k:'move',ic:'train',nm:'東北新幹線 やまびこ，一之關 → 仙台',q:'仙台駅',cost:[[3660,'move','新幹線']],note:['tip','自由席 ¥3,660，指定席 ¥4,190。週六傍晚往仙台的車可能比較擠。']},
+   {t:'17:40',sub:'約',k:'hotel',nm:'Check-in 相鐵 FRESA INN 仙台',q:'相鉄フレッサイン 仙台',note:['tip','仙台站西口走約 7 分，地下鐵あおば通站 2 號出口走 5 分。']},
+   {t:'19:00',t2:'20:00',k:'food',nm:'晚餐',tbd:1,cost:[[2000,'food','晚餐']],note:['tip','第一晚吃牛舌最合理：仙台站 3 樓的牛舌通有 6 家店，大多開到 21:00，週六要排隊。定食大約 ¥2,500–3,500，比預算多一點。']}
+  ]},
+ {n:7,date:'2027-03-21',md:'3/21',wd:'日',jd:'3月21日（日・祝）',act:3,kind:'乗船券',trip:['仙台','松島','仙台'],via:'仙石線と遊覧船',fare:1500,
+  title:'松島的島，仙台的城',stay:'相鐵 FRESA INN 仙台',
+  daynote:'3/21 是春分之日，松島和仙台會比平常週日更擠。遊覽船整點才開，10:20 搭不到，下面已經把順序調成先逛寺、11:00 再上船。',
+  photos:[['@godaido','五大堂','景點'],['@zuiganji','瑞巖寺','景點'],['@fukuura','福浦橋','景點'],['@masamune','伊達政宗騎馬像','景點'],['@kaisendon2','海鮮丼','美食']],
+  stops:[
+   {t:'09:30',t2:'10:10',k:'move',ic:'train',nm:'JR 仙石線，仙台 → 松島海岸',q:'松島海岸駅',cost:[[440,'move','JR']],note:['tip','直達普通車約 38 分，IC 卡同價。想坐 10:00 的船，就提早一班車。']},
+   {t:'10:15',t2:'10:55',k:'sight',nm:'五大堂、瑞巖寺',q:'瑞巌寺',cost:[[1000,'ticket','瑞巖寺']],
+    note:['tip','五大堂免費。瑞巖寺 3 月 8:30–16:30，2026/4 起門票漲到 ¥1,000（原表 ¥700）。']},
+   {t:'11:00',t2:'11:50',k:'sight',nm:'松島遊覽船（仁王丸コース）',q:'松島島巡り観光船',cost:[[1500,'ticket','遊覽船']],
+    note:['tip','每小時整點開，約 50 分，碼頭在車站走 6–8 分。2 樓展望席加 ¥600，只能上船現場買。天候不好會停航。']},
+   {t:'11:50',t2:'12:30',k:'walk',nm:'福浦島、海岸散步',q:'福浦橋',cost:[[200,'ticket','福浦橋']],note:['tip','走紅色的福浦橋過去，¥200，8:30–17:00。從碼頭走約 10 分。']},
+   {t:'12:30',t2:'13:30',k:'food',nm:'午餐：漁師の海鮮丼',q:'漁師の海鮮丼 松島',cost:[[3000,'food','午餐']],note:['tip','表上的「漁師的海鮮丼」就是店名。車站走 2 分，11:00–15:00，週日有開。假日中午會排隊，排太久就看彈性選項的其他店。']},
+   {t:'13:32',t2:'14:29',k:'move',ic:'train',nm:'JR＋地下鐵，松島海岸 → 國際中心站',q:'国際センター駅',cost:[[650,'move','交通']],note:['tip','仙石線到仙台 ¥440，轉地下鐵東西線到國際中心 ¥210，約 5 分。']},
+   {t:'14:30',t2:'16:30',k:'sight',nm:'青葉城跡（仙台城跡）',q:'仙台城跡',
+    note:[['tip','本丸免費。國際中心站走上山約 15–20 分，也可以在站前搭觀光巴士るーぷる仙台（¥260）。'],['warn','青葉城資料展示館（¥770）冬季 16:00 關門，15:30 停止入館，到了先進展示館，再去看伊達政宗騎馬像和夜景。']]},
+   {t:'16:30',t2:'19:00',k:'food',nm:'晚餐：やよい軒（彌生軒）',q:'やよい軒 仙台',cost:[[2000,'food','晚餐']],
+    note:['tip','「彌生軒」是やよい軒在台灣的名字，日本叫やよい軒。仙台的分店沒查到細節。想吃在地的，牛舌老店選項在彈性選項。']},
+   {t:'晚餐後',k:'walk',nm:'逛街：一番町、廣瀨通',q:'仙台 一番町',
+    note:['warn','藤崎 19:30、仙台三越 19:00 就關，晚餐後百貨已經關了。想逛百貨就排在晚餐前；晚上可以逛拱廊商店街，或回站內的エスパル（到 21:00）。']}
+  ]},
+ {n:8,date:'2027-03-22',md:'3/22',wd:'一',jd:'3月22日（月・休）',act:3,kind:'搭乗券',trip:['仙台','仙台空港','台北'],via:'仙台空港アクセス線',fare:660,
+  title:'帶著萩之月回家',stay:null,
+  photos:[['@sendaista','仙台站','交通'],['@sendaiair','仙台機場','交通'],['@zunda','毛豆泥麻糬','美食'],['@hagi','萩之月','美食']],
+  stops:[
+   {t:'早上',k:'hotel',nm:'退房',note:['tip','退房 11:00，先問櫃台能不能寄放行李，逛完再回來拿。']},
+   {t:'09:00',t2:'12:00',k:'walk',nm:'自由活動',q:'仙台駅',
+    note:[['warn','仙台朝市週日、國定假日公休，3/22 是補假，大概率不開。'],['tip','可以搭るーぷる仙台去瑞鳳殿（9:00–16:50，¥570），或直接逛站內エスパル B1 的伴手禮街（9:00–21:00）。']]},
+   {t:'12:00',t2:'13:00',k:'food',nm:'午餐',tbd:1,cost:[[2000,'food','午餐']],note:['tip','仙台站 3 樓的壽司通和牛舌通都很近。牛舌通焼助的午餐牛舌定食 ¥1,950，剛好在預算內。']},
+   {t:'13:10',t2:'13:37',k:'move',ic:'train',nm:'仙台機場線，仙台 → 仙台機場',q:'仙台空港駅',cost:[[660,'move','JR']],note:['tip','¥660（原表 ¥680），快速約 17 分、普通約 25 分，白天 15–30 分一班。']},
+   {t:'13:40',sub:'約',k:'plane',nm:'仙台機場，報到、最後採買',q:'仙台空港',note:['tip','2 樓有萩之月、喜久水庵、ずんだ茶寮、笹かまぼこ的鐘崎；1 樓有牛舌立食。喜久福要冷凍，最後再買。']},
+   {t:'16:15',t2:'19:30',k:'plane',nm:'仙台 → 桃園'},
+   {t:'回台後',k:'food',nm:'晚餐',tbd:1}
+  ]}
+];
+
+const HOTELS = [
+ {id:'h1', stayKey:'Daiwa Roynet 青森', nm:'Daiwa Roynet 青森', jp:'ダイワロイネットホテル青森', img:'',
+  when:'Day 1–3　3/15 入住，3 晚', price:'約 NT$2,200／晚', q:'ダイワロイネットホテル青森',
+  lead:'青森站東口走 5 分的連鎖飯店，前三晚的據點，去弘前、五所川原、美術館都從這裡出發。',
+  facts:[
+   ['位置','青森市新町 1-11-16，青森站東口走約 5 分'],
+   ['入住','14:00 起，退房 11:00'],
+   ['雙床房','Moderate Twin 24.87㎡、Superior Twin 25.16㎡、Deluxe Twin 29.6㎡','床寬沒查到。'],
+   ['浴室','房內衛浴，浴廁分開，沒有大浴場'],
+   ['早餐','1 樓 UGUISU 自助餐，有青森鄉土料理；¥2,300，6:30–10:00（9:30 最後入場），在 2 樓櫃台買餐券'],
+   ['設施','投幣洗衣機、微波爐、製冰機、健身房']
+  ],
+  tips:[
+   'Day 3 的巴士 7:53 從青森站前發車，早餐 6:30 就開。',
+   'Day 4 退房後先把行李寄放在櫃台，去完美術館、吃完午餐再回來拿。',
+   '投幣洗衣機可以在第三晚把衣服洗一輪，後面還有四晚。'
+  ]},
+ {id:'h2', stayKey:'奧入瀨溪流飯店', nm:'星野集團 奧入瀨溪流飯店', jp:'星野リゾート 奥入瀬渓流ホテル', img:'',
+  when:'Day 4　3/18 入住，1 晚', price:'約 NT$6,000／晚', q:'星野リゾート 奥入瀬渓流ホテル',
+  lead:'奧入瀨溪流旁唯一的度假飯店，露天風呂就在溪邊，大廳有岡本太郎做的巨型暖爐。',
+  facts:[
+   ['位置','十和田市奥瀬栃久保 231，奧入瀨溪流下游的焼山'],
+   ['入住','15:00 起，退房 12:00','有網站寫退房 11:00，以確認信為準。'],
+   ['雙床房','モダンルーム 44㎡，兩張單人床','床寬沒查到。'],
+   ['溫泉','溪流露天風呂，冬天大約 6:00–23:00，中午有清潔時段不開；入湯稅 ¥150'],
+   ['晚餐','自助餐「青森りんごキッチン」，17:30–21:00（20:30 最後點餐）'],
+   ['早餐','自助餐 7:00–10:00（9:30 最後點餐）'],
+   ['特色','東館大廳 8.5 公尺高的暖爐「森の神話」、西館的「河神」，都是岡本太郎的作品']
+  ],
+  tips:[
+   '青森站來的接駁車冬天每人 ¥4,000，最晚 2 天前要預約；往八戶站的回程免費，也要預約。',
+   '冰瀑點燈 2/28 就結束了，但露天風呂的「氷瀑の湯」開到 3/29。',
+   '退房時間是 12:00，但往八戶的接駁車 11:00 就開，早上的行程抓 10:45 結束。'
+  ]},
+ {id:'h3', stayKey:'東橫INN 八戶站前', nm:'東橫INN 八戶站前', jp:'東横INN 八戸駅前', img:'',
+  when:'Day 5　3/19 入住，1 晚', price:'約 NT$1,500／晚', q:'東横INN 八戸駅前',
+  lead:'八戶站東口走 1 分的商務旅館，隔天一早搭新幹線最方便。',
+  facts:[
+   ['位置','八戶市一番町 1-3-17，八戶站東口走 1 分'],
+   ['入住','15:00–22:00，不接受深夜入住；退房 10:00'],
+   ['雙床房','標準雙床 13㎡，兩張單人床','房間偏小，床寬沒查到。'],
+   ['早餐','免費自助早餐，6:30–9:00']
+  ],
+  tips:[
+   '奧入瀨的接駁車停在西口，飯店在東口，要穿過車站。',
+   '12:10 到的時候還不能入住，先問櫃台能不能寄放行李。',
+   '隔天要帶行李逛平泉和猊鼻溪，可以今晚在櫃台問宅急便，把大行李直接寄到仙台的飯店。',
+   '早餐 6:30 開，吃完再去搭 7:17 的新幹線剛好。'
+  ]},
+ {id:'h4', stayKey:'相鐵 FRESA INN 仙台', nm:'相鐵 FRESA INN 仙台', jp:'相鉄フレッサイン 仙台', img:'',
+  when:'Day 6–7　3/20 入住，2 晚', price:'約 NT$2,000／晚', q:'相鉄フレッサイン 仙台',
+  lead:'仙台站西口走 7 分的商務飯店，最後兩晚，去一番町逛街、吃牛舌都走得到。',
+  facts:[
+   ['位置','仙台市青葉區中央 4-4-5，仙台站西口走約 7 分；地下鐵あおば通站 2 號出口走 5 分'],
+   ['入住','15:00 起，退房 11:00'],
+   ['雙床房','標準雙床 18.7㎡、高級雙床 21㎡，兩張半雙人床','床寬沒查到。'],
+   ['浴室','有浴缸，沒有附牙刷'],
+   ['早餐','和洋自助餐，用仙台朝市進的食材，約 ¥1,450','地點和時間沒查到。'],
+   ['服務','可以寄宅配']
+  ],
+  tips:[
+   '牙刷記得自己帶。',
+   '從八戶用宅急便寄行李過來的話，入住時跟櫃台說一聲。',
+   'Day 8 退房 11:00，13:10 才去機場，先問能不能寄放行李。'
+  ]}
+];
+
+const STATIONS = [
+ {nm:'青森空港',d:1},{nm:'青森',d:1},{nm:'弘前',d:2,side:1},{nm:'金木',d:3,side:1},{nm:'奥入瀬',d:4},
+ {nm:'八戸',d:5},{nm:'平泉',d:6,side:1},{nm:'仙台',d:6},{nm:'松島',d:7,side:1},{nm:'仙台空港',d:8}
+];
+
+const CHECKS = [
+ {g:'要先訂的',items:[
+  ['b1','四間飯店確認信'],
+  ['b2','奧入瀨溪流飯店接駁車','Day 4 青森站出發、Day 5 到八戶站，最晚 2 天前'],
+  ['b3','奧入瀨溪流巴士導覽','Day 5 7:00，前一天 18:00 前'],
+  ['b4','Times 租車','Day 5 八戶站東口，勾雪地胎'],
+  ['b5','台灣駕照日文譯本','監理所臨櫃 NT$100；國際駕照在日本不能用'],
+  ['b6','新幹線指定席','Day 6 はやぶさ 8 號全車指定席'],
+  ['b7','Visit Japan Web 入境資料','填完會拿到 QR code'],
+  ['b8','日本上網：eSIM 或網卡'],
+  ['b9','換日幣','暖爐列車、鄉下的店和巴士常只收現金']
+ ]},
+ {g:'出發前再確認',items:[
+  ['c1','JR 3 月新時刻表','大約 12 月公布，表上所有 JR 班次都要重查'],
+  ['c2','Day 2、Day 3 要不要對調','弘前的兩個館週二休'],
+  ['c3','AUGA 新鮮市場 3 月公休日','撞到 3/17 就改吃魚菜中心'],
+  ['c4','Day 4 去美術館的巴士','51 號、A1 都查不到'],
+  ['c5','波光食堂有沒有海膽','0178-38-2433'],
+  ['c6','猊鼻溪 14:00 船班','0191-47-2341'],
+  ['c7','げいび溪口週六的巴士','沒車就搭 JR'],
+  ['c8','大戸屋 青森新町店還有沒有開'],
+  ['c9','松島遊覽船 3/21 的班表','整點開，冬季班表從 10:00 開始']
+ ]},
+ {g:'行李',items:[
+  ['p1','防滑的鞋','三月的津輕和奧入瀨還有積雪'],
+  ['p2','保暖外套、手套、毛帽'],
+  ['p3','行動電源','冷天手機掉電快'],
+  ['p4','零錢包','巴士、置物櫃']
+ ]}
+];
+
+const ALT = {}; const EVENTS = []; const PER = {}; const PHOTOS = {};
+// ---- Aomori city, Hirosaki, Tsugaru: Day 1–3, Day 4 morning ----
+ALT[1] = [
+  {nm:'A-FACTORY', q:'A-FACTORY 青森', what:'青森站旁的蘋果酒工房和市集，可以隔著玻璃看釀酒，也有蘋果派、義式冰淇淋。', near:'青森站東口旁', hrs:'10:00–19:00', fee:'免費', io:'室內'},
+  {nm:'青森灣大橋、Love Bridge', q:'青森ベイブリッジ', what:'ASPAM 旁的海灣步道，晚上大橋點燈。', near:'ASPAM 旁', fee:'免費', io:'戶外'},
+  {nm:'八甲田丸（週一休）', q:'八甲田丸', what:'青函連絡船改成的紀念船。冬季週一休，今天進不去，Day 3、Day 4 可以去。', near:'青森站走 5 分', hrs:'9:00–17:00', fee:'約 ¥510', io:'室內'}
+];
+ALT[2] = [
+  {g:'追手門一帶（都免費、週二有開）', nm:'舊東奧義塾外人教師館', q:'旧東奥義塾外人教師館', what:'明治時代的木造洋館，1 樓是咖啡廳，可以吃法式定食和蛋糕。', near:'舊市立圖書館旁', hrs:'9:00–18:00（咖啡 10:00–17:30）', fee:'免費', io:'室內'},
+  {g:'追手門一帶（都免費、週二有開）', nm:'弘前洋館迷你模型', q:'ミニチュア建造物 弘前', what:'弘前市內洋館的縮小模型，跟圖書館、教師館排在一起。', near:'舊市立圖書館旁', fee:'免費', io:'戶外'},
+  {g:'追手門一帶（都免費、週二有開）', nm:'山車展示館', q:'山車展示館 弘前', what:'展示弘前八幡宮祭典的山車。', near:'追手門前', hrs:'9:00–18:00', fee:'免費', io:'室內'},
+  {g:'追手門一帶（都免費、週二有開）', nm:'百石町展示館', q:'百石町展示館', what:'明治時代的商家建築，現在是展覽空間。', near:'土手町', fee:'免費', io:'室內'},
+  {g:'其他', nm:'弘前市立博物館', q:'弘前市立博物館', what:'在弘前公園裡，講津輕藩的歷史。', near:'弘前公園內', hrs:'9:30–16:30', fee:'¥280', io:'室內'},
+  {g:'其他', nm:'津輕藩睡魔村', q:'津軽藩ねぷた村', what:'看弘前睡魔燈籠、聽津輕三味線，也有傳統工藝。', near:'弘前公園北側', hrs:'9:00–17:00', fee:'¥600', io:'室內'},
+  {g:'其他', nm:'弘前教會、天主堂', q:'日本基督教団弘前教会', what:'兩座都是明治、大正時代的教堂，免費參觀。日本基督教團弘前教會週一休，週二有開。', near:'弘前公園西側', fee:'免費', io:'室內'}
+];
+ALT[3] = [
+  {g:'五所川原（11:29–12:28 的空檔）', nm:'立佞武多之館', q:'立佞武多の館', what:'高 23 公尺的巨大睡魔燈籠就放在館內，2026 年 7 月整修完重新開館。很適合塞進等巴士的這一小時。', near:'五所川原站走約 5 分', hrs:'9:00–17:00', fee:'¥800', io:'室內'},
+  {g:'青森市（下午）', nm:'青森魚菜中心 のっけ丼', q:'青森魚菜センター', what:'先買餐券，再到各攤挑生魚片放到白飯上。週二休，週三有開，是丸青食堂休息時的首選。', near:'青森站走 5 分', hrs:'7:00–16:00', fee:'餐券 12 張 ¥2,200', io:'室內'},
+  {g:'青森市（下午）', nm:'八甲田丸', q:'八甲田丸', what:'青函連絡船改成的紀念船，可以進船艙和甲板。', near:'青森站走 5 分', hrs:'9:00–17:00', fee:'約 ¥510', io:'室內'},
+  {g:'青森市（下午）', nm:'ASPAM', q:'青森県観光物産館アスパム', what:'三角形的觀光物產館，伴手禮很齊。', near:'青森站走 8 分', hrs:'8:30–18:00', io:'室內'}
+];
+ALT[4] = [
+  {g:'青森（上午）', nm:'三內丸山遺跡', q:'三内丸山遺跡', what:'日本最大的繩文聚落遺跡，就在美術館隔壁，有重建的大型高床建築。', near:'縣立美術館旁', hrs:'9:00–17:00', fee:'¥500', io:'半室內'}
+];
+
+EVENTS.push(
+  {id:'shiga', nm:'縣立美術館「志賀理江子」展（這次碰不到）', dt:'10/31–3/14', dt2:'2026–27', when:'2027/3/14 結束', where:'青森縣立美術館', note:'比你們到的那天早一天結束。', days:[], q:'青森県立美術館'},
+  {id:'museumcol', nm:'縣立美術館 收藏展「十和田湖」', dt:'1/2–4/11', dt2:'2027', when:'收藏展 2026-4，主題是十和田湖（暫定）', where:'青森縣立美術館', note:'當天下午就要去奧入瀨，剛好是預習。', days:[4], q:'青森県立美術館'},
+  {id:'renga', nm:'弘前紅磚倉庫美術館「大正⇆令和アヴァンギャルド」', dt:'12/4–5/16', dt2:'2026–27', when:'展名暫定，一般 ¥1,600', where:'弘前紅磚倉庫美術館', note:'週二休館，3/16 進不去；如果跟 Day 3 對調就看得到。', days:[2], q:'弘前れんが倉庫美術館'},
+  {id:'stove', nm:'津輕鐵道暖爐列車', dt:'12/1–3/31', dt2:'2026–27', when:'每天 3 往返，2025 年底的車廂事故後已恢復行駛', where:'津輕五所川原—津輕中里', note:'週末比較擠，9:35 那班相對好坐。', days:[3], q:'津軽五所川原駅'},
+  {id:'shayo', nm:'斜陽館特展「太宰治 旅の中で」', dt:'4/1–3/22', dt2:'2026–27', when:'展到 2027/3/22', where:'太宰治記念館「斜陽館」', note:'剛好趕上最後幾天。', days:[3], q:'太宰治記念館 斜陽館'},
+  {id:'yukidoro', nm:'弘前城雪燈籠祭（這次碰不到）', dt:'2月初', dt2:'每年', when:'弘前公園的雪燈籠和雪雕', where:'弘前公園', note:'2 月初的活動。', days:[], q:'弘前公園'}
+);
+
+const PER_A = {
+ 1: {
+  eat:[
+   {g:'晚餐（週一）', nm:'大戸屋（原行程）', note:'查到的是新町的分店，在青森ハイパーホテルパサージュ 1 樓，從車站走約 5 分。最新評論停在 2023 年，現在還有沒有開、營業時間都沒查到，出發前先看 Google 地圖。', shops:[['大戸屋 青森新町店','大戸屋 青森 新町']]},
+   {g:'晚餐（週一）', nm:'看完夜景直接吃', note:'ASPAM 10 樓的みちのく料理 西むら，17:00–20:00（19:30 最後點餐），青森鄉土料理。', shops:[['みちのく料理 西むら','みちのく料理 西むら アスパム']]},
+   {g:'晚餐（週一）', nm:'津輕三味線配鄉土料理', note:'りんご茶屋 18:00–22:00，週日和假日休；たか久 17:00–22:00，週日休，每天 19:00 有三味線表演，預算 ¥5,000–6,000。', shops:[['りんご茶屋','りんご茶屋 青森'],['ねぶたの國 たか久','ねぶたの國 たか久']]}
+  ],
+  buy:[
+   {nm:'青森伴手禮', note:'ASPAM 的物產店 9:30–19:00；A-FACTORY 有蘋果酒和蘋果點心。', shops:[['ASPAM','青森県観光物産館アスパム'],['A-FACTORY','A-FACTORY 青森']]}
+  ]
+ },
+ 2: {
+  eat:[
+   {g:'弘前午餐（週二）', nm:'蕎麥麵（原行程）', note:'かふく亭 11:00–19:30，週一休，週二有開，一人約 ¥1,000–2,000。', shops:[['そば処 かふく亭','そば処 かふく亭 弘前']]},
+   {g:'弘前午餐（週二）', nm:'弘前法式料理', note:'弘前人說這座城是「法國菜之城」。レストラン山崎午餐 11:30–14:00，¥3,300 起，週一休；ポルトブラン ¥1,900–3,600，週日休。', shops:[['レストラン山崎','レストラン山崎 弘前'],['レストラン ポルトブラン','ポルトブラン 弘前']]},
+   {g:'弘前午餐（週二）', nm:'洋館裡的定食', note:'舊東奧義塾外人教師館 1 樓的サロン・ド・カフェ アンジュ。', shops:[['サロン・ド・カフェ アンジュ','サロン・ド・カフェ アンジュ 弘前']]},
+   {g:'青森晚餐', nm:'炸豬排、薩莉亞（原行程）', note:'さぼてん在ラビナ 1 樓，車站走 2 分；サイゼリヤ在 &LOVINA 1 樓，車站走 1 分。', shops:[['とんかつ新宿さぼてん 青森ラビナ店','とんかつ新宿さぼてん 青森ラビナ'],['サイゼリヤ &LOVINA','サイゼリヤ 青森']]},
+   {g:'青森晚餐', nm:'津輕三味線配鄉土料理', note:'りんご茶屋、たか久週二都有開，見 Day 1。', shops:[['りんご茶屋','りんご茶屋 青森']]}
+  ],
+  snack:[
+   {nm:'洋館的蘋果派（原行程）', note:'大正浪漫喫茶室在藤田紀念庭園洋館裡，9:30–16:30（16:00 最後點餐），無休。蘋果派套餐約 ¥990–1,100。', shops:[['大正浪漫喫茶室','大正浪漫喫茶室']]},
+   {nm:'只在冬天賣的蘋果派', note:'パティスリー山崎 12–3 月才有，¥648，10:00–20:30，週一休。', shops:[['パティスリー山崎','パティスリー山崎 弘前']]},
+   {nm:'老咖啡館', note:'可否屋葡瑠満休第 2、4 個週二，3/16 是第 3 個，有開，冬天有蘋果派。', shops:[['可否屋葡瑠満','可否屋葡瑠満 弘前']]},
+   {nm:'週二公休的名店', note:'ラグノオ百石町本店、グランメルシー、ノエル、ジャルダン今天都休。'}
+  ],
+  buy:[
+   {nm:'ラグノオ的蘋果點心', note:'「気になるリンゴ」整顆蘋果包在派裡，¥972；パティシエのりんごスティック 5 入 ¥1,150（2023 年價格）。百石町本店週二休。'}
+  ]
+ },
+ 3: {
+  eat:[
+   {g:'青森午餐（週三）', nm:'丸青食堂（原行程）', note:'在 AUGA 地下 1 樓的新鮮市場，7:00–16:00（15:30 最後點餐）。青森丼 ¥2,800，比原表 ¥2,500 多一點；扇貝貝燒味噌定食 ¥1,550。', shops:[['丸青食堂','丸青食堂 アウガ']]},
+   {g:'青森午餐（週三）', nm:'のっけ丼', note:'青森魚菜中心，週三有開，餐券 12 張 ¥2,200。', shops:[['青森魚菜センター','青森魚菜センター']]},
+   {g:'青森午餐（週三）', nm:'貝燒味噌、鮟鱇魚', note:'大もりや 12:00–22:00，不定休，東口走幾分鐘。', shops:[['大もりや','大もりや 青森']]},
+   {g:'青森晚餐（週三）', nm:'吉野家、薩莉亞（原行程）', note:'サイゼリヤ在 &LOVINA 1 樓。吉野家的分店沒查到。', shops:[['サイゼリヤ &LOVINA','サイゼリヤ 青森']]},
+   {g:'青森晚餐（週三）', nm:'小魚乾拉麵', note:'長尾中華そば 青森駅前店 7:00–21:00，招牌こく煮干し。', shops:[['長尾中華そば 青森駅前店','長尾中華そば 青森駅前店']]},
+   {g:'青森晚餐（週三）', nm:'味噌咖哩牛奶拉麵', note:'青森的怪名物，喝起來比名字溫和很多。味の札幌 浅利晚上 18:30–22:00，週一休。另一家味の札幌 大西週二、週三休。', shops:[['味の札幌 浅利','味の札幌 浅利']]},
+   {g:'週三公休，別排', nm:'㐂伝、青森きっちん POPE、青森食堂'}
+  ],
+  snack:[
+   {nm:'暖爐上烤魷魚乾', note:'車上買或自己帶都可以，服務員會在暖爐上幫你烤好撕開。車上也賣青森日本酒。'},
+   {nm:'蘋果酒、蘋果派、義式冰淇淋（原行程）', note:'A-FACTORY 2 樓的蘋果酒工房可以用預付卡試飲。', shops:[['A-FACTORY','A-FACTORY 青森']]}
+  ],
+  buy:[
+   {nm:'睡魔祭周邊', note:'ワ・ラッセ的商店 9:00–18:30。', shops:[['ワ・ラッセ','ねぶたの家 ワ・ラッセ']]},
+   {nm:'五所川原物產', note:'立佞武多之館 1 樓有物產區。', shops:[['立佞武多の館','立佞武多の館']]}
+  ]
+ },
+ 4: {
+  eat:[
+   {g:'青森午餐（週四）', nm:'可麗餅、法式薄餅（原行程）', note:'Galetteria Da Sasino 在 A-FACTORY 2 樓，午餐 11:00–14:30（最後點餐），不定休，¥1,000 起。', shops:[['Galetteria Da Sasino','Galetteria Da Sasino 青森']]},
+   {g:'青森午餐（週四）', nm:'扇貝、貝燒味噌', note:'お食事処おさない，車站走 2 分，10:30–14:00，週一、週二休，今天有開。', shops:[['お食事処おさない','お食事処おさない 青森']]}
+  ]
+ }
+};
+for (const k in PER_A){ PER[k] = PER[k] || {}; if (PER_A[k].season) PER[k].season = PER_A[k].season; for (const f of ['eat','snack','buy']) if (PER_A[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_A[k][f]); }
+
+Object.assign(PHOTOS, {
+  hero:'Hirosaki-castle-winter.JPG',
+  act1:'Tsugaru_Testsudo_Stove_Train.jpg',
+  act2:'Oirase_Stream,_Towada-Hachimantai_National_Park,_Japan.jpg',
+  aomoribay:'Aomori_bay.jpg',
+  lovebridge:'Aomori_Love_Bridge_20200621b.jpg',
+  aomoriair:'191207_Aomori_Airport_Japan01s3.jpg',
+  apple:'Malus_domestica_Fuji_Apple_Hirosaki_Aomori_Japan_20161016a.jpg',
+  hirosaki:'Hirosaki-castle-winter.JPG',
+  library:'Former_Hirosaki_City_Library.JPG',
+  fujita:'Western_style_house_of_the_Fujita_Memorial_Garden_20220618a.jpg',
+  applepie:'Apple_pie_16.jpg',
+  stove:'TsugaruTetsudoStoveTrain.JPG',
+  shayokan:'140914_Shayokan_Goshogawara_Aomori_pref_Japan11s3.jpg',
+  nebuta:'Nebuta_house_Warasse_Aomori_Japan08s5.jpg',
+  kaisendon:'Kaisendon_-_sashimi_fish_bowl_-_July_2014.jpg',
+  museum:'140913_Aomori_Museum_of_Art_Japan02bs3.jpg',
+  galette:'Galette_complete_sur_billig.jpg',
+  oirase:'Oirase-keiryu.jpg',
+  kabushima:'Kabushima-Shrine.jpg',
+  kabushima2:'蕪嶋神社の風景20210403-P1170305.jpg',
+  uni:'Uni_-_Sea_Urchin.jpg',
+  hachinohesta:'Hachinohe_Station_Shinkansen_Concourse,_Aomori_Pref.jpg'
+});
+
+// ---- Oirase & Hachinohe: Day 4 evening, Day 5 ----
+ALT[4] = (ALT[4]||[]).concat([
+  {g:'奧入瀨（晚上）', nm:'芽吹きハンカチ製作', q:'星野リゾート 奥入瀬渓流ホテル', what:'飯店的季節手作活動，3/1–3/29 有辦，晚餐前後的空檔可以做。', near:'飯店內', io:'室內'}
+]);
+ALT[5] = [
+  {g:'奧入瀨（早上）', nm:'苔玉體驗', q:'星野リゾート 奥入瀬渓流ホテル', what:'把奧入瀨的苔蘚做成小盆栽，30 分鐘。早餐後的 9:00 場剛好。', near:'飯店內', fee:'¥3,000–6,000', io:'室內'},
+  {g:'奧入瀨（早上）', nm:'阿修羅の流れ、銚子大滝', q:'阿修羅の流れ', what:'溪流最有名的兩段，但冬天步道大約封閉到 3 月下旬，飯店的冬季巴士團也不停。', near:'飯店往上游', io:'戶外'},
+  {g:'八戶', nm:'八食中心', q:'八食センター', what:'八戶的大型海鮮市場，在「七厘村」買了海鮮可以自己烤。週三休，週五有開。', near:'八戶站東口 4 號站牌搭 100 円巴士約 15 分', hrs:'9:00–18:00（七厘村受理到 17:00）', fee:'七厘村 ¥500／2 小時', io:'室內'},
+  {g:'八戶', nm:'是川繩文館', q:'是川縄文館', what:'國寶「合掌土偶」就在這裡。', near:'八戶站開車約 15 分', hrs:'9:00–17:00（16:30 停止入館），週一休', fee:'¥250', io:'室內'},
+  {g:'八戶', nm:'八戶市美術館', q:'八戸市美術館', what:'2021 年開的新美術館，建築本身就值得看，傍晚也有開。', near:'本八戶', hrs:'10:00–19:00，週二休', fee:'免費（特展另計）', io:'室內'},
+  {g:'八戶', nm:'八戶書店中心', q:'八戸ブックセンター', what:'日本第一間市營書店，選書很有個性。', near:'本八戶', hrs:'10:00–20:00，週二休', fee:'免費', io:'室內'},
+  {g:'種差海岸', nm:'種差天然芝生地', q:'種差海岸 天然芝生地', what:'草地一路長到海邊，是種差海岸的招牌風景，就在波光食堂旁。資訊中心可以寄放東西。', near:'種差海岸站旁', hrs:'資訊中心冬季 9:00–16:00', fee:'免費', io:'戶外'}
+];
+
+EVENTS.push(
+  {id:'hyobaku', nm:'奧入瀨冰瀑點燈（這次碰不到）', dt:'12/25–2/28', dt2:'2026–27', when:'飯店的冰瀑夜間巴士團，最後一天是 2/28', where:'奧入瀨溪流', note:'比你們早半個月結束。', days:[], q:'奥入瀬渓流'},
+  {id:'hyobakuyu', nm:'溪流露天風呂「氷瀑の湯」', dt:'12/4–3/29', dt2:'2026–27', when:'飯店露天風呂裡做出冰瀑，房客免費', where:'奧入瀨溪流飯店', note:'冰瀑點燈結束了，這個還在。晚餐後去泡。', days:[4], q:'星野リゾート 奥入瀬渓流ホテル'},
+  {id:'umineko', nm:'黑尾鷗回到蕪島', dt:'2月底–8月', dt2:'每年', when:'海鷗 2 月底開始飛回來，4 月產卵', where:'蕪嶋神社', note:'3/19 應該已經有鳥，但還不是最多的時候。神社有免費借的傘，擋鳥糞用。', days:[5], q:'蕪嶋神社'}
+);
+
+const PER_O = {
+ 4: {
+  eat:[
+   {g:'晚餐（飯店）', nm:'青森りんごキッチン（原行程）', note:'飯店的自助餐，有青森鄉土料理和蘋果甜點，17:30–21:00（20:30 最後點餐）。', shops:[['星野リゾート 奥入瀬渓流ホテル','星野リゾート 奥入瀬渓流ホテル']]}
+  ],
+  buy:[
+   {g:'奧入瀨', nm:'飯店商店', note:'飯店原創商品、蘋果果醬和甜點。營業時間沒查到，退房前去逛。'}
+  ]
+ },
+ 5: {
+  season:'種差海岸的海膽通常是初夏，3 月波光食堂有沒有生海膽沒查到，想吃的話先打電話問（0178-38-2433）。',
+  eat:[
+   {g:'午餐（週五）', nm:'海膽丼、草莓煮（原行程）', note:'波光食堂在種差海岸站旁，無休，11:00–16:00（15:15 最後點餐），也有網站寫到 17:00。草莓煮（いちご煮）是海膽加鮑魚的清湯，八戶名物。', shops:[['波光食堂','波光食堂 八戸']]},
+   {g:'午餐（週五）', nm:'比目魚漬丼', note:'みなと食堂的招牌，¥1,100。6:00–14:00，週日、週一休，週五有開。在陸奧湊，往種差的路上。', shops:[['みなと食堂','みなと食堂 八戸']]},
+   {g:'午餐（週五）', nm:'市場海鮮自己烤', note:'八食中心的七厘村，買了直接烤。', shops:[['八食センター','八食センター']]},
+   {g:'晚餐（週五）', nm:'LAWSON（原行程）', note:'八戶站東口正前方就有一間，Times 租車就在它旁邊。'},
+   {g:'晚餐（週五）', nm:'八戶站東口的居酒屋', note:'浜小家走 2 分，17:00–24:00；炭薫在東口正前方，週三休。兩家都有八戶的醋鯖魚。', shops:[['浜小家','浜小家 八戸駅'],['肴・めし・酒 炭薫','炭薫 八戸駅']]},
+   {g:'晚餐（週五）', nm:'みろく橫丁的屋台', note:'本八戶的屋台村，26 攤擠在一條巷子裡。しおさい 17:00 開，週一休，有八戶仙貝湯。從八戶站搭巴士約 20 分、計程車約 15 分。', shops:[['屋台村 みろく横丁','みろく横丁'],['しおさい','しおさい みろく横丁']]},
+   {g:'晚餐（週五）', nm:'鯖魚料理、仙貝湯', note:'サバの駅是鯖魚專門店；おかげさん有仙貝湯鍋，週日休。兩家都在本八戶，營業時間各網站寫的不太一樣，週五應該都有開。', shops:[['サバの駅','サバの駅 八戸'],['おかげさん','おかげさん 八戸']]}
+  ],
+  snack:[
+   {nm:'蘋果甜點', note:'奧入瀨溪流館裡的「あら、りんご。」，早上去溪流館時順便。', shops:[['奥入瀬渓流館','奥入瀬渓流館']]},
+   {nm:'霜淇淋', note:'葦毛崎展望台山腳的ホロンバイル，9:00 開，冬季內用到 17:00。', shops:[['ホロンバイル','ホロンバイル 八戸']]},
+   {nm:'八食中心的小點心', note:'風香堂霜淇淋 ¥230、マルシャン紅豆甜甜圈 ¥210。', shops:[['八食センター','八食センター']]}
+  ],
+  buy:[
+   {g:'八戶站ユートリー（18:00 關門）', nm:'八戶伴手禮', note:'1 樓有 2,000 樣以上的伴手禮。18:00 就關，還車前先買。', shops:[['ユートリー','八戸ユートリー']]},
+   {g:'八食中心', nm:'南部仙貝、つるこまんじゅう', note:'民芸菓子処 しんぼり。', shops:[['八食センター','八食センター']]},
+   {g:'八食中心', nm:'青森地酒', note:'八食酒屋 地酒本舗。', shops:[['八食センター','八食センター']]}
+  ]
+ }
+};
+for (const k in PER_O){ PER[k] = PER[k] || {}; if (PER_O[k].season) PER[k].season = PER_O[k].season; for (const f of ['eat','snack','buy']) if (PER_O[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_O[k][f]); }
+
+// ---- Hiraizumi & Geibikei: Day 6 ----
+ALT[6] = [
+  {g:'平泉', nm:'平泉文化遺產中心', q:'平泉文化遺産センター', what:'先看這裡再進寺院，比較看得懂奧州藤原氏和淨土庭園。開放時間沒查到。', near:'毛越寺和中尊寺之間', io:'室內'},
+  {g:'平泉', nm:'高館義經堂', q:'高館義経堂', what:'源義經最後的地方，山丘上看得到北上川。開放時間、票價沒查到。', near:'中尊寺往平泉站方向', io:'戶外'},
+  {g:'平泉', nm:'無量光院跡', q:'無量光院跡', what:'模仿京都平等院蓋的寺院遺跡，現在只剩池子和礎石。', near:'平泉站走約 10 分', fee:'免費', io:'戶外'},
+  {g:'一關', nm:'嚴美溪', q:'厳美渓', what:'另一個峽谷，名物是用籃子從對岸「飛」過來的郭公團子（¥400）。冬天會休業，3 月有沒有開沒查到。', near:'一之關站搭巴士約 20 分', io:'戶外'}
+];
+
+EVENTS.push(
+  {id:'joko', nm:'毛越寺 常行堂會', dt:'每月 20 日', dt2:'每月', when:'11:00 的例行法會', where:'毛越寺 常行堂', note:'3/20 剛好是 20 號。', days:[6], q:'毛越寺'},
+  {id:'kotatsu', nm:'猊鼻溪被爐船（這次碰不到）', dt:'12/1–2/28', dt2:'每年', when:'船上擺暖桌，可以點鍋物便當', where:'猊鼻溪', note:'2 月底就收了，3/20 坐的是一般船，記得穿暖。', days:[], q:'げいび観光センター'}
+);
+
+const PER_H = {
+ 6: {
+  eat:[
+   {g:'午餐（週六）', nm:'蕎麥麵、鰻魚（原行程）', note:'たかこう離猊鼻溪約 200 公尺，11:00–14:30，週一、週四休，週六有開，只收現金。天ぷらそば ¥900。13:17 到站、14:00 開船，只有 30 多分，點蕎麥麵最快。', shops:[['たかこう','たかこう 一関 東山町']]},
+   {g:'午餐（週六）', nm:'平泉碗子蕎麥', note:'在平泉先吃比較從容：駅前芭蕉館 9:30–15:00，平泉わんこそば ¥2,200 起。', shops:[['駅前芭蕉館','駅前芭蕉館 平泉']]},
+   {g:'午餐（週六）', nm:'猊鼻溪的十割蕎麥、烤香魚', note:'げいびレストハウス，營業時間各網站寫的不一樣，大約 11:00–14:00。', shops:[['げいびレストハウス','げいびレストハウス']]},
+   {g:'午餐（週六）', nm:'懷舊給食午餐', note:'平泉的喫茶去 じゅげむ，9:30–14:00，¥1,200。', shops:[['喫茶去 じゅげむ','じゅげむ 平泉']]}
+  ],
+  snack:[
+   {nm:'弁慶力餅（原行程的點心）', note:'吉野屋，平泉站走 2 分，9:00–17:00，8 個 ¥799。', shops:[['菓子工房 吉野屋','吉野屋 弁慶力餅']]}
+  ]
+ }
+};
+for (const k in PER_H){ PER[k] = PER[k] || {}; for (const f of ['eat','snack','buy']) if (PER_H[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_H[k][f]); }
+
+Object.assign(PHOTOS, {
+  motsuji:'Mōtsū-ji_Pure_Land_Garden2.JPG',
+  konjikido:'Chuson-ji_Konjiki-do_201806.jpg',
+  wanko:'Wanko_soba.jpg',
+  geibista:'Geibikei_station_02.jpg'
+});
+
+// ---- Sendai & Matsushima: Day 6 evening, Day 7, Day 8 ----
+ALT[7] = [
+  {g:'松島', nm:'圓通院', q:'円通院 松島', what:'伊達政宗孫子的靈廟，庭園和苔蘚很漂亮，緣結的「縁結び觀音」很有名。', near:'瑞巖寺旁，車站走 8 分', hrs:'3 月 9:00–15:30', fee:'¥500', io:'戶外'},
+  {g:'松島', nm:'觀瀾亭', q:'観瀾亭 松島', what:'伊達家的海邊茶亭，可以坐著喝抹茶看海。開放時間沒查到。', near:'五大堂旁', fee:'¥300', io:'室內'},
+  {g:'仙台城跡', nm:'仙台城見聞館', q:'仙台城見聞館', what:'免費的小展館，講仙台城的石垣和歷史，資料展示館關門後還能進。', near:'本丸跡', hrs:'9:00–17:00', fee:'免費', io:'室內'},
+  {g:'仙台城跡', nm:'仙臺綠彩館', q:'仙臺緑彩館', what:'青葉山的觀光設施，週末常有鄉土表演和體驗攤位。', near:'國際中心站旁', io:'室內'},
+  {g:'仙台城跡', nm:'るーぷる仙台 觀光循環巴士', q:'るーぷる仙台', what:'國際中心站就有站牌，搭上山不用爬坡。單程 ¥260，一日券 ¥920；持一日券，青葉城資料展示館、瑞鳳殿都有折扣。', near:'國際中心站', hrs:'仙台站首班 9:00、末班 16:00', io:'交通'}
+];
+ALT[8] = [
+  {nm:'瑞鳳殿', q:'瑞鳳殿', what:'伊達政宗的靈廟，桃山風格的金色裝飾，在杉樹林裡。', near:'るーぷる仙台約 15 分', hrs:'9:00–16:50', fee:'¥570', io:'戶外'},
+  {nm:'大崎八幡宮', q:'大崎八幡宮', what:'伊達政宗蓋的國寶神社，黑漆金飾的社殿。', near:'るーぷる仙台可到', fee:'免費', io:'戶外'},
+  {nm:'仙台朝市（可能休市）', q:'仙台朝市', what:'仙台站西口走 5 分的市場。週日、國定假日公休，3/22 是補假，大概率不開。', near:'仙台站西口走 5 分', io:'室內'},
+  {nm:'エスパル おみやげ通り', q:'エスパル仙台 本館', what:'跟仙台站地下直通的伴手禮街，最後補貨最方便。', near:'仙台站', hrs:'9:00–21:00', io:'室內'}
+];
+
+EVENTS.push(
+  {id:'suzume', nm:'仙臺綠彩館 鄉土藝能公演', dt:'3 月週末', dt2:'2026', when:'2026 年 3/22（日）有雀舞（すずめ踊り）表演和體驗，11:00、13:00、14:30 三場', where:'仙臺綠彩館（青葉山）', note:'2027 年還沒公布。就在仙台城旁邊，如果 3/21 有辦就順路。', days:[7], q:'仙臺緑彩館'},
+  {id:'kakigoya', nm:'松島牡蠣小屋（大概碰不到）', dt:'11月上旬–3月上旬', dt2:'每年', when:'觀光協會的牡蠣小屋，40 分鐘吃到飽', where:'松島', note:'3 月上旬就收了。松島さかな市場的焼がきハウス全年都有。', days:[], q:'松島 かき小屋'}
+);
+
+const PER_S = {
+ 6: {
+  eat:[
+   {g:'仙台晚餐（週六）', nm:'牛舌通（仙台站 3 樓）', note:'6 家店排一排，下了新幹線就到。喜助スペシャルセット ¥2,515、利久極定食 ¥3,509、伊達の牛たん本舗芯たん定食 ¥3,200，大多開到 21:00。週六晚上要排隊。', shops:[['牛たん通り','仙台駅 牛たん通り']]},
+   {g:'仙台晚餐（週六）', nm:'站外的老牌牛舌', note:'閣在一番町，晚上 17:00–22:30；司 東口店 17:00–23:00。', shops:[['閣','牛たん 閣 一番町'],['司 東口店','牛たん 司 東口']]}
+  ]
+ },
+ 7: {
+  season:'松島的牡蠣季大約到 3 月上旬，觀光協會的牡蠣小屋 3/21 很可能已經收了；松島さかな市場的焼がきハウス全年都有。',
+  eat:[
+   {g:'松島午餐（週日・假日）', nm:'漁師の海鮮丼（原行程）', note:'表上的「漁師的海鮮丼」就是這家店的店名，車站走 2 分，11:00–15:00。公休日有週四、週四五、不定休三種說法，週日都有開。牡蠣丼套餐 ¥2,200 起。假日中午會排隊。', shops:[['漁師の海鮮丼','漁師の海鮮丼 松島']]},
+   {g:'松島午餐（週日・假日）', nm:'海鮮丼、牡蠣丼', note:'たからや食堂海鮮丼 ¥1,680，10:00–15:30；南部屋牡蠣丼 ¥1,500。兩家都是週三休，週日有開。洗心庵無休，牡蠣丼約 ¥1,100–1,250。', shops:[['たからや食堂','たからや食堂 松島'],['南部屋','南部屋 松島'],['洗心庵','洗心庵 松島']]},
+   {g:'松島午餐（週日・假日）', nm:'烤牡蠣吃到飽', note:'松島さかな市場的焼がきハウス，週末 8:00–16:00，全年營業、不收預約，45 分鐘吃到飽。價格兩個網站差很多（¥2,300–3,800）。', shops:[['松島さかな市場','松島さかな市場']]},
+   {g:'仙台晚餐', nm:'やよい軒（原行程的「彌生軒」）', note:'「彌生軒」是日本定食連鎖やよい軒在台灣用的名字。仙台有分店，但位置和時間沒查到。', shops:[['やよい軒','やよい軒 仙台']]},
+   {g:'仙台晚餐', nm:'牛舌老店', note:'元祖 味太助在一番町，11:30–21:00，週二休，今天有開；閣、司見 Day 6。', shops:[['元祖 味太助','味太助 仙台']]},
+   {g:'仙台晚餐', nm:'牛舌通', note:'仙台站 3 樓，大多開到 21:00，見 Day 6。', shops:[['牛たん通り','仙台駅 牛たん通り']]}
+  ],
+  snack:[
+   {nm:'毛豆泥奶昔（ずんだシェイク）', note:'ずんだ茶寮在仙台站 3 樓新幹線中央口旁，9:00–21:00。', shops:[['ずんだ茶寮 仙台駅店','ずんだ茶寮 仙台駅']]}
+  ]
+ },
+ 8: {
+  eat:[
+   {g:'仙台站午餐（週一・補假）', nm:'壽司通（仙台站 3 樓）', note:'4 家店大約 11:00–21:00，無休。こうや 7 貫套餐 ¥2,500；仙令鮨是站著吃的，一貫 ¥220 起。', shops:[['すし通り','仙台駅 すし通り']]},
+   {g:'仙台站午餐（週一・補假）', nm:'牛舌午餐', note:'牛舌通的焼助有午餐限定牛舌定食 ¥1,950（11:00–14:30），剛好卡在預算內。', shops:[['焼助','たん焼 焼助 仙台駅']]},
+   {g:'機場', nm:'牛舌、はらこ飯', note:'仙台機場 1 樓「陣中 牛タンスタンド」、3 樓「寿松」。', shops:[['仙台空港','仙台空港']]}
+  ],
+  buy:[
+   {g:'仙台站 2–3 樓おみやげ処、エスパル B1', nm:'萩之月', note:'菓匠三全，6 入 ¥1,590，常溫約 10 天，最穩的伴手禮。', shops:[['エスパル仙台','エスパル仙台 本館']]},
+   {g:'仙台站 2–3 樓おみやげ処、エスパル B1', nm:'喜久福', note:'喜久水庵的毛豆、抹茶麻糬，8 入 ¥1,400。要冷凍保存，上飛機前再買。', shops:[['喜久水庵','喜久水庵 仙台駅']]},
+   {g:'仙台站 2–3 樓おみやげ処、エスパル B1', nm:'支倉燒、白松がモナカ', note:'支倉燒 3 入 ¥874；白松がモナカ小型 6 入 ¥1,140。'},
+   {g:'仙台機場 2 樓', nm:'最後補貨', note:'萩之月、喜久水庵、ずんだ茶寮、鐘崎的笹かまぼこ都有。', shops:[['仙台空港','仙台空港']]}
+  ]
+ }
+};
+for (const k in PER_S){ PER[k] = PER[k] || {}; if (PER_S[k].season) PER[k].season = PER_S[k].season; for (const f of ['eat','snack','buy']) if (PER_S[k][f]) PER[k][f] = (PER[k][f]||[]).concat(PER_S[k][f]); }
+
+Object.assign(PHOTOS, {
+  act3:'Matsushima_famous_island.jpg',
+  godaido:'Matsushima_Godaido_3.jpg',
+  zuiganji:'Zuigan-ji_Matsushima_2006-09-24.JPG',
+  fukuura:'Fukuura_Bridge_With_Fukuura_Island.JPG',
+  masamune:'Sendai_statue_Date_Masamune.jpg',
+  kaisendon2:'Kaisen-don_(8126073697).jpg',
+  gyutan:'Gyuutan_set_(24890555591).jpg',
+  sendaista:'211028_Sendai_Station_Sendai_Miyagi_pref_Japan02s5.jpg',
+  sendaiair:'211028_Sendai_Airport_Sendai_Miyagi_prefecture_Japan03s.jpg',
+  zunda:'Zunda-mochi_02.jpg',
+  hagi:'Hagi-no-tsuki.jpg'
+});
+
+
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const yen = n => '¥' + n.toLocaleString('en-US');
+const ntd = n => 'NT$' + Math.round(n).toLocaleString('en-US');
+const commons = f => 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(f) + '?width=640';
+const mapUrl = q => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+const store = {
+  get(k, d){ try { const v = localStorage.getItem('tohokutrip:' + k); return v === null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem('tohokutrip:' + k, JSON.stringify(v)); } catch(e){} }
+};
+const ymd = tz => new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const nowMin = tz => { const p = new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date()).split(':'); return (+p[0]%24)*60 + +p[1]; };
+
+/* ---------- hero ---------- */
+{ const h = $('#heroImg'); h.onerror = () => h.remove(); if (PHOTOS.hero) { h.dataset.cf = PHOTOS.hero; h.dataset.keep = 1; h.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(PHOTOS.hero) + '?width=1400'; } else h.remove(); }
+
+/* ---------- nav + route ---------- */
+$('#nav').innerHTML =
+  DAYS.map(d => `<a class="chip" href="#d${d.n}" data-day="${d.n}"><b>D${d.n}</b>${d.md}</a>`).join('') +
+  '<span class="nav-sep" aria-hidden="true"></span>' +
+  [['events','活動'],['hotels','住宿'],['budget','預算'],['checks','清單']].map(([id,l]) => `<a class="chip go" href="#${id}" data-sec="${id}">${l}</a>`).join('');
+
+$('#line').innerHTML = STATIONS.map(s =>
+  `<a class="stn${s.side?' side':''}" href="#d${s.d}"><i></i><span class="nm">${s.nm}</span><span class="d">D${s.d}</span></a>`).join('');
+
+/* ---------- days ---------- */
+function stopHTML(s){
+  const icon = ICON[s.ic || s.k] || ICON.move;
+  const time = s.t2 ? `${s.t}<small>– ${s.t2}</small>` : s.sub ? `${s.t}<small>${s.sub}</small>` : s.t;
+  const costs = (s.cost||[]).map(([y,,l]) => `<span class="cost">${esc(l)} <b>${yen(y)}</b></span>`).join('');
+  const map = s.q ? `<a class="map" href="${mapUrl(s.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(s.q)}">${ICON.pin}地圖</a>` : '';
+  const note = (s.note ? (Array.isArray(s.note[0]) ? s.note : [s.note]) : []).map(n => `<p class="note ${n[0]}">${esc(n[1])}</p>`).join('');
+  return `<li class="stop k-${s.k}${s.tbd ? ' is-tbd' : ''}" data-t="${esc(s.t)}">
+    <div class="t">${time}</div>
+    <div class="ic" aria-hidden="true">${icon}</div>
+    <div><div class="nm">${esc(s.nm)}${s.tbd ? '<span class="tbd">待定</span>' : ''}</div>${(costs||map)?`<div class="meta">${costs}${map}</div>`:''}${note}</div>
+  </li>`;
+}
+const EVMAP = Object.fromEntries(EVENTS.map(e => [e.id, e]));
+function tagsHTML(a){
+  const t = [];
+  if (a.hrs) t.push(`<span class="tag">${esc(a.hrs)}</span>`);
+  if (a.fee) t.push(`<span class="tag">${esc(a.fee)}</span>`);
+  if (a.io) t.push(`<span class="tag${a.io==='室內'?' in':''}">${esc(a.io)}</span>`);
+  if (a.rsv) t.push(`<span class="tag rsv">${esc(a.rsv)}</span>`);
+  return t.length ? `<div class="tags">${t.join('')}</div>` : '';
+}
+function altHTML(a){
+  const map = a.q ? `<a class="map sm" href="${mapUrl(a.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(a.nm)}">${ICON.pin}地圖</a>` : '';
+  return `<div class="alt"><div class="alt-top"><div class="nm">${esc(a.nm)}</div>${map}</div>
+    ${a.what ? `<p>${esc(a.what)}</p>` : ''}${a.near ? `<p>${esc(a.near)}</p>` : ''}${tagsHTML(a)}</div>`;
+}
+function foodHTML(f){
+  const shops = (f.shops||[]).map(([n,q]) => `<a class="map" href="${mapUrl(q||n)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(n)}">${ICON.pin}${esc(n)}</a>`).join('');
+  return `<div class="food"><div class="nm">${esc(f.nm)}</div>${f.note ? `<p>${esc(f.note)}</p>` : ''}${shops ? `<div class="shops">${shops}</div>` : ''}</div>`;
+}
+function evtHTML(e){
+  return `<div class="evt"><div class="nm">${esc(e.nm)}</div><p>${esc(e.when)}${e.where ? '，' + esc(e.where) : ''}</p>${e.note ? `<p>${esc(e.note)}</p>` : ''}</div>`;
+}
+function grouped(items, fn){
+  let prev = null;
+  return items.map(a => { const h = a.g && a.g !== prev ? `<h4>${esc(a.g)}</h4>` : ''; prev = a.g; return h + fn(a); }).join('');
+}
+const TABS = [['ev','活動'],['alt','景點'],['eat','美食'],['snack','點心'],['buy','伴手禮']];
+function flexHTML(d){
+  const P = PER[d.n] || {};
+  const data = {ev: EVENTS.filter(e => e.days.includes(d.n)), alt: ALT[d.n] || [], eat: P.eat || [], snack: P.snack || [], buy: P.buy || []};
+  const tabs = TABS.filter(([k]) => data[k].length);
+  if (!tabs.length) return '';
+  const cnt = tabs.map(([k,l]) => `${l} ${data[k].length}`).join('，');
+  const bar = tabs.map(([k,l],i) => `<button class="tab sm" type="button" role="tab" id="t${d.n}-${k}" aria-controls="p${d.n}-${k}" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${l}<span>${data[k].length}</span></button>`).join('');
+  const panels = tabs.map(([k],i) => {
+    let body;
+    if (k === 'ev') body = data.ev.map(evtHTML).join('');
+    else if (k === 'alt') body = grouped(data.alt, altHTML);
+    else body = (k === 'eat' && P.season ? `<div class="seasonal"><b>季節提醒　</b>${esc(P.season)}</div>` : '') + grouped(data[k], foodHTML);
+    return `<div class="tp" role="tabpanel" id="p${d.n}-${k}" aria-labelledby="t${d.n}-${k}" ${i ? 'hidden' : ''}>${body}</div>`;
+  }).join('');
+  return `<details class="flex"><summary><b>彈性選項</b><span class="cnt">${cnt}</span></summary><div class="flex-body"><div class="tabs in" role="tablist" aria-label="Day ${d.n} 彈性選項">${bar}</div>${panels}</div></details>`;
+}
+let html = '', lastAct = 0;
+for (const d of DAYS){
+  if (d.act !== lastAct){
+    const a = ACTS[d.act]; lastAct = d.act;
+    const aimg = a.img[0] === '@' ? (PHOTOS[a.img.slice(1)] ? `<img data-cf="${esc(PHOTOS[a.img.slice(1)])}" data-keep="1" src="${commons(PHOTOS[a.img.slice(1)]).replace('width=640','width=1200')}" alt="${a.alt}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : '') : `<img src="${IMG[a.img]}" alt="${a.alt}" loading="lazy">`;
+    html += `<section class="act" aria-label="${a.no} ${a.title}">${aimg}
+      <div class="act-text"><div><div class="act-no">${a.no}　${a.where}</div><h2>${a.title}</h2><p>${a.text}</p></div></div></section>`;
+  }
+  const trip = d.trip.map(x => x === '⇄' ? '<span class="ar">⇄</span>' : esc(x))
+                     .join('<span class="ar">→</span>').replace(/<span class="ar">→<\/span><span class="ar">⇄<\/span><span class="ar">→<\/span>/,'<span class="ar">⇄</span>');
+  const pics = d.photos.map(([k,alt,kind]) => {
+    const tag = kind ? `<span class="k">${kind}</span>` : '';
+    if (k[0] !== '@') return `<figure><img src="${IMG[k]}" alt="${esc(alt)}" loading="lazy"><figcaption>${tag}${esc(alt)}</figcaption></figure>`;
+    const f = PHOTOS[k.slice(1)]; if (!f) return '';
+    return `<figure class="r"><img data-cf="${esc(f)}" src="${commons(f)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"><figcaption>${tag}${esc(alt)}</figcaption></figure>`;
+  }).join('');
+  const photos = pics ? `<div class="photos">${pics}</div>` : '';
+  html += `<article class="wrap day" id="d${d.n}" data-date="${d.date}">
+    <div class="ticket" role="img" aria-label="Day ${d.n}，${d.md} 星期${d.wd}，${d.trip.filter(x=>x!=='⇄').join(' 到 ')}">
+      <span class="today-tag">今天</span>
+      <div class="main">
+        <div class="kind"><em>${d.kind}</em><span>${d.jd}</span></div>
+        <div class="trip">${trip}</div>
+        <div class="foot"><span>経由　${esc(d.via)}</span><span class="fare">${d.fare ? yen(d.fare) : '當日有效'}</span></div>
+      </div>
+      <div class="stub"><small>Day</small><b>${d.n}</b><small>${ACTS[d.act].no}</small></div>
+    </div>
+    <h3>${esc(d.title)}</h3>
+    ${d.daynote ? `<p class="daynote">${esc(d.daynote)}</p>` : ''}
+    ${photos}
+    <ol class="tl">${d.stops.map(stopHTML).join('')}</ol>
+    ${flexHTML(d)}
+    ${d.stay ? `<div class="stay">${ICON.hotel}<div><span>今晚住　</span>${(H => `<a href="#${H ? H.id : 'hotels'}">${esc(H ? H.nm : d.stay)}</a>`)(HOTELS.find(h => h.stayKey === d.stay))}</div></div>` : ''}
+  </article>`;
+}
+$('#days').innerHTML = html;
+/* Commons photos: author and license are read live from Commons and listed in the footer */
+(async function(){
+  const imgs = [...document.querySelectorAll('img[data-cf]')];
+  if (!imgs.length) return;
+  const files = [...new Set(imgs.map(i => i.dataset.cf))];
+  const page = f => 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(f);
+  const meta = {};
+  for (let i = 0; i < files.length; i += 40){
+    const titles = files.slice(i, i + 40).map(f => 'File:' + f).join('|');
+    const url = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=640&iiextmetadatafilter=Artist|LicenseShortName&titles=' + encodeURIComponent(titles);
+    try {
+      const j = await (await fetch(url)).json();
+      for (const p of Object.values((j.query && j.query.pages) || {})){
+        if (!p.imageinfo) continue;
+        const ii = p.imageinfo[0], em = ii.extmetadata || {};
+        const tmp = document.createElement('div'); tmp.innerHTML = (em.Artist && em.Artist.value) || '';
+        meta[p.title.replace(/^File:/, '').replace(/ /g, '_')] = {thumb: ii.thumburl || ii.url, page: ii.descriptionurl, author: tmp.textContent.trim(), lic: (em.LicenseShortName && em.LicenseShortName.value) || ''};
+      }
+    } catch(e) {}
+  }
+  const seen = new Set(), items = [];
+  for (const img of imgs){
+    const f = img.dataset.cf, m = meta[f];
+    if (m && /\b(NC|ND)\b|non-?commercial|no ?deriv/i.test(m.lic)){ (img.closest('figure') || img).remove(); continue; }
+    if (m && m.thumb && img.isConnected && !img.dataset.keep) img.src = m.thumb;
+    if (seen.has(f) || !img.isConnected) continue;
+    seen.add(f);
+    const who = m && m.author ? esc(m.author) : '作者見原頁';
+    const lic = m && m.lic ? '，' + esc(m.lic) : '';
+    items.push(`<li>${esc(img.alt)}：<a href="${esc((m && m.page) || page(f))}" target="_blank" rel="noopener">${who}</a>${lic}</li>`);
+  }
+  $('#creditList').innerHTML = items.join('');
+})();
+function selectTab(btn){
+  const list = btn.parentElement;
+  list.querySelectorAll('.tab').forEach(t => { const on = t === btn; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; });
+  list.parentElement.querySelectorAll('.tp').forEach(p => p.hidden = p.id !== btn.getAttribute('aria-controls'));
+  list.scrollTo({left: btn.offsetLeft - list.clientWidth/2 + btn.offsetWidth/2, behavior: 'auto'});
+}
+$('#days').addEventListener('click', e => { const b = e.target.closest('.tabs.in .tab'); if (b) selectTab(b); });
+$('#days').addEventListener('keydown', e => {
+  const b = e.target.closest('.tabs.in .tab'); if (!b || !['ArrowRight','ArrowLeft'].includes(e.key)) return;
+  const tabs = [...b.parentElement.querySelectorAll('.tab')], i = tabs.indexOf(b);
+  const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+  n.focus(); selectTab(n); e.preventDefault();
+});
+
+/* ---------- events ---------- */
+$('#evList').innerHTML = [...EVENTS].sort((x,y) => (x.days.length ? Math.min(...x.days) : 99) - (y.days.length ? Math.min(...y.days) : 99)).map(e => `<div class="ev">
+  <div class="dt">${esc(e.dt)}${e.dt2 ? `<small>${esc(e.dt2)}</small>` : ''}</div>
+  <div><div class="nm">${esc(e.nm)}</div><p>${esc(e.when)}${e.where ? '，' + esc(e.where) : ''}</p>${e.note ? `<p>${esc(e.note)}</p>` : ''}
+  <div class="meta">${e.days.map(n => `<a class="d" href="#d${n}">Day ${n}</a>`).join('')}${e.q ? `<a class="map" href="${mapUrl(e.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(e.nm)}">${ICON.pin}地圖</a>` : ''}</div></div>
+</div>`).join('');
+
+/* ---------- hotels ---------- */
+$('#hotelList').innerHTML = HOTELS.map(h => `<article class="hotel" id="${h.id}">
+  ${h.img && h.img[0] === '@' ? (PHOTOS[h.img.slice(1)] ? `<img data-cf="${esc(PHOTOS[h.img.slice(1)])}" src="${commons(PHOTOS[h.img.slice(1)])}" alt="${esc(h.nm)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : '') : (h.img ? `<img src="${IMG[h.img]}" alt="${esc(h.nm)}" loading="lazy">` : '')}
+  <div class="hotel-head"><div><h3>${esc(h.nm)}<span class="jp">${esc(h.jp)}</span></h3><div class="when">${esc(h.when)}　${esc(h.price)}</div></div>
+    <a class="map" href="${mapUrl(h.q)}" target="_blank" rel="noopener" aria-label="在 Google 地圖開啟 ${esc(h.nm)}">${ICON.pin}地圖</a></div>
+  <p class="lead">${esc(h.lead)}</p>
+  ${h.facts.length ? `<dl class="facts">${h.facts.map(([k,v,n]) => `<dt>${esc(k)}</dt><dd>${esc(v)}${n ? `<small>${esc(n)}</small>` : ''}</dd>`).join('')}</dl>` : ''}
+  ${h.tips.length ? `<ul class="htips">${h.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+</article>`).join('');
+
+/* ---------- budget ---------- */
+const cats = {move:{l:'交通',items:[]}, ticket:{l:'門票、體驗',items:[]}, food:{l:'餐飲',items:[]}};
+for (const d of DAYS) for (const s of d.stops) for (const [y,c,l] of (s.cost||[])) cats[c].items.push(y);
+const sum = a => a.reduce((x,y) => x+y, 0);
+const jpyTotal = sum(Object.values(cats).map(c => sum(c.items)));
+const FLIGHT = null;  // 待定
+const LODGE = 2200*3 + 6000 + 1500 + 2000*2;
+const range = (a,b) => `${ntd(a)}–${ntd(b).replace('NT$','')}`;
+const row = (l,v,cls='') => `<div class="row ${cls}"><span class="lb">${l}</span><span class="dots"></span><span class="v">${v}</span></div>`;
+$('#receipt').innerHTML = `<h3>旅費精算</h3>
+  ${Object.values(cats).map(c => row(c.l, yen(sum(c.items))) ).join('')}
+  ${row('日幣小計', yen(jpyTotal))}
+  ${row('機票（桃園→青森、仙台→桃園）', FLIGHT ? ntd(FLIGHT) : '待定')}
+  ${row('住宿（七晚）', ntd(LODGE))}
+  ${row(FLIGHT ? '合計約' : '合計約（不含機票）', '<span id="grand"></span>', 'total')}
+  <div class="rate"><label for="rate">匯率 1 日圓 =</label><input id="rate" inputmode="decimal" value="${store.get('rate', 0.20)}"> 台幣</div>
+  <p class="fine">照原規劃表的金額加總，查到票價不同的已經改掉；不含購物和伴手禮。匯率可以自己改，換算會跟著更新。</p>`;
+function calc(){
+  const r = parseFloat($('#rate').value) || 0;
+  store.set('rate', r);
+  $('#grand').textContent = ntd(jpyTotal * r + (FLIGHT || 0) + LODGE);
+  const y = parseFloat(String($('#yen').value).replace(/[^\d.]/g,'')) || 0;
+  $('#yenOut').textContent = ntd(y * r);
+}
+$('#rate').addEventListener('input', calc);
+$('#yen').addEventListener('input', calc);
+calc();
+
+/* ---------- checklist ---------- */
+const done = store.get('checks', {});
+$('#checkList').innerHTML = CHECKS.map(g => `<h3>${g.g}</h3>` + g.items.map(([id,l,s]) =>
+  `<label class="ck"><input type="checkbox" data-id="${id}" ${done[id]?'checked':''}><span>${l}${s?`<small>${s}</small>`:''}</span></label>`).join('')).join('');
+$('#checkList').addEventListener('change', e => {
+  const id = e.target.dataset.id; if (!id) return;
+  done[id] = e.target.checked; store.set('checks', done);
+});
+
+/* ---------- today / countdown ---------- */
+(function(){
+  const st = $('#status'), fab = $('#fab');
+  const tokyo = ymd('Asia/Tokyo'), taipei = ymd('Asia/Taipei');
+  const start = DAYS[0].date, end = DAYS[DAYS.length-1].date;
+  const today = DAYS.find(d => d.date === tokyo);
+  if (today){
+    st.innerHTML = `<b>Day ${today.n}</b><span>${today.md}（${today.wd}）${esc(today.title)}</span>`;
+    const el = document.getElementById('d' + today.n);
+    el.classList.add('is-today');
+    document.querySelector(`.chip[data-day="${today.n}"]`).classList.add('is-today');
+    const now = nowMin('Asia/Tokyo');
+    for (const li of el.querySelectorAll('.stop')){
+      const m = li.dataset.t.match(/(\d{1,2}):(\d{2})/);
+      if (m && (+m[1]*60 + +m[2]) >= now){ li.classList.add('is-next'); break; }
+    }
+    fab.classList.add('show');
+    fab.addEventListener('click', () => el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}));
+  } else if (taipei < start){
+    const days = Math.round((Date.parse(start) - Date.parse(taipei)) / 864e5);
+    st.innerHTML = `<b>${days}</b><span>天後出發</span>`;
+  } else if (tokyo > end){
+    st.innerHTML = `<span>旅程結束，下一趟見。</span>`;
+  }
+})();
+
+/* ---------- nav highlight ---------- */
+(function(){
+  const chips = {};
+  document.querySelectorAll('.chip').forEach(c => chips[c.dataset.day ? 'd'+c.dataset.day : c.dataset.sec] = c);
+  const targets = [...document.querySelectorAll('article.day, section.sec')];
+  let cur = null;
+  const io = new IntersectionObserver(es => {
+    for (const e of es) if (e.isIntersecting){
+      const c = chips[e.target.id]; if (!c || c === cur) continue;
+      cur && cur.classList.remove('is-on'); c.classList.add('is-on'); cur = c;
+      c.scrollIntoView({block:'nearest', inline:'center', behavior:'auto'});
+    }
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  targets.forEach(t => io.observe(t));
+})();
+
+</script>
+</body>
+</html>
