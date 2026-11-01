@@ -233,6 +233,10 @@ footer .sig{margin-top:18px;font-family:var(--kai);opacity:.7}
 .flex[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
 @media (prefers-reduced-motion: reduce){.flex>summary::after{transition:none}}
 .flex-body{padding:0 14px 6px}
+.planb{border-color:var(--tip);background:var(--tip-soft)}
+.planb>summary b{color:var(--tip)}
+.planb .tl{margin-top:8px}
+.pb-note{margin:0;font-size:14px;line-height:1.65}
 .flex h4{font-size:14px;color:var(--ink-2);font-weight:600;margin:6px 0 2px}
 .alt{padding:10px 0;border-top:1px dashed var(--line)}
 .flex h4+.alt{border-top:0}
@@ -409,9 +413,10 @@ const DAYS = [
    {t:'18:00',sub:'約',k:'food',nm:'晚餐',tbd:1,note:['tip','高山第一晚，キッチン飛騨的飛驒牛排可以在官網預約，週六有開。選項在下面「彈性選項 → 美食」。']}
   ]},
  {n:4,guides:['hida'],date:'2027-02-14',md:'2/14',wd:'日',jd:'2月14日（日）',act:2,kind:'乗車券',trip:['高山','⇄','新穂高'],via:'濃飛バス',fare:4400,
-  title:'躍入海拔兩千公尺的純白',stay:'Hotel and Spa Gift TAKAYAMA',photos:[['ropeway', '新穗高纜車', '景點'], ['@d4_sanmachi', '三町老街', '景點'], ['jinya', '高山陣屋', '景點'], ['@d4_kokubunji', '飛驒國分寺', '景點'], ['beefsushi', '飛驒牛握壽司', '美食'], ['@d4_ramen', '高山拉麵', '美食'], ['@d4_mitarashi', '御手洗糰子', '美食']],
+  title:'躍入海拔兩千公尺的純白',stay:'Hotel and Spa Gift TAKAYAMA',
+  daynote:'早上 7 點看天氣再決定：晴天照下面去新穗高；陰天或下雪，山上什麼都看不到，改走下面的「陰天方案」。',photos:[['ropeway', '新穗高纜車', '景點'], ['@d4_sanmachi', '三町老街', '景點'], ['jinya', '高山陣屋', '景點'], ['@d4_kokubunji', '飛驒國分寺', '景點'], ['beefsushi', '飛驒牛握壽司', '美食'], ['@d4_ramen', '高山拉麵', '美食'], ['@d4_mitarashi', '御手洗糰子', '美食']],
   stops:[
-   {t:'07:36',k:'move',ic:'bus',nm:'巴士往新穗高',q:'高山濃飛バスセンター',cost:[[2200,'move','巴士']],
+   {t:'07:36',k:'move',ic:'bus',nm:'【晴天】巴士往新穗高',q:'高山濃飛バスセンター',cost:[[2200,'move','巴士']],
     note:['tip','買「高山＆新穂高 2 日間フリー乗車券」¥4,400，跟兩趟單程同價，回程可以在平湯下車泡湯再上車。']},
    {t:'09:20',t2:'12:50',k:'ropeway',nm:'新穗高纜車絕景體驗＋景觀午餐',q:'新穂高ロープウェイ',cost:[[3800,'ticket','纜車'],[2500,'food','午餐']]},
    {t:'午後',k:'move',ic:'bus',nm:'巴士回高山',cost:[[2200,'move','巴士']]},
@@ -420,7 +425,20 @@ const DAYS = [
    {t:'16:45',k:'food',nm:'必吃街邊美味：飛驒牛握壽司',q:'飛騨牛 握り 高山 古い町並',cost:[[1000,'food','握壽司']],
     note:['warn','坂口屋 15:00 就收，こって牛約 16:30–17:00 收。建議 14:45 一到老街就先吃。']},
    {t:'18:00',k:'food',nm:'晚餐：かまむら／みかど',cost:[[3000,'food','晚餐']]}
-  ]},
+  ],
+  planB:{title:'陰天方案：飛驒古川＋飛驒之里',sub:'不上山，省約 ¥10,700',
+   note:'新穗高的巴士和纜車都是當天現場買，不去也不用退票。預算表照晴天版本算，走這個方案就是現賺。',
+   stops:[
+    {t:'09:00',sub:'前後',k:'move',ic:'train',nm:'JR 高山本線，高山 → 飛驒古川',q:'飛騨古川駅',cost:[[240,'move','JR']],note:['tip','普通車 16 分，¥240。班次一小時左右一班，出發前查時刻。']},
+    {t:'09:30',t2:'12:00',k:'walk',nm:'瀨戶川與白壁土藏街',q:'瀬戸川と白壁土蔵街',note:['tip','站前走 5 分，白牆土藏、石板路和小運河，積雪的時候最好拍。《你的名字》的取景地。']},
+    {t:'10:30',sub:'約',k:'sight',nm:'起し太鼓の里 飛驒古川祭會館',q:'飛騨古川まつり会館',cost:[[700,'ticket','門票']],note:['tip','12–2 月 9:00–16:00。門票有 ¥500、¥700 兩種說法，先抓 ¥700。']},
+    {t:'12:00',sub:'前後',k:'food',nm:'午餐：古川老街吃',tbd:1,note:['tip','老街上有蕎麥麵和定食店，邊逛邊找。']},
+    {t:'13:30',sub:'前後',k:'move',ic:'train',nm:'JR，飛驒古川 → 高山',q:'高山駅',cost:[[240,'move','JR']]},
+    {t:'14:00',k:'walk',nm:'漫步高山老街、高山陣屋、飛驒國分寺',q:'高山陣屋',note:['tip','跟晴天版本一樣：陣屋 16:00 前入館，飛驒牛握壽司要趁早吃。']},
+    {t:'17:30',t2:'18:30',k:'sight',nm:'飛驒之里 冬季點燈',q:'飛騨の里',cost:[[300,'ticket','點燈']],
+     note:[['tip','高山濃飛巴士中心搭さるぼぼバス約 10 分，下車就到。點燈時段 ¥300；白天門票 ¥700，8:30–17:00。'],['warn','前一季是 12/20–25 和 1/10–2/28，17:30–20:30。2026–27 年的日期還沒公布，出發前查。']]},
+    {t:'19:00',sub:'約',k:'food',nm:'晚餐：かまむら／みかど',cost:[[3000,'food','晚餐']],note:['tip','高山的餐廳收得早，點燈看一小時就回市區吃。']}
+   ]}},
  {n:5,guides:['hida','kanazawa'],date:'2027-02-15',md:'2/15',wd:'一',jd:'2月15日（月）',act:2,kind:'乗車券',trip:['高山','白川郷','金沢'],via:'高速バス',fare:5600,
   title:'走入世界遺產的冬日畫卷',stay:'ホテルフォルツァ金沢',photos:[['asaichi', '宮川朝市', '景點'], ['shirakawa', '白川鄉合掌村', '景點'], ['@d5_wada', '和田家', '景點'], ['gohei', '五平餅', '美食'], ['@d5_hobamiso', '朴葉味噌', '美食']],
   stops:[
@@ -441,13 +459,16 @@ const DAYS = [
  {n:6,guides:['toyama'],date:'2027-02-16',md:'2/16',wd:'二',jd:'2月16日（火）',act:3,kind:'乗車券',trip:['金沢','高岡','雨晴','富山','金沢'],via:'北陸日帰り',fare:null,
   title:'海天一線與玻璃藝術的交響',stay:'ホテルフォルツァ金沢',photos:[['amaharashi', '雨晴海岸', '景點'], ['@d6_daibutsu', '高岡大佛', '景點'], ['@d6_zuiryuji', '瑞龍寺', '景點'], ['glassmuseum', '富山市玻璃美術館', '景點'], ['@d6_kansui', '環水公園', '景點'], ['tendon', '白蝦天丼', '美食'], ['@d6_toyamablack', '富山黑拉麵', '美食'], ['@d6_masuzushi', '鱒壽司', '美食']],
   stops:[
-   {t:'08:50',k:'move',ic:'train',nm:'金澤出發，09:29 抵達高岡'},
+   {t:'08:50',t2:'09:29',k:'move',ic:'train',nm:'IR 石川鐵道＋愛之風富山鐵道，金澤 → 高岡',q:'高岡駅',cost:[[870,'move','電車']],note:['tip','普通車直達約 40 分，¥870，IC 卡同價。']},
    {t:'09:29',k:'sight',nm:'高岡城跡、高岡大佛',q:'高岡大仏'},
+   {t:'11:16',t2:'11:35',k:'move',ic:'train',nm:'JR 冰見線，高岡 → 雨晴',q:'雨晴駅',cost:[[240,'move','JR']],note:['tip','¥240，19 分。坐右側看海。']},
    {t:'11:35',k:'food',nm:'抵達雨晴海岸，午餐 Cafe ISOMI TERRACE',q:'道の駅 雨晴',cost:[[2000,'food','午餐']],
     note:[['warn','氷見線班次很少：雨晴回高岡要搭 12:55，下一班就是 14:32，所以 12:45 前離開咖啡店。去程從高岡搭 11:16，坐右側看海。（2026 年 10 月時刻表，出發前再查）'],['tip','咖啡店在道之驛雨晴 2 樓，評論多是聖代和咖啡，正餐菜單沒查到；想吃飽可以在高岡先吃。']]},
+   {t:'12:55',sub:'起',k:'move',ic:'train',nm:'JR 冰見線回高岡，轉愛之風到富山',q:'富山駅',cost:[[240,'move','JR'],[390,'move','電車']],note:['tip','雨晴 → 高岡 ¥240，高岡 → 富山 ¥390，約 19 分。']},
    {t:'14:00',k:'sight',nm:'富山市玻璃美術館',q:'富山市ガラス美術館',cost:[[680,'ticket','門票']]},
    {t:'16:00',k:'walk',nm:'富岩運河環水公園漫步',q:'富岩運河環水公園'},
-   {t:'18:00',k:'food',nm:'晚餐：富山白蝦亭 天婦羅，之後回金澤',q:'白えび亭 富山駅',cost:[[2000,'food','晚餐']]}
+   {t:'18:00',k:'food',nm:'晚餐：富山白蝦亭 天婦羅',q:'白えび亭 富山駅',cost:[[2000,'food','晚餐']]},
+   {t:'19:00',sub:'後',k:'move',ic:'train',nm:'愛之風富山鐵道＋IR 石川鐵道，富山 → 金澤',q:'金沢駅',cost:[[1290,'move','電車']],note:['tip','普通車直達約 57 分，¥1,290。趕時間可以搭新幹線，貴一倍多。']}
   ]},
  {n:7,guides:['kanazawa'],date:'2027-02-17',md:'2/17',wd:'三',jd:'2月17日（水）',act:3,kind:'散策券',trip:['金沢','市内'],via:'茶屋街と兼六園',fare:null,
   title:'百萬石之城的味覺與視覺盛宴',stay:'ホテルフォルツァ金沢',photos:[['chaya', '東茶屋街', '景點'], ['@d7_kanazawajo', '金澤城', '景點'], ['pool', '21 世紀美術館', '景點'], ['@d7_nagamachi', '長町武家屋敷', '景點'], ['@d7_omicho', '近江町市場', '景點'], ['kaisendon', '海鮮丼', '美食'], ['@d7_goldsoft', '金箔霜淇淋', '美食'], ['@d7_curry', '金澤咖哩', '美食']],
@@ -462,12 +483,12 @@ const DAYS = [
     note:['warn','長町裡能進去參觀的野村家 16:00 最後入館。想進去看，就把這段跟美術館對調。']},
    {t:'18:00',sub:'約',k:'food',nm:'晚餐',tbd:1,cost:[[3000,'food','預算']],note:['tip','原規劃預算 ¥3,000，店還沒定。片町、香林坊一帶選擇最多，赤玉的金澤關東煮今天有開。選項在下面「彈性選項 → 美食」。']}
   ]},
- {n:8,guides:['kanazawa'],date:'2027-02-18',md:'2/18',wd:'四',jd:'2月18日（木）',act:3,kind:'搭乗券',trip:['金沢','小松','台北'],via:'北陸新幹線',fare:2910,
+ {n:8,guides:['kanazawa'],date:'2027-02-18',md:'2/18',wd:'四',jd:'2月18日（木）',act:3,kind:'搭乗券',trip:['金沢','小松','台北'],via:'空港リムジンバス',fare:1400,
   title:'滿載回憶起飛',stay:null,photos:[['@d5_tsuzumimon', '金澤站鼓門', '景點'], ['@d8_komatsu', '小松機場', '景點'], ['@d8_sushi', '壽司', '美食']],
   stops:[
-   {t:'07:59',k:'move',ic:'train',nm:'北陸新幹線，金澤 → 小松',q:'金沢駅',cost:[[2910,'move','新幹線']],
-    note:['tip','金澤站西口也有直達小松機場的利木津巴士，約 40–55 分、¥1,400，不用轉車也比較便宜。']},
-   {t:'09:22',k:'move',ic:'bus',nm:'接駁巴士抵達小松機場',q:'小松空港'},
+   {t:'08:30',sub:'前後',k:'move',ic:'bus',nm:'機場巴士，金澤站西口 → 小松機場',q:'金沢駅西口 小松空港リムジンバス',cost:[[1400,'move','巴士']],
+    note:[['tip','直達不用轉車，約 40–55 分，¥1,400。比原本的新幹線加接駁巴士便宜，也不用拖行李換車。'],['warn','班次配合航班時間，座位是定員制。出發前查北鐵的時刻表，挑 9:30 前到機場的那班，提早到站排隊。']]},
+   {t:'09:30',sub:'前',k:'plane',nm:'抵達小松機場，報到',q:'小松空港'},
    {t:'登機前',k:'food',nm:'午餐',tbd:1,note:['tip','在小松機場吃，或等機上餐。']},
    {t:'11:45',k:'plane',nm:'小松機場起飛，回家'},
    {t:'回台後',k:'food',nm:'晚餐',tbd:1}
@@ -508,7 +529,7 @@ const HOTELS = [
    '有評論提到晚上有免費茶泡飯、泡完湯有冰棒，不是每家評論都有寫，當驚喜就好。'
   ]},
  {id:'h3', stayKey:'ホテルフォルツァ金沢', nm:'Hotel Forza 金澤', jp:'ホテルフォルツァ金沢', img:'h_forza',
-  when:'Day 5–7　2/15 入住，3 晚', price:'約 NT$6,000／晚', q:'ホテルフォルツァ金沢',
+  when:'Day 5–7　2/15 入住，3 晚', price:'約 NT$1,500／晚', q:'ホテルフォルツァ金沢',
   lead:'就在近江町市場旁邊，吃海鮮丼、去東茶屋街、兼六園都方便，住三晚的金澤據點。',
   facts:[
    ['位置','金沢市安江町 2-10。金澤站兼六園口（東口）步行約 10 分；北鐵巴士「武蔵ヶ辻・近江町市場」站下車就在門口；近江町市場步行約 3 分'],
@@ -522,7 +543,7 @@ const HOTELS = [
   tips:[
    '住三晚剛好在中段洗一輪衣服，投幣洗衣機在館內。',
    'Day 5 從白川鄉坐到金澤站，拖行李走 10 分鐘，或轉北鐵巴士坐到「武蔵ヶ辻・近江町市場」。',
-   'Day 8 搭 07:59 的新幹線，7:30 前出門比較穩，早餐 6:30 就開，可以先吃。'
+   'Day 8 搭 8:30 前後的機場巴士，從飯店走到金澤站西口約 15 分，早餐 6:30 就開，吃完再出門。'
   ]}
 ];
 
@@ -984,6 +1005,7 @@ for (const d of DAYS){
     ${d.daynote ? `<p class="daynote">${esc(d.daynote)}</p>` : ''}
     ${photos}
     <ol class="tl">${d.stops.map(stopHTML).join('')}</ol>
+    ${d.planB ? `<details class="flex planb"><summary><b>${esc(d.planB.title)}</b><span class="cnt">${esc(d.planB.sub || '')}</span></summary><div class="flex-body">${d.planB.note ? `<p class="pb-note">${esc(d.planB.note)}</p>` : ''}<ol class="tl">${d.planB.stops.map(stopHTML).join('')}</ol></div></details>` : ''}
     ${flexHTML(d)}
     ${d.stay ? `<div class="stay">${ICON.hotel}<div><span>今晚住　</span>${(H => `<a href="#${H ? H.id : 'hotels'}">${esc(H ? H.nm : d.stay)}</a>`)(HOTELS.find(h => h.stayKey === d.stay))}</div></div>` : ''}
   </article>`;
@@ -1102,7 +1124,7 @@ $('#checkList').addEventListener('change', e => {
     el.classList.add('is-today');
     document.querySelector(`.chip[data-day="${today.n}"]`).classList.add('is-today');
     const now = nowMin('Asia/Tokyo');
-    for (const li of el.querySelectorAll('.stop')){
+    for (const li of el.querySelectorAll(':scope > .tl > .stop')){
       const m = li.dataset.t.match(/(\d{1,2}):(\d{2})/);
       if (m && (+m[1]*60 + +m[2]) >= now){ li.classList.add('is-next'); break; }
     }
